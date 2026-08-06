@@ -2,6 +2,7 @@
 layout: page
 title: Archive
 description: "我的职业生涯档案"
+permalink: /archive/
 header-img: "img/archive-bg.jpg"
 ---
 
