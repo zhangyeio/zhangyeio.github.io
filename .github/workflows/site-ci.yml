@@ -43,7 +43,6 @@ jobs:
             --no-progress
             --max-retries 3
             --timeout 20
-            --exclude-mail
             './**/*.md'
             './**/*.markdown'
             './_site/**/*.html'
