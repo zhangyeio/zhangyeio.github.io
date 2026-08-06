@@ -12,7 +12,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-toc
 
 kramdown:
   auto_ids: false
