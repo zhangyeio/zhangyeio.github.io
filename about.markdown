@@ -1,88 +1,50 @@
 ---
-layout: default
-title: About
+layout: page
+title: 关于我
 permalink: /about/
 ---
 
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
-</article>
+> 企业级系统架构、数据安全与 AI 应用实践者，关注大模型落地和数字化转型。
 
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&color=2F93F7&center=true&vCenter=true&width=435&lines=Hello%2C+I'm+zhangye+%F0%9F%91%8B;Welcome+to+my+space!" alt="Typing SVG" />
-</div>
+我长期参与企业级信息系统建设，关注如何把技术能力转化为稳定、安全、可衡量的业务价值。我的实践覆盖系统架构设计、数据安全、复杂项目管理，以及大模型在企业场景中的工程化应用。
 
-<p align="center">
-  <i>A passionate developer who loves crafting elegant solutions</i>
-</p>
+## 专业方向
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Focus-Web%20Development-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Based-China-red?style=flat-square" />
-</div>
+### 企业级系统架构
 
-<br/>
+- 大型分布式系统与集成架构
+- 高可用、性能、稳定性与可观测性
+- 复杂系统的演进、治理与技术债管理
 
-<h3 align="center">🛠️ Technology Stack</h3>
+### 数据安全
 
-<div align="center">
-  <h4>Frontend Development</h4>
-  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/-Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" />
-</div>
+- 数据传输安全与加密
+- 权限、审计、风险控制与合规落地
+- 面向真实业务场景的安全解决方案
 
-<div align="center">
-  <h4>Backend Development</h4>
-  <img src="https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-</div>
+### AI 应用
 
-<div align="center">
-  <h4>Tools & Platforms</h4>
-  <img src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-</div>
+- 大模型场景识别与价值评估
+- RAG、Agent、评测与工程化
+- AI 与企业业务流程、知识和数据的融合
 
-<br/>
+### 数字化转型
 
-<h3 align="center">✨ Current Focus</h3>
+- 业务流程分析与平台规划
+- 技术、业务和组织之间的协同
+- 项目管理、效果评估与持续优化
 
-<div align="center">
-  <table>
-    <tr>
-      <td>🌱 Learning:</td>
-      <td>Cloud Computing & DevOps</td>
-    </tr>
-    <tr>
-      <td>💻 Working on:</td>
-      <td>Full-Stack Web Applications</td>
-    </tr>
-    <tr>
-      <td>👯 Looking for:</td>
-      <td>Interesting Project Collaborations</td>
-    </tr>
-  </table>
-</div>
+## 当前关注
 
-<br/>
+- 大模型从原型验证走向生产环境
+- 企业知识库与智能 Agent
+- AI 应用的质量、安全、成本和可观测性
+- 数据安全与智能化系统的协同建设
 
-<h3 align="center">📫 Get in Touch</h3>
+## 内容与交流
 
-<div align="center">
-  <a href="https://github.com/zhangye413">
-    <img src="https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github" />
-  </a>
-  &nbsp;
-  <a href="mailto:your.email@example.com">
-    <img src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-</div>
+- [GitHub 主页](https://github.com/zhangye413)
+- [知识库](https://github.com/zhangye413/Documents)
+- [职业档案](/archive/)
 
-<br/>
-
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light" />
-</div>
+欢迎通过 GitHub Issue 或项目讨论交流。为保护隐私，本站不公开个人邮箱。
