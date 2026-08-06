@@ -1,4 +1,4 @@
-html[data-theme="dark"] {
+html[data-site-theme="dark"] {
   color-scheme: dark;
   --page-bg: #1b1b1e;
   --surface: #2a2a2f;
@@ -17,61 +17,61 @@ html[data-theme="dark"] {
   --shadow-hover: 0 18px 42px rgba(0, 0, 0, 0.3);
 }
 
-html[data-theme="dark"] .theme-icon-moon {
+html[data-site-theme="dark"] .theme-icon-moon {
   display: none;
 }
 
-html[data-theme="dark"] .theme-icon-sun {
+html[data-site-theme="dark"] .theme-icon-sun {
   display: inline;
 }
 
-html[data-theme="dark"] ::selection {
+html[data-site-theme="dark"] ::selection {
   color: #111214;
   background: #f5f5f5;
 }
 
-html[data-theme="dark"] .post-list > li::before,
-html[data-theme="dark"] .post-header,
-html[data-theme="dark"] .post-content blockquote {
+html[data-site-theme="dark"] .post-list > li::before,
+html[data-site-theme="dark"] .post-header,
+html[data-site-theme="dark"] .post-content blockquote {
   border-color: #f0f0f2;
 }
 
-html[data-theme="dark"] .post-list > li::before {
+html[data-site-theme="dark"] .post-list > li::before {
   background: #f0f0f2;
 }
 
-html[data-theme="dark"] .welcome-links a:hover,
-html[data-theme="dark"] .welcome-links a:focus-visible {
+html[data-site-theme="dark"] .welcome-links a:hover,
+html[data-site-theme="dark"] .welcome-links a:focus-visible {
   color: #111214;
   background: #f2f2f3;
   border-color: #f2f2f3;
 }
 
-html[data-theme="dark"] .post-content img {
+html[data-site-theme="dark"] .post-content img {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* Archive page contains legacy inline styles; these overrides keep it legible. */
-html[data-theme="dark"] .post-preview .post-title {
+html[data-site-theme="dark"] .post-preview .post-title {
   color: var(--text) !important;
   border-bottom-color: var(--line) !important;
 }
 
-html[data-theme="dark"] .post-content-preview {
+html[data-site-theme="dark"] .post-content-preview {
   color: var(--muted) !important;
 }
 
-html[data-theme="dark"] .achievement,
-html[data-theme="dark"] .education {
+html[data-site-theme="dark"] .achievement,
+html[data-site-theme="dark"] .education {
   color: var(--text) !important;
   background: var(--surface-soft) !important;
 }
 
-html[data-theme="dark"] .cert-badge {
+html[data-site-theme="dark"] .cert-badge {
   color: var(--text) !important;
   background: #383941 !important;
 }
 
-html[data-theme="dark"] hr {
+html[data-site-theme="dark"] hr {
   border-top-color: var(--line) !important;
 }

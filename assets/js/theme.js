@@ -22,7 +22,7 @@
 
   const applyTheme = (theme, persist = false) => {
     const isDark = theme === 'dark';
-    root.dataset.theme = isDark ? 'dark' : 'light';
+    root.dataset.siteTheme = isDark ? 'dark' : 'light';
 
     if (toggle) {
       toggle.setAttribute('aria-pressed', String(isDark));
@@ -43,7 +43,7 @@
   applyTheme(savedTheme || (media.matches ? 'dark' : 'light'));
 
   toggle?.addEventListener('click', () => {
-    applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
+    applyTheme(root.dataset.siteTheme === 'dark' ? 'light' : 'dark', true);
   });
 
   media.addEventListener?.('change', (event) => {

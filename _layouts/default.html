@@ -13,7 +13,7 @@
           var savedTheme = localStorage.getItem('theme');
           var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
           if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-            document.documentElement.dataset.theme = 'dark';
+            document.documentElement.dataset.siteTheme = 'dark';
           }
         } catch (error) {
           // Keep the light theme when browser storage is unavailable.
