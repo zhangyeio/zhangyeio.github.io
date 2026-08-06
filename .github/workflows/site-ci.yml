@@ -38,13 +38,11 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
-            --root-dir "${{ github.workspace }}"
+            --root-dir "${{ github.workspace }}/_site"
             --cache
             --no-progress
             --max-retries 3
             --timeout 20
-            './**/*.md'
-            './**/*.markdown'
             './_site/**/*.html'
           fail: true
           jobSummary: true
