@@ -512,13 +512,13 @@ tags:
 
 | 天数 | 当日学习内容 | 难度 | 重要性 | 完成标准 | 官方资料 |
 |---:|---|:---:|:---:|---|---|
-| Day 148 | 用户访谈假设与问题定义 | ⭐⭐ | ⭐⭐⭐⭐⭐ | 写清目标用户、痛点和非目标 | [GitHub Issue 模板](https://docs.github.com/en/communities/using-templates-for-repositories/configuring-issue-templates-for-your-repository) |
-| Day 149 | 用户故事与验收标准 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 定义 5 条核心用户故事 | [GitHub Issue 模板](https://docs.github.com/en/communities/using-templates-for-repositories/configuring-issue-templates-for-your-repository) |
+| Day 148 | 用户访谈假设与问题定义 | ⭐⭐ | ⭐⭐⭐⭐⭐ | 写清目标用户、痛点和非目标 | [GitHub Issue 模板](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) |
+| Day 149 | 用户故事与验收标准 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 定义 5 条核心用户故事 | [GitHub Issue 模板](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) |
 | Day 150 | 风险、问题、行动和审批模型 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 完成领域对象和关系图 | [PostgreSQL DDL](https://www.postgresql.org/docs/current/ddl.html) |
 | Day 151 | 系统架构图 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 绘制客户端、API、任务、数据库和模型 | [C4 Model](https://c4model.com/) |
 | Day 152 | 端到端数据流图 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 标记身份、数据和信任边界 | [Mermaid Flowchart](https://mermaid.js.org/syntax/flowchart.html) |
 | Day 153 | 质量、延迟、成本和安全指标 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 定义 MVP 验收阈值 | [OpenAI Evals](https://developers.openai.com/api/docs/guides/evals) |
-| Day 154 | 范围冻结与休息 | ⭐⭐ | ⭐⭐⭐⭐⭐ | 删除非核心功能，冻结 MVP | [GitHub Issue 模板](https://docs.github.com/en/communities/using-templates-for-repositories/configuring-issue-templates-for-your-repository) |
+| Day 154 | 范围冻结与休息 | ⭐⭐ | ⭐⭐⭐⭐⭐ | 删除非核心功能，冻结 MVP | [GitHub Issue 模板](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) |
 
 ### Week 23｜主项目后端与后台任务
 
@@ -637,7 +637,7 @@ tags:
 | Day 220 | RAG、评测和权限答辩 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 用主项目证据回答追问 | [OpenAI Evals](https://developers.openai.com/api/docs/guides/evals)；[PostgreSQL RLS](https://www.postgresql.org/docs/current/ddl-rowsecurity.html) |
 | Day 221 | Agent、MCP、安全和成本答辩 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 解释为何使用受控工作流 | [MCP 入门](https://modelcontextprotocol.io/docs/getting-started/intro)；[Agents SDK 人工审批](https://openai.github.io/openai-agents-python/human_in_the_loop/) |
 | Day 222 | 第一次 60 分钟模拟面试 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 记录知识、表达和证据缺口 | [GitHub README](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) |
-| Day 223 | 定向投递与第二次模拟面试 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 投递匹配岗位并修订简历 | [GitHub Issue 模板](https://docs.github.com/en/communities/using-templates-for-repositories/configuring-issue-templates-for-your-repository) |
+| Day 223 | 定向投递与第二次模拟面试 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 投递匹配岗位并修订简历 | [GitHub Issue 模板](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository) |
 | Day 224 | 最终闸门 G8 与 30/60/90 计划 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 形成下一阶段学习和求职清单 | [GitHub README](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) |
 
 ## 七、评测与调整体系
