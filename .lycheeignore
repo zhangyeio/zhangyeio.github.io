@@ -1,2 +1,3 @@
 ^https?://localhost(:[0-9]+)?/
 ^https?://127\.0\.0\.1(:[0-9]+)?/
+^https://openai\.com/zh-Hans-CN/index/harness-engineering/?$
