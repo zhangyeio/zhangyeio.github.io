@@ -1,33 +1,54 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.querySelector('.theme-toggle');
-  const body = document.body;
-  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+(() => {
+  const root = document.documentElement;
+  const toggle = document.querySelector('.theme-toggle');
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
 
-  // 检查本地存储的主题设置
-  const currentTheme = localStorage.getItem('theme');
-  if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
-    body.classList.add('dark-theme');
-  }
-
-  // 监听系统主题变化
-  prefersDarkScheme.addEventListener('change', (e) => {
-    if (!localStorage.getItem('theme')) {
-      if (e.matches) {
-        body.classList.add('dark-theme');
-      } else {
-        body.classList.remove('dark-theme');
-      }
+  const readSavedTheme = () => {
+    try {
+      return localStorage.getItem('theme');
+    } catch (error) {
+      return null;
     }
+  };
+
+  const saveTheme = (theme) => {
+    try {
+      localStorage.setItem('theme', theme);
+    } catch (error) {
+      // Theme switching still works when browser storage is unavailable.
+    }
+  };
+
+  const applyTheme = (theme, persist = false) => {
+    const isDark = theme === 'dark';
+    root.dataset.theme = isDark ? 'dark' : 'light';
+
+    if (toggle) {
+      toggle.setAttribute('aria-pressed', String(isDark));
+      toggle.setAttribute('aria-label', isDark ? '切换为浅色主题' : '切换为深色主题');
+      toggle.title = isDark ? '切换为浅色主题' : '切换为深色主题';
+    }
+
+    if (themeColor) {
+      themeColor.content = isDark ? '#101113' : '#111214';
+    }
+
+    if (persist) {
+      saveTheme(isDark ? 'dark' : 'light');
+    }
+  };
+
+  const savedTheme = readSavedTheme();
+  applyTheme(savedTheme || (media.matches ? 'dark' : 'light'));
+
+  toggle?.addEventListener('click', () => {
+    applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
   });
 
-  // 切换主题
-  themeToggle?.addEventListener('click', () => {
-    if (body.classList.contains('dark-theme')) {
-      body.classList.remove('dark-theme');
-      localStorage.setItem('theme', 'light');
-    } else {
-      body.classList.add('dark-theme');
-      localStorage.setItem('theme', 'dark');
+  media.addEventListener?.('change', (event) => {
+    if (!readSavedTheme()) {
+      applyTheme(event.matches ? 'dark' : 'light');
     }
   });
-});
+})();

@@ -2,11 +2,16 @@
 layout: default
 ---
 
-<div class="welcome-section">
+<section class="welcome-section">
+  <p class="eyebrow">TECHNICAL NOTES · SINCE 2017</p>
   <h1>👋 Welcome to Ye's Log</h1>
   <p class="welcome-text">Hi, this is Ye. I'm documenting my learning notes in this blog since 2017.</p>
-  <p class="welcome-quote">"问渠那得清如许？为有源头活水来。"</p>
-</div>
+  <p class="welcome-quote">“问渠那得清如许？为有源头活水来。”</p>
+  <div class="welcome-links" aria-label="站点链接">
+    <a href="https://github.com/zhangyeio">GitHub</a>
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  </div>
+</section>
 
 <div class="home">
   {%- if site.posts.size > 0 -%}
@@ -15,14 +20,13 @@ layout: default
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
+        <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+        </h2>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 220 }}</p>
+        <a class="read-more" href="{{ post.url | relative_url }}" aria-label="阅读全文：{{ post.title | escape }}">Read article →</a>
       </li>
       {%- endfor -%}
     </ul>
