@@ -43,8 +43,8 @@ permalink: /about/
 
 ## 内容与交流
 
-- [GitHub 主页](https://github.com/zhangye413)
-- [知识库](https://github.com/zhangye413/Documents)
+- [GitHub 主页](https://github.com/zhangyeio)
+- [知识库](https://github.com/zhangyeio/Documents)
 - [职业档案](/archive/)
 
 欢迎通过 GitHub Issue 或项目讨论交流。为保护隐私，本站不公开个人邮箱。
