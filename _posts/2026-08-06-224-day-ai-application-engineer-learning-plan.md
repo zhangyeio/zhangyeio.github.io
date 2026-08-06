@@ -2,6 +2,7 @@
 layout: post
 title: "224 天 AI 应用工程师逐日学习计划"
 date: 2026-08-06 14:00:00 +0800
+permalink: /2026/08/06/224-day-ai-application-engineer-learning-plan.html
 categories:
   - 人工智能
   - 学习计划
@@ -797,4 +798,3 @@ Agent 层：
 4. 能处理权限、审批和失败；
 5. 能部署、监控和解释成本；
 6. 最后才增加新框架和复杂架构。
-
