@@ -1,5 +1,7 @@
 # Zhang Ye's Blog
 
+[![Site CI](https://github.com/zhangyeio/zhangyeio.github.io/actions/workflows/site-ci.yml/badge.svg)](https://github.com/zhangyeio/zhangyeio.github.io/actions/workflows/site-ci.yml)
+
 个人技术博客，记录企业级系统架构、数据安全、AI 应用与数字化转型相关的实践、方法和思考。
 
 - 在线访问：[zhangyeio.github.io](https://zhangyeio.github.io/)
