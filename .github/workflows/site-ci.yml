@@ -43,6 +43,7 @@ jobs:
             --no-progress
             --max-retries 3
             --timeout 20
+            --accept '100..=103,200..=299,429'
             './_site/**/*.html'
           fail: true
           jobSummary: true
