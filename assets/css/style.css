@@ -358,6 +358,298 @@ h2 {
   background: var(--surface-soft);
 }
 
+/* AI 产品核心概念系列 */
+.post-series-ai-product-100-concepts {
+  --series-accent: #087f5b;
+  --series-accent-strong: #046c4e;
+  --series-accent-soft: #eaf8f1;
+  --series-accent-line: #a9dfc7;
+}
+
+.post-series-ai-product-100-concepts .post-header {
+  border-bottom-color: var(--series-accent);
+}
+
+.concept-hero {
+  position: relative;
+  margin: 0 0 42px;
+  padding: clamp(24px, 5vw, 40px);
+  overflow: hidden;
+  color: #f4fff9;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(255, 255, 255, 0.18), transparent 32%),
+    linear-gradient(135deg, #064e3b 0%, #087f5b 58%, #12a474 100%);
+  border-radius: 14px;
+  box-shadow: 0 18px 42px rgba(4, 108, 78, 0.2);
+}
+
+.concept-kicker {
+  margin: 0 0 12px;
+  color: #baf4d9;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.concept-lead {
+  max-width: 680px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.04rem, 2vw, 1.22rem);
+  font-weight: 620;
+  line-height: 1.75;
+}
+
+.concept-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.concept-stats span {
+  display: flex;
+  flex-direction: column;
+  padding: 13px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9px;
+  backdrop-filter: blur(6px);
+}
+
+.concept-stats strong {
+  color: #ffffff;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.concept-stats small {
+  margin-top: 3px;
+  color: #d8f8e9;
+  font-size: 0.72rem;
+}
+
+.series-grid {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 34px;
+}
+
+.series-card {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  gap: 15px;
+  align-items: center;
+  padding: 17px 18px;
+  color: var(--text);
+  text-decoration: none;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.series-card:hover,
+.series-card:focus-visible {
+  color: var(--text);
+  border-color: var(--series-accent-line);
+  box-shadow: 0 10px 24px rgba(4, 108, 78, 0.1);
+  transform: translateY(-2px);
+}
+
+.series-card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  background: var(--series-accent);
+  border-radius: 9px;
+}
+
+.series-card-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.series-card-copy strong {
+  font-size: 1rem;
+}
+
+.series-card-copy small {
+  margin-top: 3px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.series-card-count {
+  color: var(--series-accent);
+  font-size: 0.78rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.core-concept-grid,
+.all-concept-grid,
+.chapter-concept-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 20px 0 32px;
+}
+
+.core-concept-grid a,
+.all-concept-grid a,
+.chapter-concept-grid a {
+  display: block;
+  padding: 9px 12px;
+  color: var(--text);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  text-decoration: none;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+
+.core-concept-grid a:hover,
+.core-concept-grid a:focus-visible,
+.all-concept-grid a:hover,
+.all-concept-grid a:focus-visible,
+.chapter-concept-grid a:hover,
+.chapter-concept-grid a:focus-visible {
+  color: var(--series-accent-strong);
+  background: var(--series-accent-soft);
+  border-color: var(--series-accent-line);
+}
+
+.series-nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin: 0 0 34px;
+  padding: 12px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+
+.series-nav:last-child {
+  margin: 42px 0 0;
+}
+
+.series-nav span:last-child {
+  text-align: right;
+}
+
+.series-nav a {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.series-nav a:hover,
+.series-nav a:focus-visible,
+.series-nav-home {
+  color: var(--series-accent) !important;
+}
+
+.post-series-ai-product-100-concepts .post-content > h2 {
+  position: relative;
+  margin-top: 2.8em;
+  padding: 0 0 0.45em 0.72em;
+  border-bottom-color: var(--line);
+}
+
+.post-series-ai-product-100-concepts .post-content > h2::before {
+  position: absolute;
+  top: 0.12em;
+  bottom: 0.45em;
+  left: 0;
+  width: 4px;
+  content: "";
+  background: var(--series-accent);
+  border-radius: 999px;
+}
+
+.post-series-ai-product-100-concepts .post-content > h3 {
+  margin-top: 1.9em;
+  color: var(--series-accent-strong);
+  font-size: 1.04rem;
+}
+
+.post-series-ai-product-100-concepts .post-content blockquote {
+  margin: 18px 0 22px;
+  padding: 15px 17px;
+  color: #245d49;
+  background: var(--series-accent-soft);
+  border-left: 4px solid var(--series-accent);
+  border-radius: 0 8px 8px 0;
+}
+
+.post-series-ai-product-100-concepts .post-content blockquote p {
+  margin: 0;
+}
+
+.post-series-ai-product-100-concepts .post-content hr {
+  margin: 42px 0;
+  border: 0;
+  border-top: 1px dashed var(--series-accent-line);
+}
+
+.post-series-ai-product-100-concepts .post-content sup a {
+  color: var(--series-accent);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+@media (max-width: 680px) {
+  .concept-stats,
+  .core-concept-grid,
+  .all-concept-grid,
+  .chapter-concept-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .series-card {
+    grid-template-columns: 40px minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .series-card-number {
+    width: 38px;
+    height: 38px;
+  }
+
+  .series-card-count {
+    display: none;
+  }
+
+  .series-nav {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .series-nav span:last-child {
+    text-align: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .concept-stats,
+  .core-concept-grid,
+  .all-concept-grid,
+  .chapter-concept-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .post-content code {
   padding: 0.16em 0.38em;
   color: var(--code-text);

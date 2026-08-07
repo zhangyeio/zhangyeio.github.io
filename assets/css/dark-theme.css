@@ -75,3 +75,21 @@ html[data-site-theme="dark"] .cert-badge {
 html[data-site-theme="dark"] hr {
   border-top-color: var(--line) !important;
 }
+
+html[data-site-theme="dark"] .post-series-ai-product-100-concepts {
+  --series-accent: #3ddc97;
+  --series-accent-strong: #8de9bd;
+  --series-accent-soft: #173c30;
+  --series-accent-line: #2b6d55;
+}
+
+html[data-site-theme="dark"] .concept-hero {
+  background:
+    radial-gradient(circle at 92% 12%, rgba(255, 255, 255, 0.12), transparent 32%),
+    linear-gradient(135deg, #0a3f31 0%, #086247 58%, #0d805b 100%);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.3);
+}
+
+html[data-site-theme="dark"] .post-series-ai-product-100-concepts .post-content blockquote {
+  color: #c9f5df;
+}
