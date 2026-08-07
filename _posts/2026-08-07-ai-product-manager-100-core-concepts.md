@@ -234,7 +234,7 @@ AI 产品工作的难点不在于背诵名词，而在于知道一个概念会�
 
 3. Leviathan et al. (2022), [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192)。加速幅度取决于模型、硬件和实现。
 
-4. OpenAI Help Center, [What are tokens and how to count them?](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)。计费以供应商当前价格页为准。
+4. OpenAI Developer Docs, [Key concepts: Tokens](https://developers.openai.com/api/docs/concepts#tokens)。计费以供应商当前价格页为准。
 
 5. Model Context Protocol, [Architecture](https://modelcontextprotocol.io/specification/2025-06-18/architecture)。实施时应核对最新规范。
 

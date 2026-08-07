@@ -731,7 +731,7 @@ PTQ（Post-Training Quantization）在模型训练完成后直接把权重从 FP
 
 [^3]: Leviathan et al. (2022), [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192)。加速幅度取决于模型、硬件和实现。
 
-[^4]: OpenAI Help Center, [What are tokens and how to count them?](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them)。计费以供应商当前价格页为准。
+[^4]: OpenAI Developer Docs, [Key concepts: Tokens](https://developers.openai.com/api/docs/concepts#tokens)。计费以供应商当前价格页为准。
 
 <nav class="series-nav" aria-label="系列导航">
   <span></span>
