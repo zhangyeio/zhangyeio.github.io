@@ -230,7 +230,7 @@ METR 在 2025 年的一项随机实验中甚至发现，熟悉大型开源项目
 
 软件也不会停止增长。
 
-[美国劳工统计局](https://www.bls.gov/opub/ted/2026/artificial-intelligence-information-technology-and-employment-2024-34.htm)预计，软件开发者岗位在 2024 年至 2034 年间增长 15.8%，增加约 26.8 万个岗位。AI 自身同样需要大量基础设施、数据、安全和应用开发人员。
+美国劳工统计局预计，软件开发者岗位在 2024 年至 2034 年间增长 15.8%，增加约 26.8 万个岗位。AI 自身同样需要大量基础设施、数据、安全和应用开发人员。
 
 但岗位继续存在，不代表过去的职业契约还能继续存在。
 
@@ -264,7 +264,7 @@ AI 不会让软件工程师整体消失。
 
 ## 参考资料
 
-1. U.S. Bureau of Labor Statistics, [Artificial intelligence, information technology, and employment, 2024–34](https://www.bls.gov/opub/ted/2026/artificial-intelligence-information-technology-and-employment-2024-34.htm), 2026。
+1. U.S. Bureau of Labor Statistics, *Artificial Intelligence, Information Technology, and Employment, 2024–34*, 2026。
 2. SignalFire, [State of Tech Talent Report 2026](https://www.signalfire.com/blog/signalfire-state-of-talent-report-2026), 2026。
 3. Stack Overflow, [2025 Developer Survey: AI](https://survey.stackoverflow.co/2025/ai), 2025。
 4. Google Cloud DORA, [State of AI-assisted Software Development 2025](https://dora.dev/research/2025/dora-report/), 2025。
