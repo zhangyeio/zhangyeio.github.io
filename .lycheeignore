@@ -1,3 +1,6 @@
 ^https?://localhost(:[0-9]+)?/
 ^https?://127\.0\.0\.1(:[0-9]+)?/
 ^https://openai\.com/zh-Hans-CN/index/harness-engineering/?$
+^https://www\.iea\.org/reports/key-questions-on-energy-and-ai/executive-summary$
+^https://www\.sec\.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231\.htm$
+^https://www\.sec\.gov/Archives/edgar/data/1326801/000162828026025532/meta-20260416\.htm$
