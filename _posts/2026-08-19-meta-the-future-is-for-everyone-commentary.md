@@ -73,7 +73,7 @@ tags:
 
 农业人口从社会主体变成少数，并不能简单证明技术转型总会平稳改善每个人的处境。历史上的工业化伴随着长期城市贫困、劳动冲突、职业教育、工会斗争和社会保障建设。技术最终提高了总体生产率，并不意味着过渡成本被公平承担。
 
-国际劳工组织 2025 年的研究认为，全球约四分之一就业岗位对生成式 AI 存在一定程度的暴露，“岗位转型”比全面替代更可能发生；但暴露程度在职业、性别和国家收入水平之间高度不均，工作自主性、劳动强度和岗位质量也可能恶化。[ILO 研究](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-of-occupational-exposure)
+国际劳工组织 2025 年的研究认为，全球约四分之一就业岗位对生成式 AI 存在一定程度的暴露，“岗位转型”比全面替代更可能发生；但暴露程度在职业、性别和国家收入水平之间高度不均，工作自主性、劳动强度和岗位质量也可能恶化。[ILO 研究](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure)
 
 因此，真正专业的就业框架不能只问“最后还有没有工作”，还应追问：
 
