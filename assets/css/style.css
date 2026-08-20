@@ -734,3 +734,26 @@ hr {
     gap: 4px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .post-list > li:hover,
+  .theme-toggle:hover,
+  .theme-toggle:focus-visible,
+  .series-card:hover,
+  .series-card:focus-visible {
+    transform: none;
+  }
+}
