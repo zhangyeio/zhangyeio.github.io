@@ -20,7 +20,7 @@
 
 ## 本地运行
 
-请先安装 Ruby、Bundler 和仓库依赖：
+请先安装 Ruby 3.4（仓库中的 `.ruby-version` 固定了当前验证版本）和 Bundler，然后安装仓库依赖：
 
 ```bash
 bundle install
@@ -28,6 +28,12 @@ bundle exec jekyll serve
 ```
 
 默认可在 <http://localhost:4000> 预览。修改 `_config.yml` 后需要重新启动本地服务。
+
+提交前建议运行与 CI 一致的严格构建：
+
+```bash
+JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter --trace
+```
 
 ## 反馈与交流
 

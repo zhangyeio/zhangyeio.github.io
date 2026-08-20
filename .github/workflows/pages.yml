@@ -21,6 +21,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Check out repository
@@ -29,7 +30,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2"
+          ruby-version: "3.4"
           bundler-cache: true
 
       - name: Configure Pages
@@ -37,7 +38,7 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Build Jekyll site
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --trace
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --strict_front_matter --trace
         env:
           JEKYLL_ENV: production
 
@@ -51,6 +52,7 @@ jobs:
       name: github-pages
       url: "${{ steps.deployment.outputs.page_url }}"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     needs: build
 
     steps:
