@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "为了让 AI 读书，人类先把书毁了"
-date: 2026-08-22 00:01:00 +0800
+date: 2026-08-22 12:01:00 +0800
 description: "从一册稀见纸本的去向出发，追问破坏性扫描究竟是知识抢救还是文化破坏，以及图书馆、收藏者、作者、公众与 AI 公司之间的决定权和数据收益权。"
 permalink: /ai-governance/destroying-rare-books-for-ai-training/
 categories:
