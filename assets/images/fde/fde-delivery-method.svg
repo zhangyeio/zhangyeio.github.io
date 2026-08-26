@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1125" viewBox="0 0 2000 1125" role="img" aria-labelledby="title desc">
+  <title id="title">FDE 场景交付方法与团队配置</title>
+  <desc id="desc">用小型跨职能团队在真实业务现场完成诊断、建模、交付、验证和资产沉淀</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#52647C"/></marker>
+    <marker id="arrowDash" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#73839A"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1D2A3B" flood-opacity="0.10"/></filter>
+    <style>
+      text, .box-copy { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .box-copy { height:100%; display:flex; flex-direction:column; justify-content:center; }
+      .box-title { font-weight:750; line-height:1.28; }
+      .box-lines { margin-top:12px; line-height:1.55; }
+      .line + .line { margin-top:3px; }
+      .badge { align-self:center; margin-bottom:10px; padding:3px 10px; border-radius:999px; font-size:14px; font-weight:700; background:rgba(255,255,255,.58); }
+      .slide-title { font-size:42px; font-weight:800; fill:#20345E; }
+      .slide-subtitle { font-size:20px; font-weight:500; fill:#5B687A; }
+      .quote { font-size:23px; font-weight:700; fill:#FFFFFF; }
+    </style>
+  </defs>
+  <rect width="2000" height="1125" fill="#FFFFFF"/>
+  <text x="1000" y="58" class="slide-title" text-anchor="middle">FDE 场景交付方法与团队配置</text>
+  <text x="1000" y="94" class="slide-subtitle" text-anchor="middle">用小型跨职能团队在真实业务现场完成诊断、建模、交付、验证和资产沉淀</text>
+  
+  <g>
+    <rect x="35" y="230" width="210" height="300" rx="16" fill="#243A68" stroke="#243A68" stroke-width="2"/>
+    <foreignObject x="57" y="252" width="166" height="256">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#FFFFFF;text-align:center;">
+        <div class="badge">进入条件</div>
+        <div class="box-title" style="font-size:26px">场景准入</div>
+        <div class="box-lines" style="font-size:17px"><div class="line">业务价值明确</div><div class="line">数据基本可得</div><div class="line">责任人明确</div><div class="line">有限周期可验证</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="285" y="190" width="305" height="380" rx="16" fill="#FFF0CB" stroke="#B68B32" stroke-width="2"/>
+    <foreignObject x="303" y="208" width="269" height="344">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#49380E;text-align:center;">
+        <div class="badge">01</div>
+        <div class="box-title" style="font-size:24px">场景诊断</div>
+        <div class="box-lines" style="font-size:17px"><div class="line">动作：访谈、跟数、流程走查</div><div class="line">输出：问题树、指标基线、边界</div><div class="line">阶段门：问题可量化，责任人明确</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="625" y="190" width="305" height="380" rx="16" fill="#FFF0CB" stroke="#B68B32" stroke-width="2"/>
+    <foreignObject x="643" y="208" width="269" height="344">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#49380E;text-align:center;">
+        <div class="badge">02</div>
+        <div class="box-title" style="font-size:24px">本体映射与治理</div>
+        <div class="box-lines" style="font-size:17px"><div class="line">动作：识别对象、关系、动作</div><div class="line">输出：本体切片、来源、权限</div><div class="line">阶段门：关键语义通过业务复核</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="965" y="190" width="305" height="380" rx="16" fill="#FFF0CB" stroke="#B68B32" stroke-width="2"/>
+    <foreignObject x="983" y="208" width="269" height="344">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#49380E;text-align:center;">
+        <div class="badge">03</div>
+        <div class="box-title" style="font-size:24px">应用组装与联调</div>
+        <div class="box-lines" style="font-size:17px"><div class="line">动作：配置看板、Agent、工作流</div><div class="line">输出：可运行版本、测试与权限</div><div class="line">阶段门：核心路径端到端可运行</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="1305" y="190" width="305" height="380" rx="16" fill="#FFF0CB" stroke="#B68B32" stroke-width="2"/>
+    <foreignObject x="1323" y="208" width="269" height="344">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#49380E;text-align:center;">
+        <div class="badge">04</div>
+        <div class="box-title" style="font-size:24px">影子运行与验证</div>
+        <div class="box-lines" style="font-size:17px"><div class="line">动作：与人工流程并行、比较差异</div><div class="line">输出：评测报告、指标变化、修订项</div><div class="line">阶段门：达到阈值且风险可控</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="1645" y="190" width="305" height="380" rx="16" fill="#FFF0CB" stroke="#B68B32" stroke-width="2"/>
+    <foreignObject x="1663" y="208" width="269" height="344">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#49380E;text-align:center;">
+        <div class="badge">05</div>
+        <div class="box-title" style="font-size:24px">生产发布与移交</div>
+        <div class="box-lines" style="font-size:17px"><div class="line">动作：灰度、培训、SOP、责任移交</div><div class="line">输出：生产版本、手册、责任矩阵</div><div class="line">阶段门：业务、技术、治理共同验收</div></div>
+      </div>
+    </foreignObject>
+  </g><path d="M 245 380 L 278 380" fill="none" stroke="#52647C" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 590 380 L 617 380" fill="none" stroke="#52647C" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 930 380 L 957 380" fill="none" stroke="#52647C" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 1270 380 L 1297 380" fill="none" stroke="#52647C" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 1610 380 L 1637 380" fill="none" stroke="#52647C" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 1800 570 C 1830 650, 1450 655, 1450 700" fill="none" stroke="#52647C" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrowDash)"/><text x="1680" y="645" fill="#445268" font-size="16" font-weight="600" text-anchor="middle">进入持续运营</text>
+  <g>
+    <rect x="35" y="695" width="1930" height="210" rx="22" fill="#F8FAFC" stroke="#D6DDE6" stroke-width="2" />
+    <rect x="57" y="677" width="270" height="38" rx="19" fill="#243A68"/>
+    <text x="77" y="703" fill="#FFFFFF" font-size="20" font-weight="700">跨职能团队配置</text>
+  </g>
+  <g>
+    <rect x="65" y="745" width="285" height="130" rx="16" fill="#E7EFFA" stroke="#6684AE" stroke-width="2"/>
+    <foreignObject x="75" y="755" width="265" height="110">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#172D4D;text-align:center;">
+        
+        <div class="box-title" style="font-size:20px">业务 Sponsor</div>
+        <div class="box-lines" style="font-size:15px"><div class="line">目标 · 优先级 · 资源</div><div class="line">对业务结果负责</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="380" y="745" width="285" height="130" rx="16" fill="#E7EFFA" stroke="#6684AE" stroke-width="2"/>
+    <foreignObject x="390" y="755" width="265" height="110">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#172D4D;text-align:center;">
+        
+        <div class="box-title" style="font-size:20px">领域负责人</div>
+        <div class="box-lines" style="font-size:15px"><div class="line">口径 · 规则 · 动作审核</div><div class="line">对业务语义负责</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="695" y="745" width="285" height="130" rx="16" fill="#ECE7F6" stroke="#73659B" stroke-width="2"/>
+    <foreignObject x="705" y="755" width="265" height="110">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#302A4E;text-align:center;">
+        
+        <div class="box-title" style="font-size:20px">FDE 负责人</div>
+        <div class="box-lines" style="font-size:15px"><div class="line">现场诊断 · 范围 · 节奏</div><div class="line">连接业务与技术</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="1010" y="745" width="285" height="130" rx="16" fill="#DDEFE5" stroke="#3C8061" stroke-width="2"/>
+    <foreignObject x="1020" y="755" width="265" height="110">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#173E2E;text-align:center;">
+        
+        <div class="box-title" style="font-size:20px">本体 / 数据工程师</div>
+        <div class="box-lines" style="font-size:15px"><div class="line">接入 · 对齐 · 建模</div><div class="line">质量 · 血缘 · 版本</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="1325" y="745" width="285" height="130" rx="16" fill="#FFF0CB" stroke="#B68B32" stroke-width="2"/>
+    <foreignObject x="1335" y="755" width="265" height="110">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#49380E;text-align:center;">
+        
+        <div class="box-title" style="font-size:20px">应用交付工程师</div>
+        <div class="box-lines" style="font-size:15px"><div class="line">Agent · 工作流 · 工具</div><div class="line">测试 · 上线 · 运维</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="1640" y="745" width="285" height="130" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="1650" y="755" width="265" height="110">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+        
+        <div class="box-title" style="font-size:20px">平台治理专家</div>
+        <div class="box-lines" style="font-size:15px"><div class="line">架构 · 安全 · 权限</div><div class="line">合规 · 模型 · 运维</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="180" y="950" width="1640" height="105" rx="22" fill="#F7F9FB" stroke="#D6DDE6" stroke-width="2" />
+    <rect x="202" y="932" width="250" height="38" rx="19" fill="#68778B"/>
+    <text x="222" y="958" fill="#FFFFFF" font-size="20" font-weight="700">协作与治理节奏</text>
+  </g>
+  <g>
+    <rect x="220" y="980" width="360" height="54" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="225" y="985" width="350" height="44">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+        
+        <div class="box-title" style="font-size:17px">每日现场同步</div>
+        <div class="box-lines" style="font-size:13px"><div class="line">进展 · 阻塞 · 数据问题</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="620" y="980" width="360" height="54" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="625" y="985" width="350" height="44">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+        
+        <div class="box-title" style="font-size:17px">每周业务回顾</div>
+        <div class="box-lines" style="font-size:13px"><div class="line">指标 · 反馈 · 风险 · 优先级</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="1020" y="980" width="360" height="54" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="1025" y="985" width="350" height="44">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+        
+        <div class="box-title" style="font-size:17px">阶段门评审</div>
+        <div class="box-lines" style="font-size:13px"><div class="line">语义 · 安全 · 质量 · 上线</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="1420" y="980" width="360" height="54" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="1425" y="985" width="350" height="44">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+        
+        <div class="box-title" style="font-size:17px">月度资产复核</div>
+        <div class="box-lines" style="font-size:13px"><div class="line">版本 · 责任人 · 过期与修订</div></div>
+      </div>
+    </foreignObject>
+  </g><rect x="280" y="1080" width="1440" height="30" rx="15" fill="#243A68"/><text x="1000" y="1102" fill="#FFFFFF" font-size="17" font-weight="700" text-anchor="middle">场景不过门不立项｜影子运行不过门不上线｜责任人不明确不移交</text>
+</svg>
