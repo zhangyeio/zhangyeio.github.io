@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">企业本体驱动的 FDE 落地闭环</title>
+  <desc id="desc">从一个可量化的业务问题出发，形成可运行应用，并将验证后的语义持续沉淀为企业资产</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#52647C"/></marker>
+    <marker id="arrowDash" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#73839A"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1D2A3B" flood-opacity="0.10"/></filter>
+    <style>
+      text, .box-copy { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+      .box-copy { height:100%; display:flex; flex-direction:column; justify-content:center; }
+      .box-title { font-weight:750; line-height:1.28; }
+      .box-lines { margin-top:12px; line-height:1.55; }
+      .line + .line { margin-top:3px; }
+      .badge { align-self:center; margin-bottom:10px; padding:3px 10px; border-radius:999px; font-size:14px; font-weight:700; background:rgba(255,255,255,.58); }
+      .slide-title { font-size:42px; font-weight:800; fill:#20345E; }
+      .slide-subtitle { font-size:20px; font-weight:500; fill:#5B687A; }
+      .quote { font-size:23px; font-weight:700; fill:#FFFFFF; }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+  <text x="800" y="58" class="slide-title" text-anchor="middle">企业本体驱动的 FDE 落地闭环</text>
+  <text x="800" y="94" class="slide-subtitle" text-anchor="middle">从一个可量化的业务问题出发，形成可运行应用，并将验证后的语义持续沉淀为企业资产</text>
+  <rect x="55" y="125" width="1490" height="72" rx="16" fill="#243A68"/><text x="800" y="170" class="quote" text-anchor="middle">不是交付一个孤立的 AI 应用，而是建立“业务结果 + 可复用语义资产”的持续交付闭环</text>
+  <g>
+    <rect x="45" y="245" width="270" height="230" rx="16" fill="#E7EFFA" stroke="#6684AE" stroke-width="2"/>
+    <foreignObject x="67" y="267" width="226" height="186">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#172D4D;text-align:center;">
+        <div class="badge">① 从价值出发</div>
+        <div class="box-title" style="font-size:23px">业务命题</div>
+        <div class="box-lines" style="font-size:18px"><div class="line">明确痛点、流程与指标</div><div class="line">确定基线、目标和责任人</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="350" y="245" width="270" height="230" rx="16" fill="#FFF0CB" stroke="#B68B32" stroke-width="2"/>
+    <foreignObject x="372" y="267" width="226" height="186">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#49380E;text-align:center;">
+        <div class="badge">② 进入现场</div>
+        <div class="box-title" style="font-size:23px">FDE 现场诊断</div>
+        <div class="box-lines" style="font-size:18px"><div class="line">访谈真实用户、跟踪数据</div><div class="line">识别根因、约束与场景边界</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="655" y="245" width="270" height="230" rx="16" fill="#DDEFE5" stroke="#3C8061" stroke-width="3"/>
+    <foreignObject x="677" y="267" width="226" height="186">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#173E2E;text-align:center;">
+        <div class="badge">③ 沉淀资产</div>
+        <div class="box-title" style="font-size:23px">本体资产化</div>
+        <div class="box-lines" style="font-size:18px"><div class="line">定义对象、关系、动作</div><div class="line">统一口径、权限、来源与责任</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="960" y="245" width="270" height="230" rx="16" fill="#ECE7F6" stroke="#73659B" stroke-width="2"/>
+    <foreignObject x="982" y="267" width="226" height="186">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#302A4E;text-align:center;">
+        <div class="badge">④ 形成能力</div>
+        <div class="box-title" style="font-size:23px">应用受控运行</div>
+        <div class="box-lines" style="font-size:18px"><div class="line">组装看板、Agent、工作流</div><div class="line">权限校验、人审与异常处理</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="1265" y="245" width="270" height="230" rx="16" fill="#E7EFFA" stroke="#6684AE" stroke-width="3"/>
+    <foreignObject x="1287" y="267" width="226" height="186">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#172D4D;text-align:center;">
+        <div class="badge">⑤ 量化验证</div>
+        <div class="box-title" style="font-size:23px">业务结果验证</div>
+        <div class="box-lines" style="font-size:18px"><div class="line">验证效率、质量、成本与风险</div><div class="line">形成执行记录与改进建议</div></div>
+      </div>
+    </foreignObject>
+  </g><path d="M 315 360 L 336 360" fill="none" stroke="#52647C" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 620 360 L 641 360" fill="none" stroke="#52647C" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 925 360 L 946 360" fill="none" stroke="#52647C" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 1230 360 L 1251 360" fill="none" stroke="#52647C" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 1400 475 C 1420 560, 1120 565, 790 492" fill="none" stroke="#52647C" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrowDash)"/><text x="1125" y="550" fill="#445268" font-size="16" font-weight="600" text-anchor="middle">验证后的语义变更，经治理后回写本体</text><path d="M 1400 475 C 1480 660, 110 660, 180 492" fill="none" stroke="#52647C" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrowDash)"/><text x="800" y="640" fill="#445268" font-size="17" font-weight="600" text-anchor="middle">效果未达标或出现新问题：进入下一轮诊断</text>
+  <g>
+    <rect x="95" y="690" width="660" height="140" rx="22" fill="#F7F4FC" stroke="#D7CEE8" stroke-width="2" />
+    <rect x="117" y="672" width="270" height="38" rx="19" fill="#73659B"/>
+    <text x="137" y="698" fill="#FFFFFF" font-size="20" font-weight="700">每轮交付的直接成果</text>
+  </g>
+  <g>
+    <rect x="125" y="725" width="285" height="80" rx="16" fill="#ECE7F6" stroke="#73659B" stroke-width="2"/>
+    <foreignObject x="135" y="735" width="265" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#302A4E;text-align:center;">
+        
+        <div class="box-title" style="font-size:20px">可运行应用</div>
+        <div class="box-lines" style="font-size:16px"><div class="line">看板 · Agent · 工作流</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="435" y="725" width="285" height="80" rx="16" fill="#E7EFFA" stroke="#6684AE" stroke-width="2"/>
+    <foreignObject x="445" y="735" width="265" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#172D4D;text-align:center;">
+        
+        <div class="box-title" style="font-size:20px">可量化结果</div>
+        <div class="box-lines" style="font-size:16px"><div class="line">效率 · 质量 · 成本 · 风险</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="845" y="690" width="660" height="140" rx="22" fill="#F2FAF6" stroke="#C8E0D3" stroke-width="2" />
+    <rect x="867" y="672" width="290" height="38" rx="19" fill="#3C8061"/>
+    <text x="887" y="698" fill="#FFFFFF" font-size="20" font-weight="700">企业长期沉淀的资产</text>
+  </g>
+  <g>
+    <rect x="875" y="725" width="285" height="80" rx="16" fill="#DDEFE5" stroke="#3C8061" stroke-width="2"/>
+    <foreignObject x="885" y="735" width="265" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#173E2E;text-align:center;">
+        
+        <div class="box-title" style="font-size:20px">语义与行动资产</div>
+        <div class="box-lines" style="font-size:16px"><div class="line">对象 · 关系 · 动作 · 权限</div></div>
+      </div>
+    </foreignObject>
+  </g>
+  <g>
+    <rect x="1185" y="725" width="285" height="80" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="1195" y="735" width="265" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+        
+        <div class="box-title" style="font-size:20px">治理与运行证据</div>
+        <div class="box-lines" style="font-size:16px"><div class="line">来源 · 版本 · 责任 · 审计</div></div>
+      </div>
+    </foreignObject>
+  </g>
+</svg>
