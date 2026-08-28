@@ -2,6 +2,7 @@
 layout: post
 title: "Nvidia 130 亿美元收购 Hugging Face？它真正想控制的，是 AI 世界的默认入口"
 date: 2026-08-29 06:20:00 +0800
+permalink: /人工智能/技术评论/2026/08/29/nvidia-hugging-face-default-ai-gateway.html
 categories:
   - 人工智能
   - 技术评论
