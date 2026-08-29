@@ -10,6 +10,7 @@
       .box-copy { height:100%; display:flex; flex-direction:column; justify-content:center; }
       .box-title { font-weight:750; line-height:1.28; }
       .box-lines { margin-top:12px; line-height:1.55; }
+      .box-copy.compact .box-lines { margin-top:6px; line-height:1.3; }
       .line + .line { margin-top:3px; }
       .badge { align-self:center; margin-bottom:10px; padding:3px 10px; border-radius:999px; font-size:14px; font-weight:700; background:rgba(255,255,255,.58); }
       .slide-title { font-size:42px; font-weight:800; fill:#20345E; }
@@ -312,9 +313,9 @@
     <text x="367" y="953" fill="#FFFFFF" font-size="20" font-weight="700">五、连接与数据工程层</text>
   </g>
   <g>
-    <rect x="350" y="980" width="280" height="68" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
-    <foreignObject x="356" y="986" width="268" height="56">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+    <rect x="350" y="975" width="280" height="78" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="356" y="981" width="268" height="66">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy compact" style="color:#283647;text-align:center;">
         
         <div class="box-title" style="font-size:17px">系统连接器</div>
         <div class="box-lines" style="font-size:13px"><div class="line">API · 数据库 · 事件</div><div class="line">文件 · MCP</div></div>
@@ -322,9 +323,9 @@
     </foreignObject>
   </g>
   <g>
-    <rect x="670" y="980" width="280" height="68" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
-    <foreignObject x="676" y="986" width="268" height="56">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+    <rect x="670" y="975" width="280" height="78" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="676" y="981" width="268" height="66">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy compact" style="color:#283647;text-align:center;">
         
         <div class="box-title" style="font-size:17px">采集与同步</div>
         <div class="box-lines" style="font-size:13px"><div class="line">批量 · CDC · 事件流</div><div class="line">文档增量更新</div></div>
@@ -332,9 +333,9 @@
     </foreignObject>
   </g>
   <g>
-    <rect x="990" y="980" width="280" height="68" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
-    <foreignObject x="996" y="986" width="268" height="56">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+    <rect x="990" y="975" width="280" height="78" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="996" y="981" width="268" height="66">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy compact" style="color:#283647;text-align:center;">
         
         <div class="box-title" style="font-size:17px">解析与对齐</div>
         <div class="box-lines" style="font-size:13px"><div class="line">文档切分 · 字段映射</div><div class="line">实体匹配 · 关系识别</div></div>
@@ -342,9 +343,9 @@
     </foreignObject>
   </g>
   <g>
-    <rect x="1310" y="980" width="280" height="68" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
-    <foreignObject x="1316" y="986" width="268" height="56">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+    <rect x="1310" y="975" width="280" height="78" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="1316" y="981" width="268" height="66">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy compact" style="color:#283647;text-align:center;">
         
         <div class="box-title" style="font-size:17px">质量与血缘</div>
         <div class="box-lines" style="font-size:13px"><div class="line">完整 · 一致 · 时效</div><div class="line">来源与转换记录</div></div>
@@ -352,9 +353,9 @@
     </foreignObject>
   </g>
   <g>
-    <rect x="1630" y="980" width="280" height="68" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
-    <foreignObject x="1636" y="986" width="268" height="56">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+    <rect x="1630" y="975" width="280" height="78" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="1636" y="981" width="268" height="66">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy compact" style="color:#283647;text-align:center;">
         
         <div class="box-title" style="font-size:17px">受控写回</div>
         <div class="box-lines" style="font-size:13px"><div class="line">幂等 · 重试 · 补偿</div><div class="line">权限检查 · 执行回执</div></div>
