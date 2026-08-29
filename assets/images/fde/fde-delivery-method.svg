@@ -10,6 +10,7 @@
       .box-copy { height:100%; display:flex; flex-direction:column; justify-content:center; }
       .box-title { font-weight:750; line-height:1.28; }
       .box-lines { margin-top:12px; line-height:1.55; }
+      .box-copy.compact .box-lines { margin-top:6px; line-height:1.3; }
       .line + .line { margin-top:3px; }
       .badge { align-self:center; margin-bottom:10px; padding:3px 10px; border-radius:999px; font-size:14px; font-weight:700; background:rgba(255,255,255,.58); }
       .slide-title { font-size:42px; font-weight:800; fill:#20345E; }
@@ -152,9 +153,9 @@
     <text x="222" y="958" fill="#FFFFFF" font-size="20" font-weight="700">协作与治理节奏</text>
   </g>
   <g>
-    <rect x="220" y="980" width="360" height="54" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
-    <foreignObject x="225" y="985" width="350" height="44">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+    <rect x="220" y="975" width="360" height="70" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="225" y="980" width="350" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy compact" style="color:#283647;text-align:center;">
         
         <div class="box-title" style="font-size:17px">每日现场同步</div>
         <div class="box-lines" style="font-size:13px"><div class="line">进展 · 阻塞 · 数据问题</div></div>
@@ -162,9 +163,9 @@
     </foreignObject>
   </g>
   <g>
-    <rect x="620" y="980" width="360" height="54" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
-    <foreignObject x="625" y="985" width="350" height="44">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+    <rect x="620" y="975" width="360" height="70" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="625" y="980" width="350" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy compact" style="color:#283647;text-align:center;">
         
         <div class="box-title" style="font-size:17px">每周业务回顾</div>
         <div class="box-lines" style="font-size:13px"><div class="line">指标 · 反馈 · 风险 · 优先级</div></div>
@@ -172,9 +173,9 @@
     </foreignObject>
   </g>
   <g>
-    <rect x="1020" y="980" width="360" height="54" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
-    <foreignObject x="1025" y="985" width="350" height="44">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+    <rect x="1020" y="975" width="360" height="70" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="1025" y="980" width="350" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy compact" style="color:#283647;text-align:center;">
         
         <div class="box-title" style="font-size:17px">阶段门评审</div>
         <div class="box-lines" style="font-size:13px"><div class="line">语义 · 安全 · 质量 · 上线</div></div>
@@ -182,9 +183,9 @@
     </foreignObject>
   </g>
   <g>
-    <rect x="1420" y="980" width="360" height="54" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
-    <foreignObject x="1425" y="985" width="350" height="44">
-      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy" style="color:#283647;text-align:center;">
+    <rect x="1420" y="975" width="360" height="70" rx="16" fill="#EFF2F6" stroke="#8794A5" stroke-width="2"/>
+    <foreignObject x="1425" y="980" width="350" height="60">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="box-copy compact" style="color:#283647;text-align:center;">
         
         <div class="box-title" style="font-size:17px">月度资产复核</div>
         <div class="box-lines" style="font-size:13px"><div class="line">版本 · 责任人 · 过期与修订</div></div>
