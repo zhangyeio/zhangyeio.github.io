@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Function Calling 的一次完整往返</title>
+  <desc id="desc">模型读取 Schema 后申请工具，程序执行 Python 函数，结果写回 Context，模型再决定下一步。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 25px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.card{fill:#fff;stroke:#cbd5e1;stroke-width:2}.head{font:700 19px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.body{font:400 15px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}.code{font:400 14px Consolas,'Microsoft YaHei',monospace;fill:#0f172a}.num{font:700 17px Arial,sans-serif;fill:#fff}.arrow{stroke:#64748b;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.soft{fill:#eff6ff;stroke:#93c5fd;stroke-width:2}.tool{fill:#f5f3ff;stroke:#c4b5fd;stroke-width:2}.result{fill:#ecfdf5;stroke:#6ee7b7;stroke-width:2}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="520" rx="18"/>
+  <text class="title" x="600" y="42" text-anchor="middle">模型只“申请调用”，程序才真正执行</text>
+
+  <g transform="translate(54,78)">
+    <rect class="soft" width="500" height="92" rx="14"/>
+    <text class="head" x="24" y="31">给模型看的：Schema（菜单）</text>
+    <text class="code" x="24" y="60">order_get(order_id: string)</text>
+    <text class="body" x="292" y="60">说明“有什么工具、参数怎么写”</text>
+  </g>
+  <g transform="translate(646,78)">
+    <rect class="tool" width="500" height="92" rx="14"/>
+    <text class="head" x="24" y="31">给程序用的：Python 函数（厨房）</text>
+    <text class="code" x="24" y="60">def order_get(order_id): ...</text>
+    <text class="body" x="292" y="60">真正查询并返回业务数据</text>
+  </g>
+
+  <path class="arrow" d="M185 254 H300"/><path class="arrow" d="M482 254 H598"/><path class="arrow" d="M780 254 H896"/>
+  <g transform="translate(45,205)">
+    <rect class="card" width="140" height="100" rx="14"/>
+    <circle cx="24" cy="24" r="16" fill="#2563eb"/><text class="num" x="24" y="30" text-anchor="middle">1</text>
+    <text class="head" x="70" y="57" text-anchor="middle">模型判断</text>
+    <text class="body" x="70" y="82" text-anchor="middle">需要查订单</text>
+  </g>
+  <g transform="translate(300,195)">
+    <rect class="soft" width="182" height="120" rx="14"/>
+    <circle cx="25" cy="25" r="16" fill="#2563eb"/><text class="num" x="25" y="31" text-anchor="middle">2</text>
+    <text class="head" x="91" y="54" text-anchor="middle">调用申请</text>
+    <text class="code" x="91" y="80" text-anchor="middle">order_get</text>
+    <text class="code" x="91" y="103" text-anchor="middle">{order_id: A1024}</text>
+  </g>
+  <g transform="translate(598,195)">
+    <rect class="tool" width="182" height="120" rx="14"/>
+    <circle cx="25" cy="25" r="16" fill="#7c3aed"/><text class="num" x="25" y="31" text-anchor="middle">3</text>
+    <text class="head" x="91" y="57" text-anchor="middle">程序执行</text>
+    <text class="code" x="91" y="84" text-anchor="middle">REFUND_TOOLS</text>
+    <text class="body" x="91" y="106" text-anchor="middle">找到真正函数</text>
+  </g>
+  <g transform="translate(896,195)">
+    <rect class="result" width="250" height="120" rx="14"/>
+    <circle cx="25" cy="25" r="16" fill="#059669"/><text class="num" x="25" y="31" text-anchor="middle">4</text>
+    <text class="head" x="125" y="54" text-anchor="middle">结果写回 Context</text>
+    <text class="code" x="125" y="80" text-anchor="middle">role = tool</text>
+    <text class="body" x="125" y="104" text-anchor="middle">refund_status = 失败</text>
+  </g>
+
+  <path class="arrow" d="M1021 315 C1021 410 748 442 600 442 C405 442 115 408 115 305"/>
+  <text class="head" x="600" y="402" text-anchor="middle">下一轮：模型看到新事实，再决定继续查什么</text>
+  <text class="body" x="600" y="474" text-anchor="middle">没有第 3 步，工具从未执行；没有第 4 步，模型看不到结果。</text>
+</svg>

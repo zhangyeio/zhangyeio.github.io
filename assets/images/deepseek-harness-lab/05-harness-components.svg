@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
+  <title id="title">最小 Harness 的五个组件</title>
+  <desc id="desc">Loop 驱动模型，Tools 执行工具，Session 记录事件，Hook 检查能否结束，Evaluation 在结束后评分。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 25px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.shell{fill:#fff;stroke:#94a3b8;stroke-width:2.5}.loop{fill:#f5f3ff;stroke:#c4b5fd;stroke-width:2}.tools{fill:#fff7ed;stroke:#fdba74;stroke-width:2}.session{fill:#eff6ff;stroke:#93c5fd;stroke-width:2}.hook{fill:#fef2f2;stroke:#fca5a5;stroke-width:2}.eval{fill:#ecfdf5;stroke:#6ee7b7;stroke-width:2}.model{fill:#fff;stroke:#7c3aed;stroke-width:3}.head{font:700 19px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.body{font:400 14px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}.arrow{stroke:#64748b;stroke-width:2.4;fill:none;marker-end:url(#arrow)}.dash{stroke:#94a3b8;stroke-width:2;stroke-dasharray:7 6;fill:none;marker-end:url(#arrow)}.label{font:600 13px 'Microsoft YaHei',Arial,sans-serif;fill:#334155}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="590" rx="18"/>
+  <text class="title" x="600" y="42" text-anchor="middle">Harness：围在模型外面的运行系统</text>
+  <rect class="shell" x="45" y="68" width="1110" height="468" rx="24"/>
+
+  <g transform="translate(85,118)">
+    <rect class="loop" width="225" height="118" rx="16"/>
+    <text class="head" x="112" y="37" text-anchor="middle">Loop</text>
+    <text class="body" x="112" y="69" text-anchor="middle">问模型、拿结果、再问</text>
+    <text class="body" x="112" y="93" text-anchor="middle">推动每一轮执行</text>
+  </g>
+  <path class="arrow" d="M310 177 H458"/>
+  <g transform="translate(458,108)">
+    <rect class="model" width="284" height="138" rx="69"/>
+    <text class="head" x="142" y="58" text-anchor="middle">模型</text>
+    <text class="body" x="142" y="89" text-anchor="middle">理解 Context，判断下一步</text>
+  </g>
+  <path class="arrow" d="M742 177 H890"/>
+  <g transform="translate(890,118)">
+    <rect class="tools" width="225" height="118" rx="16"/>
+    <text class="head" x="112" y="37" text-anchor="middle">Tools</text>
+    <text class="body" x="112" y="69" text-anchor="middle">检查、执行工具</text>
+    <text class="body" x="112" y="93" text-anchor="middle">返回真实结果</text>
+  </g>
+
+  <path class="dash" d="M1002 236 C1002 300 828 320 742 326"/>
+  <path class="dash" d="M198 236 C198 300 372 320 458 326"/>
+  <g transform="translate(458,292)">
+    <rect class="session" width="284" height="104" rx="16"/>
+    <text class="head" x="142" y="36" text-anchor="middle">Session</text>
+    <text class="body" x="142" y="66" text-anchor="middle">追加记录“实际发生过什么”</text>
+    <text class="body" x="142" y="88" text-anchor="middle">供回放、门禁和评估使用</text>
+  </g>
+
+  <path class="arrow" d="M600 396 V431"/>
+  <g transform="translate(312,431)">
+    <rect class="hook" width="252" height="80" rx="14"/>
+    <text class="head" x="126" y="32" text-anchor="middle">Hook</text>
+    <text class="body" x="126" y="58" text-anchor="middle">提交答案前：证据够吗？</text>
+  </g>
+  <g transform="translate(636,431)">
+    <rect class="eval" width="252" height="80" rx="14"/>
+    <text class="head" x="126" y="32" text-anchor="middle">Evaluation</text>
+    <text class="body" x="126" y="58" text-anchor="middle">任务结束后：完成得好吗？</text>
+  </g>
+  <path class="arrow" d="M564 471 H636"/>
+  <text class="label" x="600" y="456" text-anchor="middle">通过后</text>
+  <path class="arrow" d="M312 471 C185 471 113 410 113 236"/>
+  <text class="label" x="165" y="440">不通过：继续 Loop</text>
+  <text class="body" x="600" y="566" text-anchor="middle">模型负责判断；Harness 负责执行、记录、拦截和验收。</text>
+</svg>

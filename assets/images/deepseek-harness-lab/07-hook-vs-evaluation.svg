@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="540" viewBox="0 0 1100 540" role="img" aria-labelledby="title desc">
+  <title id="title">Hook 与 Evaluation 的区别</title>
+  <desc id="desc">Hook 在运行中决定能不能结束；Evaluation 在结束后同时检查过程和结果。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 24px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.node{fill:#fff;stroke:#cbd5e1;stroke-width:2}.hook{fill:#fef2f2;stroke:#fca5a5;stroke-width:2}.eval{fill:#ecfdf5;stroke:#6ee7b7;stroke-width:2}.back{fill:#fff7ed;stroke:#fdba74;stroke-width:2}.head{font:700 19px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.body{font:400 14px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}.label{font:600 13px 'Microsoft YaHei',Arial,sans-serif;fill:#334155}.arrow{stroke:#64748b;stroke-width:2.4;fill:none;marker-end:url(#arrow)}.cell-good{fill:#ecfdf5}.cell-mid{fill:#fff7ed}.cell-bad{fill:#fef2f2}.grid{stroke:#cbd5e1;stroke-width:1.5}.gtext{font:600 13px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}
+    </style>
+  </defs>
+  <rect class="bg" width="1100" height="540" rx="18"/>
+  <text class="title" x="550" y="40" text-anchor="middle">Hook 管“能不能交卷”，Evaluation 管“交卷后得几分”</text>
+
+  <g transform="translate(55,86)"><rect class="node" width="205" height="86" rx="14"/><text class="head" x="102" y="34" text-anchor="middle">模型提交文字答案</text><text class="body" x="102" y="61" text-anchor="middle">想结束当前任务</text></g>
+  <path class="arrow" d="M260 129 H344"/>
+  <g transform="translate(344,78)"><rect class="hook" width="230" height="102" rx="16"/><text class="head" x="115" y="36" text-anchor="middle">Hook：运行中</text><text class="body" x="115" y="66" text-anchor="middle">必需证据是否齐全？</text></g>
+  <path class="arrow" d="M574 110 H660"/>
+  <text class="label" x="617" y="96" text-anchor="middle">齐全</text>
+  <g transform="translate(660,78)"><rect class="node" width="170" height="102" rx="16"/><text class="head" x="85" y="43" text-anchor="middle">允许结束</text><text class="body" x="85" y="72" text-anchor="middle">保存最终答案</text></g>
+  <path class="arrow" d="M830 129 H905"/>
+  <g transform="translate(905,78)"><rect class="eval" width="150" height="102" rx="16"/><text class="head" x="75" y="36" text-anchor="middle">Evaluation</text><text class="body" x="75" y="64" text-anchor="middle">结束后评分</text><text class="body" x="75" y="84" text-anchor="middle">过程 + 结果</text></g>
+  <path class="arrow" d="M459 180 V226 H158 V172"/>
+  <text class="label" x="310" y="216" text-anchor="middle">缺证据：反馈缺口，继续 Loop</text>
+
+  <text class="head" x="550" y="275" text-anchor="middle">为什么评估必须同时看过程和结果？</text>
+  <g transform="translate(170,300)">
+    <rect class="node" width="760" height="184" rx="14"/>
+    <line class="grid" x1="150" y1="0" x2="150" y2="184"/><line class="grid" x1="455" y1="0" x2="455" y2="184"/>
+    <line class="grid" x1="0" y1="52" x2="760" y2="52"/><line class="grid" x1="0" y1="118" x2="760" y2="118"/>
+    <rect class="cell-good" x="455" y="52" width="305" height="66"/><rect class="cell-mid" x="150" y="52" width="305" height="66"/>
+    <rect class="cell-mid" x="455" y="118" width="305" height="66"/><rect class="cell-bad" x="150" y="118" width="305" height="66"/>
+    <text class="gtext" x="75" y="32" text-anchor="middle">执行过程</text>
+    <text class="gtext" x="302" y="32" text-anchor="middle">答案不完整 / 错误</text>
+    <text class="gtext" x="607" y="32" text-anchor="middle">答案正确完整</text>
+    <text class="gtext" x="75" y="91" text-anchor="middle">查齐证据</text>
+    <text class="gtext" x="302" y="91" text-anchor="middle">过程合格，表达需改进</text>
+    <text class="gtext" x="607" y="91" text-anchor="middle">可靠成功</text>
+    <text class="gtext" x="75" y="157" text-anchor="middle">没查证据</text>
+    <text class="gtext" x="302" y="157" text-anchor="middle">明确失败</text>
+    <text class="gtext" x="607" y="150" text-anchor="middle">可能只是碰巧猜对</text>
+    <text class="body" x="607" y="171" text-anchor="middle">不能算可靠成功</text>
+  </g>
+</svg>

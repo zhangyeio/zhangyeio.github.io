@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-labelledby="title desc">
+  <title id="title">Workflow 与 Agent 的区别</title>
+  <desc id="desc">Workflow 的步骤提前固定；Agent 根据工具返回的新事实选择不同下一步。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:2}.title{font:700 24px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.head{font:700 20px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.body{font:400 15px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}.node{fill:#eff6ff;stroke:#93c5fd;stroke-width:2}.branch{fill:#f5f3ff;stroke:#c4b5fd;stroke-width:2}.result{fill:#ecfdf5;stroke:#6ee7b7;stroke-width:2}.text{font:600 15px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.arrow{stroke:#64748b;stroke-width:2.3;fill:none;marker-end:url(#arrow)}.label{font:500 13px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}
+    </style>
+  </defs>
+  <rect class="bg" width="1100" height="430" rx="18"/>
+  <text class="title" x="550" y="40" text-anchor="middle">区别不在“步骤多少”，而在“下一步由谁决定”</text>
+
+  <g transform="translate(42,72)">
+    <rect class="panel" width="480" height="310" rx="16"/>
+    <text class="head" x="240" y="39" text-anchor="middle">Workflow：代码提前固定路径</text>
+    <g transform="translate(40,112)"><rect class="node" width="105" height="66" rx="12"/><text class="text" x="52" y="40" text-anchor="middle">主管审批</text></g>
+    <path class="arrow" d="M145 145 H188"/>
+    <g transform="translate(188,112)"><rect class="node" width="105" height="66" rx="12"/><text class="text" x="52" y="40" text-anchor="middle">HR 备案</text></g>
+    <path class="arrow" d="M293 145 H336"/>
+    <g transform="translate(336,112)"><rect class="node" width="105" height="66" rx="12"/><text class="text" x="52" y="40" text-anchor="middle">通知员工</text></g>
+    <text class="body" x="240" y="232" text-anchor="middle">无论中间返回什么，流程顺序已经写好</text>
+    <text class="body" x="240" y="263" text-anchor="middle">适合稳定、规则明确的流程</text>
+  </g>
+
+  <g transform="translate(578,72)">
+    <rect class="panel" width="480" height="310" rx="16"/>
+    <text class="head" x="240" y="39" text-anchor="middle">Agent：新事实决定下一步</text>
+    <g transform="translate(37,122)"><rect class="branch" width="112" height="66" rx="12"/><text class="text" x="56" y="40" text-anchor="middle">查快递状态</text></g>
+    <path class="arrow" d="M149 155 H215"/>
+    <g transform="translate(215,112)"><rect class="branch" width="105" height="86" rx="43"/><text class="text" x="52" y="36" text-anchor="middle">返回什么</text><text class="text" x="52" y="61" text-anchor="middle">新事实？</text></g>
+    <path class="arrow" d="M320 136 C362 107 384 94 420 94"/>
+    <path class="arrow" d="M320 174 C362 203 384 216 420 216"/>
+    <text class="label" x="350" y="91" text-anchor="end">天气异常</text>
+    <text class="label" x="350" y="232" text-anchor="end">地址异常</text>
+    <g transform="translate(366,62)"><rect class="result" width="90" height="54" rx="10"/><text class="text" x="45" y="34" text-anchor="middle">查天气</text></g>
+    <g transform="translate(366,216)"><rect class="result" width="90" height="54" rx="10"/><text class="text" x="45" y="34" text-anchor="middle">核对地址</text></g>
+    <text class="body" x="240" y="278" text-anchor="middle">模型在允许的动作中，根据 Context 选择路径</text>
+  </g>
+</svg>

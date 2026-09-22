@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">从聊天到 Harness 的六级学习台阶</title>
+  <desc id="desc">从一次聊天开始，依次理解普通函数、调用申请、最小循环、Harness 和迁移案例。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/>
+    </marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 25px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.step{fill:#fff;stroke:#cbd5e1;stroke-width:2}.n{font:700 18px Arial,sans-serif;fill:#fff}.h{font:700 18px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.s{font:400 14px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}.arrow{stroke:#64748b;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="330" rx="18"/>
+  <text class="title" x="600" y="42" text-anchor="middle">每一级只增加一个新东西</text>
+
+  <path class="arrow" d="M202 155 H225"/><path class="arrow" d="M397 155 H420"/><path class="arrow" d="M592 155 H615"/>
+  <path class="arrow" d="M787 155 H810"/><path class="arrow" d="M982 155 H1005"/>
+
+  <g transform="translate(30,88)">
+    <rect class="step" width="172" height="142" rx="14"/>
+    <circle cx="28" cy="29" r="18" fill="#2563eb"/><text class="n" x="28" y="35" text-anchor="middle">1</text>
+    <text class="h" x="86" y="74" text-anchor="middle">一次聊天</text>
+    <text class="s" x="86" y="101" text-anchor="middle">模型能回答文字</text>
+    <text class="s" x="86" y="124" text-anchor="middle">但没有真实数据</text>
+  </g>
+  <g transform="translate(225,88)">
+    <rect class="step" width="172" height="142" rx="14"/>
+    <circle cx="28" cy="29" r="18" fill="#2563eb"/><text class="n" x="28" y="35" text-anchor="middle">2</text>
+    <text class="h" x="86" y="74" text-anchor="middle">普通函数</text>
+    <text class="s" x="86" y="101" text-anchor="middle">工具首先只是</text>
+    <text class="s" x="86" y="124" text-anchor="middle">Python 函数</text>
+  </g>
+  <g transform="translate(420,88)">
+    <rect class="step" width="172" height="142" rx="14"/>
+    <circle cx="28" cy="29" r="18" fill="#7c3aed"/><text class="n" x="28" y="35" text-anchor="middle">3</text>
+    <text class="h" x="86" y="74" text-anchor="middle">调用申请</text>
+    <text class="s" x="86" y="101" text-anchor="middle">Schema 让模型</text>
+    <text class="s" x="86" y="124" text-anchor="middle">学会“点名工具”</text>
+  </g>
+  <g transform="translate(615,88)">
+    <rect class="step" width="172" height="142" rx="14"/>
+    <circle cx="28" cy="29" r="18" fill="#7c3aed"/><text class="n" x="28" y="35" text-anchor="middle">4</text>
+    <text class="h" x="86" y="74" text-anchor="middle">最小 Loop</text>
+    <text class="s" x="86" y="101" text-anchor="middle">执行、写回</text>
+    <text class="s" x="86" y="124" text-anchor="middle">再让模型判断</text>
+  </g>
+  <g transform="translate(810,88)">
+    <rect class="step" width="172" height="142" rx="14"/>
+    <circle cx="28" cy="29" r="18" fill="#059669"/><text class="n" x="28" y="35" text-anchor="middle">5</text>
+    <text class="h" x="86" y="74" text-anchor="middle">Harness</text>
+    <text class="s" x="86" y="101" text-anchor="middle">记录、治理</text>
+    <text class="s" x="86" y="124" text-anchor="middle">门禁、评估</text>
+  </g>
+  <g transform="translate(1005,88)">
+    <rect class="step" width="165" height="142" rx="14"/>
+    <circle cx="28" cy="29" r="18" fill="#d97706"/><text class="n" x="28" y="35" text-anchor="middle">6</text>
+    <text class="h" x="82" y="74" text-anchor="middle">迁移案例</text>
+    <text class="s" x="82" y="101" text-anchor="middle">保留运行系统</text>
+    <text class="s" x="82" y="124" text-anchor="middle">只替换业务部分</text>
+  </g>
+  <text class="s" x="600" y="285" text-anchor="middle">聊天能力 → 获取事实 → 多步行动 → 可靠完成</text>
+</svg>

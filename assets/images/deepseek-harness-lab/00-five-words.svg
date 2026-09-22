@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">五个词的关系：做晚饭</title>
+  <desc id="desc">模型像会想菜但不掀冰箱门的人，工具像打开冰箱和橱柜，Context 是便签上已知道的事，Loop 把看到的写回便签再决定下一步，合在一起才是 Agent。</desc>
+  <defs>
+    <marker id="arrow-five" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/>
+    </marker>
+    <style>
+      .bg{fill:#f8fafc}
+      .title{font:700 25px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}
+      .shell{fill:#fff;stroke:#94a3b8;stroke-width:2.5}
+      .context{fill:#eff6ff;stroke:#93c5fd;stroke-width:2}
+      .model{fill:#f5f3ff;stroke:#c4b5fd;stroke-width:2.5}
+      .tool{fill:#fff7ed;stroke:#fdba74;stroke-width:2}
+      .done{fill:#ecfdf5;stroke:#6ee7b7;stroke-width:2}
+      .head{font:700 19px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}
+      .sub{font:600 14px 'Microsoft YaHei',Arial,sans-serif;fill:#64748b}
+      .body{font:400 15px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}
+      .item{font:400 14px 'Microsoft YaHei',Arial,sans-serif;fill:#334155}
+      .arrow{stroke:#64748b;stroke-width:2.5;fill:none;marker-end:url(#arrow-five)}
+      .loop{stroke:#7c3aed;stroke-width:2.6;fill:none;marker-end:url(#arrow-five)}
+      .label{font:600 14px 'Microsoft YaHei',Arial,sans-serif;fill:#334155}
+      .looplabel{font:700 15px 'Microsoft YaHei',Arial,sans-serif;fill:#6d28d9}
+      .shelllabel{font:700 16px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}
+      .caption{font:400 15px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}
+      .n{font:700 15px Arial,sans-serif;fill:#fff}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="620" rx="18"/>
+  <text class="title" x="600" y="40" text-anchor="middle">五个词其实是一次做晚饭</text>
+
+  <rect class="shell" x="36" y="62" width="1128" height="500" rx="24"/>
+  <text class="shelllabel" x="68" y="94">Agent（这一整次：会想菜、会开冰箱、缺什么就再看）</text>
+
+  <g transform="translate(68,122)">
+    <rect class="context" width="280" height="248" rx="16"/>
+    <circle cx="28" cy="28" r="16" fill="#2563eb"/><text class="n" x="28" y="34" text-anchor="middle">1</text>
+    <text class="head" x="56" y="28">Context</text>
+    <text class="sub" x="56" y="50">贴在冰箱上的便签</text>
+    <text class="item" x="24" y="92">家人：今晚想吃番茄炒蛋</text>
+    <text class="item" x="24" y="122">冰箱：有番茄，没鸡蛋</text>
+    <text class="item" x="24" y="152">橱柜：有豆腐、有米</text>
+    <text class="body" x="140" y="198" text-anchor="middle">每轮只能根据便签判断</text>
+    <text class="body" x="140" y="224" text-anchor="middle">新看到的也会写回来</text>
+  </g>
+
+  <path class="arrow" d="M348 246 H430"/>
+  <text class="label" x="389" y="230" text-anchor="middle">看便签</text>
+
+  <g transform="translate(430,148)">
+    <rect class="model" width="300" height="196" rx="98"/>
+    <circle cx="150" cy="36" r="16" fill="#7c3aed"/><text class="n" x="150" y="42" text-anchor="middle">2</text>
+    <text class="head" x="150" y="78" text-anchor="middle">模型 / 做饭的人</text>
+    <text class="body" x="150" y="108" text-anchor="middle">听得懂「想吃番茄炒蛋」</text>
+    <text class="body" x="150" y="136" text-anchor="middle">但隔着门看不见冰箱里</text>
+    <text class="body" x="150" y="164" text-anchor="middle">不打开，就只能猜有鸡蛋</text>
+  </g>
+
+  <path class="arrow" d="M730 246 H812"/>
+  <text class="label" x="771" y="230" text-anchor="middle">去打开</text>
+
+  <g transform="translate(812,122)">
+    <rect class="tool" width="316" height="248" rx="16"/>
+    <circle cx="28" cy="28" r="16" fill="#d97706"/><text class="n" x="28" y="34" text-anchor="middle">3</text>
+    <text class="head" x="56" y="28">工具 / 打开去看</text>
+    <text class="sub" x="56" y="50">手才真正打开门</text>
+    <text class="item" x="28" y="96">打开冰箱()</text>
+    <text class="item" x="28" y="126">→ 有番茄，没有鸡蛋</text>
+    <text class="item" x="28" y="164">看橱柜()</text>
+    <text class="item" x="28" y="194">→ 有豆腐、有米</text>
+    <text class="body" x="158" y="228" text-anchor="middle">人只说「去看」，手才执行</text>
+  </g>
+
+  <path class="loop" d="M970 370 C970 418 230 418 208 370"/>
+  <text class="looplabel" x="600" y="408" text-anchor="middle">4  Loop：看到什么写回便签，再决定下一步</text>
+
+  <g transform="translate(360,448)">
+    <rect class="done" width="480" height="86" rx="14"/>
+    <text class="head" x="240" y="32" text-anchor="middle">食材清楚了，定菜单</text>
+    <text class="body" x="240" y="60" text-anchor="middle">鸡蛋没了，今晚改做番茄豆腐，配米饭</text>
+  </g>
+
+  <text class="caption" x="600" y="592" text-anchor="middle">模型负责想下一步，工具负责看真实世界，Loop 让便签越写越全。合在一起，才叫 Agent。</text>
+</svg>

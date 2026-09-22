@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">最小 Agent Loop</title>
+  <desc id="desc">Context 进入模型，模型可以申请工具，程序执行并将结果写回 Context；模型也可以输出最终答案结束。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 25px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.card{fill:#fff;stroke:#cbd5e1;stroke-width:2}.context{fill:#eff6ff;stroke:#93c5fd;stroke-width:2}.model{fill:#f5f3ff;stroke:#c4b5fd;stroke-width:2}.tool{fill:#fff7ed;stroke:#fdba74;stroke-width:2}.done{fill:#ecfdf5;stroke:#6ee7b7;stroke-width:2}.head{font:700 19px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.body{font:400 15px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}.code{font:400 14px Consolas,'Microsoft YaHei',monospace;fill:#0f172a}.arrow{stroke:#64748b;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.label{font:600 14px 'Microsoft YaHei',Arial,sans-serif;fill:#334155}
+    </style>
+  </defs>
+  <rect class="bg" width="1100" height="560" rx="18"/>
+  <text class="title" x="550" y="43" text-anchor="middle">最小 Agent Loop：新事实推动下一步</text>
+
+  <g transform="translate(70,102)">
+    <rect class="context" width="250" height="156" rx="16"/>
+    <text class="head" x="125" y="38" text-anchor="middle">Context / messages</text>
+    <text class="body" x="24" y="72">• 系统要求</text>
+    <text class="body" x="24" y="101">• 用户任务</text>
+    <text class="body" x="24" y="130">• 历史回复与工具结果</text>
+  </g>
+  <path class="arrow" d="M320 180 H422"/>
+  <text class="label" x="371" y="164" text-anchor="middle">每轮重发</text>
+
+  <g transform="translate(422,110)">
+    <rect class="model" width="256" height="140" rx="70"/>
+    <text class="head" x="128" y="61" text-anchor="middle">模型判断</text>
+    <text class="body" x="128" y="91" text-anchor="middle">还要查，还是可以回答？</text>
+  </g>
+
+  <path class="arrow" d="M678 150 C770 120 832 118 884 148"/>
+  <text class="label" x="786" y="111" text-anchor="middle">有 tool_calls</text>
+  <g transform="translate(820,148)">
+    <rect class="tool" width="230" height="154" rx="16"/>
+    <text class="head" x="115" y="37" text-anchor="middle">程序执行工具</text>
+    <text class="code" x="115" y="72" text-anchor="middle">execute_tool(...)</text>
+    <text class="body" x="115" y="103" text-anchor="middle">拿到真实结果</text>
+    <text class="body" x="115" y="129" text-anchor="middle">追加 role = tool</text>
+  </g>
+
+  <path class="arrow" d="M935 302 C935 424 460 450 195 258"/>
+  <text class="label" x="825" y="338" text-anchor="middle">结果写回 Context</text>
+
+  <path class="arrow" d="M550 250 V348"/>
+  <text class="label" x="575" y="304">无 tool_calls</text>
+  <g transform="translate(422,348)">
+    <rect class="done" width="256" height="112" rx="16"/>
+    <text class="head" x="128" y="47" text-anchor="middle">文字答案</text>
+    <text class="body" x="128" y="78" text-anchor="middle">裸 Loop 直接结束</text>
+  </g>
+  <text class="body" x="550" y="515" text-anchor="middle">第一部分先实现循环；第二部分再检查“模型想结束”是否等于“任务真的完成”。</text>
+</svg>

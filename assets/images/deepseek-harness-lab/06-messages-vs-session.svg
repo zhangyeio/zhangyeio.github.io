@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="470" viewBox="0 0 1100 470" role="img" aria-labelledby="title desc">
+  <title id="title">messages 与 Session 的区别</title>
+  <desc id="desc">messages 是模型的工作记忆，Session 是系统的执行流水账；同一次工具调用在两边留下不同记录。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 24px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.panel{fill:#fff;stroke:#cbd5e1;stroke-width:2}.left{fill:#eff6ff;stroke:#93c5fd;stroke-width:2}.right{fill:#ecfdf5;stroke:#6ee7b7;stroke-width:2}.head{font:700 20px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.body{font:400 15px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}.label{font:700 14px 'Microsoft YaHei',Arial,sans-serif;fill:#334155}.code{font:400 14px Consolas,'Microsoft YaHei',monospace;fill:#0f172a}.warn{fill:#fff7ed;stroke:#fdba74;stroke-width:2}
+    </style>
+  </defs>
+  <rect class="bg" width="1100" height="470" rx="18"/>
+  <text class="title" x="550" y="40" text-anchor="middle">同一次工具调用，留下两种不同用途的记录</text>
+
+  <g transform="translate(45,72)">
+    <rect class="panel" width="485" height="300" rx="16"/>
+    <rect class="left" x="20" y="20" width="445" height="72" rx="12"/>
+    <text class="head" x="242" y="50" text-anchor="middle">messages：给模型看的工作记忆</text>
+    <text class="body" x="242" y="76" text-anchor="middle">回答“模型这一轮知道什么？”</text>
+    <text class="label" x="36" y="130">工具结果进入 Context</text>
+    <text class="code" x="36" y="163">role: "tool"</text>
+    <text class="code" x="36" y="192">content: "原交易处理中"</text>
+    <text class="body" x="36" y="236">用途：让模型根据新事实继续推理</text>
+    <text class="body" x="36" y="266">下一轮会再次随请求发送给模型</text>
+  </g>
+
+  <g transform="translate(570,72)">
+    <rect class="panel" width="485" height="300" rx="16"/>
+    <rect class="right" x="20" y="20" width="445" height="72" rx="12"/>
+    <text class="head" x="242" y="50" text-anchor="middle">Session：给系统看的执行流水账</text>
+    <text class="body" x="242" y="76" text-anchor="middle">回答“Agent 实际做过什么？”</text>
+    <text class="label" x="36" y="130">真实执行事件</text>
+    <text class="code" x="36" y="163">type: "tool/result"</text>
+    <text class="code" x="36" y="192">name: "payment_query", ok: true</text>
+    <text class="body" x="36" y="236">用途：回放、审计、Hook 和 Evaluation</text>
+    <text class="body" x="36" y="266">只追加，不依赖模型如何描述自己</text>
+  </g>
+
+  <g transform="translate(215,393)">
+    <rect class="warn" width="670" height="52" rx="12"/>
+    <text class="body" x="335" y="32" text-anchor="middle">模型说“我查过” ≠ Session 中存在成功记录；系统只认实际执行证据。</text>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">支付排障的三阶段证据链</title>
+  <desc id="desc">从确认现象，到定位根因并排除替代解释，最后用回滚结果验证因果，共包含六类证据。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 25px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.phase1{fill:#eff6ff;stroke:#93c5fd;stroke-width:2}.phase2{fill:#f5f3ff;stroke:#c4b5fd;stroke-width:2}.phase3{fill:#ecfdf5;stroke:#6ee7b7;stroke-width:2}.head{font:700 20px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.body{font:400 14px 'Microsoft YaHei',Arial,sans-serif;fill:#475569}.tool{font:600 14px Consolas,'Microsoft YaHei',monospace;fill:#0f172a}.arrow{stroke:#64748b;stroke-width:2.5;fill:none;marker-end:url(#arrow)}.weak{fill:#fef2f2;stroke:#fca5a5;stroke-width:2}.strong{fill:#ecfdf5;stroke:#6ee7b7;stroke-width:2}.label{font:700 15px 'Microsoft YaHei',Arial,sans-serif;fill:#0f172a}.plus{font:700 22px Arial,sans-serif;fill:#64748b}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="650" rx="18"/>
+  <text class="title" x="600" y="42" text-anchor="middle">支付排障：先确认，再归因，最后验证</text>
+
+  <g transform="translate(42,80)">
+    <rect class="phase1" width="310" height="250" rx="18"/>
+    <text class="head" x="155" y="39" text-anchor="middle">阶段一：确认现象</text>
+    <text class="body" x="155" y="68" text-anchor="middle">发生了什么？失败在哪一环？</text>
+    <text class="tool" x="28" y="113">1  query_metrics</text>
+    <text class="body" x="28" y="139">时间、范围、成功率、容量</text>
+    <text class="tool" x="28" y="184">2  query_traces</text>
+    <text class="body" x="28" y="210">调用链、超时路径、重试放大</text>
+  </g>
+  <path class="arrow" d="M352 205 H430"/>
+  <g transform="translate(430,80)">
+    <rect class="phase2" width="390" height="250" rx="18"/>
+    <text class="head" x="195" y="39" text-anchor="middle">阶段二：定位根因</text>
+    <text class="body" x="195" y="68" text-anchor="middle">支持假设，也主动寻找反证</text>
+    <text class="tool" x="28" y="108">3  query_success_by_slice</text>
+    <text class="body" x="28" y="132">锁定 v2.3.7 × 新路由</text>
+    <text class="tool" x="28" y="167">4  compare_retry_config</text>
+    <text class="body" x="28" y="191">重试目标指向已限流端点</text>
+    <text class="tool" x="28" y="226">5  check_vendor_status</text>
+    <text class="body" x="238" y="226">排除第三方全局故障</text>
+  </g>
+  <path class="arrow" d="M820 205 H898"/>
+  <g transform="translate(898,80)">
+    <rect class="phase3" width="260" height="250" rx="18"/>
+    <text class="head" x="130" y="39" text-anchor="middle">阶段三：验证结论</text>
+    <text class="body" x="130" y="68" text-anchor="middle">修复后是否恢复？</text>
+    <text class="tool" x="24" y="123">6  verify_rollback</text>
+    <text class="body" x="24" y="155">成功率回到约 98%</text>
+    <text class="body" x="24" y="184">错误率快速回落</text>
+    <text class="body" x="24" y="218">相关性进一步变成因果证据</text>
+  </g>
+
+  <text class="head" x="600" y="382" text-anchor="middle">“时间接近”为什么还不够？</text>
+  <g transform="translate(80,414)">
+    <rect class="weak" width="360" height="150" rx="16"/>
+    <text class="label" x="180" y="36" text-anchor="middle">弱结论：只有时间相关</text>
+    <text class="body" x="180" y="73" text-anchor="middle">10:17 发布配置</text>
+    <text class="plus" x="180" y="105" text-anchor="middle">↓</text>
+    <text class="body" x="180" y="132" text-anchor="middle">10:20 出现故障，所以一定是发布导致</text>
+  </g>
+  <path class="arrow" d="M440 489 H530"/>
+  <g transform="translate(530,404)">
+    <rect class="strong" width="590" height="170" rx="16"/>
+    <text class="label" x="295" y="34" text-anchor="middle">强证据链：多种证据互相吻合</text>
+    <text class="body" x="295" y="67" text-anchor="middle">时间吻合 ＋ 特定版本/路由异常 ＋ 配置命中故障路径</text>
+    <text class="body" x="295" y="99" text-anchor="middle">＋ 第三方正常 ＋ 回滚后恢复</text>
+    <text class="head" x="295" y="141" text-anchor="middle">根因：错误重试配置造成超时与重试放大</text>
+  </g>
+  <text class="body" x="600" y="620" text-anchor="middle">Hook 固定的是“交卷前必须有哪些证据”，不是把六个调用的先后顺序写死。</text>
+</svg>
