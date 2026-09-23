@@ -1,13 +1,11 @@
 ^https?://localhost(:[0-9]+)?/
 ^https?://127\.0\.0\.1(:[0-9]+)?/
+^https://zhangyeio\.github\.io/
 ^https://openai\.com/zh-Hans-CN/index/harness-engineering/?$
 ^https://www\.iea\.org/reports/key-questions-on-energy-and-ai/executive-summary$
 ^https://www\.sec\.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231\.htm$
 ^https://www\.sec\.gov/Archives/edgar/data/1326801/000162828026025532/meta-20260416\.htm$
-^https://zhangyeio\.github\.io/automotive/neue-klasse-bmw-ix3-owner-expectations/?$
 ^https://www\.axios\.com/2026/08/21/ftc-ai-companies-book-destruction-investigate$
 ^https://www\.courtlistener\.com/docket/69058235/231/bartz-v-anthropic-pbc/?$
-^https://zhangyeio\.github\.io/ai-governance/destroying-rare-books-for-ai-training/?$
 ^https://www\.theinformation\.com/articles/nvidia-agrees-buy-open-source-model-repository-hugging-face-12-9-billion$
 ^https://nvidianews\.nvidia\.com/_gallery/download_pdf/64d264de3d6332ef7a827c67/?$
-^https://zhangyeio\.github\.io/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%8A%80%E6%9C%AF%E8%AF%84%E8%AE%BA/2026/08/29/nvidia-hugging-face-default-ai-gateway\.html$
