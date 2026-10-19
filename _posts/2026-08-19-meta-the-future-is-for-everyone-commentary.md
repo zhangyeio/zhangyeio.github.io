@@ -93,7 +93,7 @@ tags:
 
 Meta 的可信度还必须放在其商业结构中评估。根据公司 2025 年年报，Meta 约 2009.66 亿美元总收入中，广告收入为 1961.75 亿美元，占比约 97.6%。[Meta 2025 年 Form 10-K](https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm) 这种模式并不证明 Meta 一定会滥用智能体数据，但它意味着个性化、行为预测和广告变现之间存在长期结构性张力。
 
-这一张力也不是抽象担忧。美国联邦贸易委员会曾因 Facebook 违反此前隐私命令、在用户控制个人信息方面造成误导而处以 50 亿美元罚款，并要求实施新的董事会和外部监督机制。[FTC 决定](https://www.ftc.gov/news-events/news/press-releases/2019/07/ftc-imposes-5-billion-penalty-sweeping-new-privacy-restrictions-facebook)
+这一张力也不是抽象担忧。美国联邦贸易委员会曾因 Facebook 违反此前隐私命令、在用户控制个人信息方面造成误导而处以 50 亿美元罚款，并要求实施新的董事会和外部监督机制。[FTC 官方说明](https://www.ftc.gov/business-guidance/blog/2019/07/ftcs-5-billion-facebook-settlement-record-breaking-history-making)
 
 所以，“相信我们”不足以支持一个掌握用户完整生活上下文的智能体。可信承诺至少需要用户控制的密钥、数据最小化、默认隔离广告系统、可验证删除、第三方安全审计、模型与数据可迁移，以及不因拒绝数据使用而遭受实质性功能惩罚。
 
