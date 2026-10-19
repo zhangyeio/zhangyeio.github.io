@@ -757,3 +757,31 @@ hr {
     transform: none;
   }
 }
+
+/* Article archive: dates and titles stay aligned on narrow screens. */
+.archive-intro {
+  color: var(--muted);
+}
+
+.archive-post-list {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.archive-post-list li {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-post-list time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.archive-post-list a {
+  overflow-wrap: anywhere;
+}
