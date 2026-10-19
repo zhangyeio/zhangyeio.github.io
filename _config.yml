@@ -2,6 +2,7 @@ title: Zhang Ye's Blog
 description: 企业级系统架构、数据安全与 AI 应用实践，关注大模型落地和数字化转型
 url: "https://zhangyeio.github.io"
 baseurl: ""
+timezone: Asia/Shanghai
 
 author: Zhang Ye
 lang: zh-CN

@@ -2,6 +2,7 @@
 layout: post
 title: "“人人的未来”，还是平台化的未来？——评扎克伯格的 AI 政治哲学"
 date: 2026-08-19 00:01:00 +0800
+permalink: /人工智能/科技治理/2026/08/18/meta-the-future-is-for-everyone-commentary.html
 categories:
   - 人工智能
   - 科技治理

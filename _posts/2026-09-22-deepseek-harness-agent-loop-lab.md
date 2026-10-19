@@ -2,6 +2,8 @@
 layout: post
 title: "从聊天机器人到 Harness：用 DeepSeek 搭一个可验证的 Agent Loop"
 date: 2026-09-22 15:50:00 +0800
+excerpt: "从退款查询到支付故障排查，逐步搭建可验证的 Agent Loop，理解 Session、Tools、Hook 与 Evaluation，并配套可运行的 Notebook。"
+description: "通过退款查询和支付故障排查案例，学习使用 DeepSeek 构建可验证的 Agent Loop，理解工具调用、状态、可观测性与评估。"
 categories:
   - 人工智能
   - 软件工程
