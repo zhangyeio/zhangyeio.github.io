@@ -406,8 +406,8 @@ tags:
 |---:|---|:---:|:---:|---|---|
 | Day 85 | Embedding 与语义空间 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 生成 20 条文本向量 | [OpenAI Embeddings](https://developers.openai.com/api/docs/guides/embeddings) |
 | Day 86 | 余弦相似度和 top-k | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 实现 NumPy 版相似度检索 | [OpenAI Embeddings](https://developers.openai.com/api/docs/guides/embeddings) |
-| Day 87 | 设计查询集和相关性标注 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 标注 30 个 query 的相关案例 | [信息检索评测](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html) |
-| Day 88 | 计算 recall@k | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 比较 k=3、5、10 的召回 | [信息检索评测](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html) |
+| Day 87 | 设计查询集和相关性标注 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 标注 30 个 query 的相关案例 | [信息检索评测（教材PDF，第8章）](https://www2.denizyuret.com/bib/manning/manning2008introduction/irbookonlinereading.pdf) |
+| Day 88 | 计算 recall@k | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 比较 k=3、5、10 的召回 | [信息检索评测（教材PDF，第8章）](https://www2.denizyuret.com/bib/manning/manning2008introduction/irbookonlinereading.pdf) |
 | Day 89 | PostgreSQL 全文检索 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 实现关键词检索基线 | [PostgreSQL 全文检索](https://www.postgresql.org/docs/current/textsearch.html) |
 | Day 90 | pgvector 与混合检索 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 比较关键词、向量和融合结果 | [pgvector](https://github.com/pgvector/pgvector) |
 | Day 91 | 闸门 G3 与休息 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 解释 ML、Embedding、RAG、微调边界 | [OpenAI Retrieval](https://developers.openai.com/api/docs/guides/retrieval) |
@@ -479,10 +479,10 @@ tags:
 | Day 127 | 向量检索参数与索引 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 建立 pgvector 检索函数 | [pgvector](https://github.com/pgvector/pgvector) |
 | Day 128 | 全文检索与中文分词边界 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 建立关键词检索基线 | [PostgreSQL 全文检索](https://www.postgresql.org/docs/current/textsearch.html) |
 | Day 129 | 查询改写与多查询 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 记录改写前后召回差异 | [OpenAI Retrieval](https://developers.openai.com/api/docs/guides/retrieval) |
-| Day 130 | 混合融合策略 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 实现简单 RRF 融合 | [信息检索评测](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html) |
+| Day 130 | 混合融合策略 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 实现简单 RRF 融合 | [信息检索评测（教材PDF，第8章）](https://www2.denizyuret.com/bib/manning/manning2008introduction/irbookonlinereading.pdf) |
 | Day 131 | rerank 与候选集 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 只对少量候选重排 | [OpenAI 延迟优化](https://developers.openai.com/api/docs/guides/latency-optimization) |
 | Day 132 | 质量、延迟和成本对比 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 对 50 个问题输出对比表 | [成本优化](https://developers.openai.com/api/docs/guides/cost-optimization) |
-| Day 133 | 周验收与休息 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 选定主项目检索方案并写 ADR | [信息检索评测](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html) |
+| Day 133 | 周验收与休息 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 选定主项目检索方案并写 ADR | [信息检索评测（教材PDF，第8章）](https://www2.denizyuret.com/bib/manning/manning2008introduction/irbookonlinereading.pdf) |
 
 ### Week 20｜证据回答与 RAG 评测
 
@@ -491,7 +491,7 @@ tags:
 | Day 134 | 基于检索证据生成回答 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 回答只能使用提供的上下文 | [OpenAI Retrieval](https://developers.openai.com/api/docs/guides/retrieval) |
 | Day 135 | 文件、页码和片段引用 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 每项风险返回可核验出处 | [OpenAI Retrieval](https://developers.openai.com/api/docs/guides/retrieval) |
 | Day 136 | 证据不足时拒答 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 加入无答案和需要澄清样例 | [Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs) |
-| Day 137 | 检索层评测 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 统计 recall@k 和过滤正确率 | [信息检索评测](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html) |
+| Day 137 | 检索层评测 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 统计 recall@k 和过滤正确率 | [信息检索评测（教材PDF，第8章）](https://www2.denizyuret.com/bib/manning/manning2008introduction/irbookonlinereading.pdf) |
 | Day 138 | 答案正确性与引用支持率 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 人工标注并运行生成层评测 | [OpenAI Evals](https://developers.openai.com/api/docs/guides/evals) |
 | Day 139 | 错误聚类与前三类修复 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 比较修复前后指标 | [OpenAI Graders](https://developers.openai.com/api/docs/guides/graders) |
 | Day 140 | 周回归与休息 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 生成 RAG v1 评测报告 | [OpenAI Evals](https://developers.openai.com/api/docs/guides/evals) |
@@ -609,7 +609,7 @@ tags:
 | 天数 | 当日学习内容 | 难度 | 重要性 | 完成标准 | 官方资料 |
 |---:|---|:---:|:---:|---|---|
 | Day 204 | 扩展黄金集到 50—100 条 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 覆盖正常、边界、拒答和安全场景 | [OpenAI Evals](https://developers.openai.com/api/docs/guides/evals) |
-| Day 205 | 检索指标总评 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 统计 recall、过滤和检索延迟 | [信息检索评测](https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html) |
+| Day 205 | 检索指标总评 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 统计 recall、过滤和检索延迟 | [信息检索评测（教材PDF，第8章）](https://www2.denizyuret.com/bib/manning/manning2008introduction/irbookonlinereading.pdf) |
 | Day 206 | 生成指标总评 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 统计正确性、引用和拒答 | [OpenAI Graders](https://developers.openai.com/api/docs/guides/graders) |
 | Day 207 | Agent 轨迹与任务完成评测 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 统计工具选择、参数和完成率 | [Agents SDK Tracing](https://openai.github.io/openai-agents-python/tracing/) |
 | Day 208 | 权限与安全回归 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 确保所有越权样例失败 | [OpenAI 安全最佳实践](https://developers.openai.com/api/docs/guides/safety-best-practices) |
