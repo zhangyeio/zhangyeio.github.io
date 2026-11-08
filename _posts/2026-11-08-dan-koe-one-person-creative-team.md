@@ -11,11 +11,11 @@ excerpt: "一个人用 AI 做创意团队，具体要交付什么？从品牌定
 
 这份三页 PDF 以表格整理了 Dan Koe 的一人创意团队方案，涵盖品牌访谈、半年内容地图和首单执行清单。
 
-![第 1 页：注意力、创作者经济与一人创意团队]({{ '/assets/dan-koe-2027-ai-business/page-1.jpg' | relative_url }}){: width="720" height="1370" }
+![第 1 页：注意力、创作者经济与一人创意团队]({{ '/assets/dan-koe-2027-ai-business/page-1-hd.avif' | relative_url }}){: width="720" height="1370" }
 
-![第 2 页：品牌访谈、半年内容地图与首个客户]({{ '/assets/dan-koe-2027-ai-business/page-2.jpg' | relative_url }}){: width="720" height="1370" loading="lazy" }
+![第 2 页：品牌访谈、半年内容地图与首个客户]({{ '/assets/dan-koe-2027-ai-business/page-2-hd.avif' | relative_url }}){: width="720" height="1370" loading="lazy" }
 
-![第 3 页：角色定位、跨平台调研与五阶段执行清单]({{ '/assets/dan-koe-2027-ai-business/page-3.jpg' | relative_url }}){: width="720" height="1370" loading="lazy" }
+![第 3 页：角色定位、跨平台调研与五阶段执行清单]({{ '/assets/dan-koe-2027-ai-business/page-3-hd.avif' | relative_url }}){: width="720" height="1370" loading="lazy" }
 
 **[下载原版 PDF]({{ '/assets/dan-koe-2027-ai-business.pdf' | relative_url }})**
 
