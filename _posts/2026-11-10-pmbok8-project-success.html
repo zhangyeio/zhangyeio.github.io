@@ -1,0 +1,256 @@
+---
+layout: post
+title: "项目按时上线之后，怎么知道它成功了？"
+date: 2026-11-10 00:00:00 +0800
+permalink: /2026/11/10/pmbok8-project-success/
+categories: [项目管理]
+tags: [PMBOK, PMP, 价值交付, 项目治理]
+description: "从运营商自助服务迁移出发，理解 PMBOK® 第 8 版的价值交付、七个绩效域与裁剪。附可展开的全书脑图。"
+excerpt: "项目按期上线、通过验收之后，如何衡量用户采用和业务收益？用一个运营商案例读懂 PMBOK® 第 8 版。"
+---
+
+<style>
+
+.pmbok8{--ink:#172b2e;--mute:#4a6161;--bg:#f2f6f3;--paper:#fff;--line:#a9c4bb;--teal:#146051;--soft:#e3f0ea;--amber:#783e14;--border:#cadbd4}
+.pmbok8 *{box-sizing:border-box}
+.pmbok8{margin:0;color:inherit;font:16px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+.pmbok8 .pmbok-banner{background:#143b35;color:white;padding:38px max(24px,calc((100% - 1100px)/2));border-bottom:5px solid #75b29c}
+.pmbok8 .eyebrow{font-size:.78rem;letter-spacing:.16em;color:#bddfd2;margin:0}
+.pmbok8 h1{line-height:1.16;font-size:clamp(1.75rem,5vw,3.15rem);margin:.35em 0}
+.pmbok8 .pmbok-banner p:last-child{margin:0;color:#def2eb}
+.pmbok8 .pmbok-map-body,.pmbok8 .pmbok-footer{max-width:1148px;margin:auto;padding:20px 24px}
+.pmbok8 nav,.pmbok8 .controls,.pmbok8 .legend{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pmbok8 nav{margin:4px 0 16px}
+.pmbok8 button,.pmbok8 input{font:inherit;color:var(--ink);background:white;border:1px solid var(--border);border-radius:8px;padding:6px 11px}
+.pmbok8 button{cursor:pointer}
+.pmbok8 button[aria-pressed=true]{background:var(--teal);color:white;border-color:var(--teal)}
+.pmbok8 button:hover{border-color:var(--teal)}
+.pmbok8 :focus-visible{outline:3px solid #278670;outline-offset:3px}
+.pmbok8 input{min-width:185px;flex:1;max-width:340px}
+.pmbok8 .legend{margin-top:13px;font-size:.84rem;color:var(--mute)}
+.pmbok8 .badge{display:inline-block;background:var(--soft);color:#145346;border-radius:5px;padding:0 6px;font-size:.75rem;font-weight:700;margin-right:5px;white-space:nowrap}
+.pmbok8 .badge.case{background:#e8edfb;color:#354c87}
+.pmbok8 .badge.note{background:#f9ecdd;color:var(--amber)}
+.pmbok8 .map{margin:22px 0 10px;display:grid;grid-template-columns:210px minmax(0,1fr);align-items:center;column-gap:25px}
+.pmbok8 .root{position:relative;padding:20px 15px;background:#153f38;color:white;border-radius:12px;line-height:1.4}
+.pmbok8 .root::after{position:absolute;left:100%;top:50%;width:25px;border-top:2px solid var(--line);content:""}
+.pmbok8 .root strong{display:block;font-size:1.25rem}
+.pmbok8 .root small{display:block;margin-top:8px;color:#d0ebe2}
+.pmbok8 .branches{list-style:none;margin:0;padding:0 0 0 23px;border-left:2px solid var(--line);display:grid;gap:12px}
+.pmbok8 .branch{position:relative;min-width:0}
+.pmbok8 .branch::before{content:"";position:absolute;top:26px;right:100%;width:23px;border-top:2px solid var(--line)}
+.pmbok8 details{background:white;border:1px solid var(--border);border-radius:9px}
+.pmbok8 summary{cursor:pointer;padding:12px 15px;font-weight:700;color:#174c43}
+.pmbok8 summary::marker{color:#267761}
+.pmbok8 .branch>details>summary{background:#e3f0e9;border-radius:8px}
+.pmbok8 .branch>details[open]>summary{border-radius:8px 8px 0 0}
+.pmbok8 .leaves{list-style:none;margin:10px 14px 14px 19px;padding:0 0 0 14px;border-left:1px solid var(--line);display:grid;gap:7px}
+.pmbok8 .leaf{position:relative;min-width:0}
+.pmbok8 .leaf::before{position:absolute;content:"";width:14px;right:100%;top:24px;border-top:1px solid var(--line)}
+.pmbok8 .leaf summary{padding:10px 12px;font-size:.95rem;color:var(--ink)}
+.pmbok8 .leaf p{margin:0;padding:0 12px 9px;color:var(--mute);overflow-wrap:anywhere}
+.pmbok8 .leaf .ref{font-size:.8rem;color:#24554b;padding-top:3px;border-top:1px dotted var(--border);margin:0 12px 7px;padding-left:0;padding-right:0}
+.pmbok8 .status{margin:9px 0 0;font-size:.85rem;color:var(--mute);min-height:1.5em}
+.pmbok8 .pmbok-footer{padding-top:0;color:var(--mute);font-size:.85rem}
+.pmbok8 [hidden]{display:none!important}
+@media(max-width:640px){.pmbok8 .pmbok-banner,.pmbok8 .pmbok-map-body,.pmbok8 .pmbok-footer{padding-left:14px;padding-right:14px}
+.pmbok8 .map{display:block}
+.pmbok8 .root::after{display:none}
+.pmbok8 .branches{margin-left:11px;padding-top:13px;padding-left:13px}
+.pmbok8 .branch::before{width:13px}
+.pmbok8 .root{padding:14px}
+.pmbok8 .leaves{margin-left:11px;padding-left:9px}
+.pmbok8 .leaf::before{width:9px}}
+@media print{.pmbok8 nav,.pmbok8 .controls,.pmbok8 .status{display:none}
+.pmbok8 .pmbok-banner{background:white;color:black}
+.pmbok8 .pmbok-banner p:last-child,.pmbok8 .eyebrow{color:#333}
+.pmbok8 .map{display:block}
+.pmbok8 .root{color:black;background:white;padding-left:0}
+.pmbok8 .root small{color:black}
+.pmbok8 .root::after{display:none}
+.pmbok8 details{break-inside:avoid}}
+.pmbok8 .pmbok-prose{max-width:760px;margin:0 auto;padding:52px 24px 32px;color:var(--ink);font-size:17px;line-height:1.8}
+.pmbok8 .pmbok-prose h1{font-size:clamp(2.1rem,6vw,3.55rem);letter-spacing:-.045em}
+.pmbok8 .pmbok-prose h2{margin:2em 0 .6em;font-size:1.52rem;line-height:1.35}
+.pmbok8 .pmbok-prose a{color:var(--teal);text-underline-offset:.25em}
+.pmbok8 .pmbok-prose .kicker{font-size:.82rem;color:var(--teal);font-weight:700;letter-spacing:.12em}
+.pmbok8 .pmbok-prose .lead{font-size:1.18rem;color:var(--mute)}
+.pmbok8 .pmbok-prose .source{display:block;margin-top:.45em;color:var(--mute);font-size:.82rem}
+.pmbok8 .table-wrap{overflow-x:auto}
+.pmbok8 .pmbok-prose table{width:100%;border-collapse:collapse;background:white;font-size:.93rem}
+.pmbok8 .pmbok-prose th,.pmbok8 .pmbok-prose td{text-align:left;padding:9px 12px;border:1px solid var(--border);vertical-align:top}
+.pmbok8 .pmbok-prose th{min-width:8em}
+.pmbok8 .pmbok-prose thead{background:var(--soft)}
+.pmbok8 #knowledge-map h2{font-size:clamp(1.75rem,5vw,3.15rem);line-height:1.16;margin:.35em 0}
+@media(max-width:640px){.pmbok8 .pmbok-prose{padding:34px 18px 22px}
+.pmbok8 .pmbok-prose th{min-width:6.5em}}
+
+.pmbok8 .pmbok-prose{max-width:none;padding:0;color:inherit}
+.pmbok8 .pmbok-prose .source,.pmbok8 .pmbok-prose .lead{color:inherit;opacity:.82}
+.pmbok8 .pmbok-prose .kicker,.pmbok8 .pmbok-prose a{color:inherit}
+.pmbok8 .pmbok-prose table{color:var(--ink)}
+.pmbok8 .pmbok-map-body,.pmbok8 .pmbok-footer{background:var(--bg);color:var(--ink)}
+.pmbok8 #knowledge-map{padding:28px 24px;margin-top:36px;scroll-margin-top:5rem}
+.pmbok8 #knowledge-map h2{color:white}
+.pmbok8 .map{grid-template-columns:minmax(130px,26%) minmax(0,1fr)}
+.pmbok8 .pmbok-map-body button,.pmbok8 .pmbok-map-body input{color:var(--ink);background:white}
+.pmbok8 .pmbok-map-body button[aria-pressed=true]{color:white;background:var(--teal)}
+.pmbok8 .pmbok-map-body p{margin-top:0}
+.pmbok8 .pmbok-footer{padding-bottom:16px}
+@media(max-width:640px){.pmbok8 #knowledge-map{padding:20px 14px}}
+</style>
+<div class="pmbok8">
+<div class="pmbok-prose">
+
+<p class="kicker">项目管理 · PMBOK® 第 8 版读书笔记</p>
+<p class="lead">从运营商自助服务迁移出发，理解 PMBOK® 第 8 版的价值交付、七个绩效域与裁剪。</p>
+<p><a href="#knowledge-map">跳到文末的可展开脑图 ↓</a></p>
+
+<p>设想一个运营商项目，把一项原本在营业厅办理的业务迁移到 App。版本按期上线，功能通过验收，预算也控制在批准范围内。一个月后，大量用户仍在线下办理，客服还多了一类来电，问的是办理到一半为什么失败。项目组的周报可以是绿的，运营团队看到的却是另一张成绩单。</p>
+<p>PMBOK® 第 8 版把这两张成绩单放在同一个框架里讨论。一张看项目执行得怎么样，另一张看交付物投入使用后，组织和受益方得到了什么。这个区分也影响立项怎么写、变更怎么批，以及收尾时谁接手跟踪收益。<small class="source">《标准》§2.1.2，第 16–17 页</small></p>
+
+<h2>上线、采用和收益是三件事</h2>
+<p>在上面的例子里，<strong>可用的自助办理入口</strong>是交付物，<strong>目标用户能够独立办完业务</strong>是使用结果，<strong>在投诉率维持在约定阈值内的前提下，降低人工办理成本</strong>才是要验证的业务收益。评估价值时，还要把这些收益和建设、运营、维护所需的投入放在一起看。</p>
+<p>三件事需要三种证据。上线可以查发布与验收记录，采用可以看目标用户的自助办理完成率，收益则需要比较迁移前后的单位办理成本，并同步观察投诉和转人工情况。假如线下办理量下降，同时大量用户中途放弃，渠道数据本身就不足以证明服务改善。把基线、指标口径、观察窗口和运营承接人写进收益管理计划，可以让项目收尾后的验证有据可依。<small class="source">原书框架见《标准》§2.1，第 13–17 页；收益管理计划见《指南》第 4 章，第 115–116 页。运营商场景为本文应用示例。</small></p>
+
+<h2>用一项变更读懂七个绩效域</h2>
+<p>第 8 版把管理实践组织为七个绩效域，并把 40 个示例过程映射到启动、规划、执行、监控和收尾五个关注领域。绩效域帮助团队盘点要管理的事项，关注领域帮助团队归类正在做的管理活动。这些活动可以在同一个交付阶段重叠。<small class="source">《标准》§4.5，第 69–74 页；《指南》表 2-1，第 9 页</small></p>
+<p>假设上线前，业务方希望增加一个身份核验环节。它可能降低错误办理的风险，也可能让更多用户卡在流程中。项目经理可以沿着七个绩效域，把一句“加个核验”变成一份可供决策的影响评估。</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">绩效域</th><th scope="col">需要回答的问题</th></tr></thead>
+<tbody>
+<tr><th scope="row">范围</th><td>哪些业务和用户需要核验？失败后如何处理？验收条件是什么？</td></tr>
+<tr><th scope="row">进度</th><td>是否新增外部接口、联调和回归测试？哪个里程碑可能移动？</td></tr>
+<tr><th scope="row">财务</th><td>接口调用、客服承接和后续维护会增加多少成本？</td></tr>
+<tr><th scope="row">利益相关方</th><td>业务、合规、客服和用户代表分别关心什么？</td></tr>
+<tr><th scope="row">资源</th><td>谁能承担开发、测试与上线支持？他们是否有可用产能？</td></tr>
+<tr><th scope="row">风险</th><td>怎样权衡错误办理风险与核验失败造成的用户流失？</td></tr>
+<tr><th scope="row">治理</th><td>谁有权批准变更？上线后依据哪些数据判断是否扩大覆盖？</td></tr>
+</tbody></table></div>
+<p>这些评估可以并行。若政策允许，团队可以先在部分场景试点，同时监测核验失败率、办理完成率与转人工率。若存在明确的强制要求，决策空间就集中在实现方式、迁移节奏和异常处理。治理要解决的是把这些约束、决策权和后续验证安排放进同一次讨论。<small class="source">《指南》§2.1.6.8，第 28–31 页；§2.1.8，第 35–36 页。变更情境为本文应用示例。</small></p>
+
+<h2>混合交付需要把交接条件说清楚</h2>
+<p>原书的电子病历案例把基础设施和应用交付分开处理。基础设施可以按预测型方式推进，界面开发与集成可以用适应型方式获取反馈。不同部分选择不同做法，取决于需求稳定程度、变更代价和获得反馈的条件。<small class="source">《标准》§4.2.3，第 66 页</small></p>
+<p>放回运营商项目，外部接口验收和生产切换窗口适合提前锁定，表单、提示语和失败后的引导可以分批验证。两条工作线汇合时，团队需要共同约定什么条件下能够切换，比如关键场景测试通过、客服完成演练、回退方案已经验证。否则，各组可能都按自己的计划完成工作，联合上线却仍然缺一个条件。</p>
+<p>《指南》把这种选择称为<strong>裁剪</strong>。先选初始方法，再适配组织要求与项目情境，执行中继续调整。假如审批一直排队，可以先查哪些决定反复等同一批人，再用风险或金额阈值确定哪些决定可以下放。假如交付物屡次返工，则要追查质量问题最早出现在哪里，调整评审或验证环节。<small class="source">《指南》§3.3–3.6，第 104–112 页</small></p>
+
+<h2>原则和工具最终都要落到一个决定上</h2>
+<p>第 8 版的六项原则是全局视角、聚焦价值、将质量嵌入过程与交付物、做负责任的领导者、将可持续性贯穿项目，以及建立赋能文化。回到自助办理案例，全局视角要求把 App、客服和营业厅一起考虑，质量要求团队在迭代中验证失败路径，赋能文化则让一线人员能反馈反复出现的办理障碍，并在授权范围内推动改进。<small class="source">《标准》§3.3–3.8，第 38–55 页。案例解读为本文整理。</small></p>
+<p>工具也可以从待决问题选起。想判断接口联调延迟是否影响完工，先看活动依赖和关键路径。想定位哪些需求尚未验证，可以用需求追踪矩阵。想在多个方案之间比较风险与收益，可以用决策树把情景、概率和结果摆到桌面上。AI 可以协助汇总反馈、草拟报告或整理风险线索，影响上线或投资的判断仍需要项目团队核验证据并承担责任。<small class="source">《指南》第 4 章、第 5 章及附录 X3，第 237–244 页</small></p>
+<p>下一次写上线汇报时，可以在交付进展之后补一段：用户已经能做什么，还需要观察什么，谁会在什么时间依据哪组数据做下一次决定。这样，即使项目团队已经收尾，业务团队也知道该怎样判断这笔投入是否兑现了预期。</p>
+<p class="source">本文依据原有 PMBOK® 第 8 版脑图及大纲撰写。正文页码为英文版印刷页，中文术语为学习用译名。</p>
+</div>
+<section class="pmbok-banner" id="knowledge-map" aria-labelledby="pmbok-map-title"><p class="eyebrow">PROJECT MANAGEMENT INSTITUTE · 第八版 · 2025</p>
+<h2 id="pmbok-map-title">PMBOK® 全书知识脑图</h2>
+<p>从项目为何值得做，到如何组织交付、检验收益和调整做法。</p>
+</section>
+<div class="pmbok-map-body">
+<nav id="views" aria-label="脑图视图"></nav>
+<div class="controls">
+<label for="query">搜索当前图</label><input id="query" type="search" placeholder="例如 价值、关键路径、PDF 266">
+<button type="button" id="expand">全部展开</button>
+<button type="button" id="collapse">全部折叠</button>
+</div>
+<div class="legend"><span class="badge">原书</span><span class="badge case">原书示例</span><span class="badge note">整理</span><span>S＝《标准》 · G＝《指南》 · p.＝印刷页 · PDF＝从封面起的页序</span></div>
+<div id="status" class="status" role="status" aria-live="polite"></div>
+<div id="map" class="map" aria-label="知识脑图"></div>
+<noscript>请在启用 JavaScript 的浏览器中打开本文件，或查阅随附的 Markdown 大纲。</noscript>
+</div>
+<div class="pmbok-footer">来源为用户提供的 PMI 英文版 PDF。点击主题与节点逐级展开。中文术语为学习用译名。</div>
+<script id="map-data" type="application/json">{"overview": {"label": "全书总图", "title": "PMBOK® 第八版", "desc": "核心问题 · 六项原则 · 五张专题图", "branches": [{"title": "全书回答什么", "items": [{"kind": "整理", "title": "项目为何值得做，何时算成功？", "body": "要把战略意图变成可观察的结果，同时判断收益是否值得投入，并区分交付效率与实际业务成效。", "ref": "S §1.2、§2.1 pp. 4–6、13–17｜PDF 27–29、36–40"}, {"kind": "整理", "title": "团队怎么选做法？", "body": "原则帮助判断，生命周期与开发方法组织交付，关注领域分类管理活动，绩效域说明要管理什么。再按组织和项目的约束选用过程与工具。", "ref": "S §3–4 pp. 35–74｜PDF 58–97；G §2–3 pp. 7–112｜PDF 112–217"}, {"kind": "整理", "title": "怎样知道管理措施有效？", "body": "工件和指标是决策证据。将计划与实际、风险信号与阈值、交付物与采用结果配对，才有依据继续投入、调整方向或提前收尾。", "ref": "S §2.1.2 pp. 16–17｜PDF 39–40；G §2.1.1–2.1.5、§2.1.9 pp. 10–15、35–37｜PDF 115–120、140–142"}]}, {"title": "六项原则｜如何判断与行动", "items": [{"kind": "原书", "title": "全局视角", "body": "识别项目与组织、社会和外部环境之间的联系，考虑局部决策的连带影响。", "ref": "S §3.3 pp. 38–39｜PDF 61–62"}, {"kind": "原书", "title": "聚焦价值", "body": "将优先级和权衡与预期成果相连，随证据变化检视项目仍否值得投入。", "ref": "S §3.4 pp. 40–42｜PDF 63–65"}, {"kind": "原书", "title": "将质量嵌入过程与交付物", "body": "让质量要求指导工作方式与验收，结合利益相关方的期望不断改进。", "ref": "S §3.5 pp. 43–45｜PDF 66–68"}, {"kind": "原书", "title": "做负责任的领导者", "body": "对承诺与决策负责，以透明、合乎伦理的方式处理冲突并建立信任。", "ref": "S §3.6 pp. 46–48｜PDF 69–71"}, {"kind": "原书", "title": "将可持续性贯穿项目", "body": "同时考虑经济、社会与环境影响，关注从项目开展到交付物使用的长期后果。", "ref": "S §3.7 pp. 48–52｜PDF 71–75"}, {"kind": "原书", "title": "建立赋能文化", "body": "创造参与、协作和自主决策的条件，通过共享责任与反馈提高团队能力。", "ref": "S §3.8 pp. 53–55｜PDF 76–78"}]}, {"title": "专题 1｜价值、治理与收益", "items": [{"kind": "原书", "title": "价值链", "body": "战略目标 → 项目交付物 → 使用后产生的结果 → 实现收益 → 相对于投入形成价值。运营可以承接交付物并向上游反馈绩效。", "ref": "S §1.2、§2.1 pp. 4–6、13–17｜PDF 27–29、36–40"}, {"kind": "原书", "title": "双维度成功", "body": "一边衡量时间、成本、范围、质量等执行效率，一边衡量组织和受益方获得的结果。结果可以是财务、社会、环境或合规收益，观测时间可能晚于结项。", "ref": "S §2.1.2 pp. 16–17｜PDF 39–40"}, {"kind": "原书", "title": "治理的三个抓手", "body": "战略对齐的目标指标、尽早提示偏离的信号、检验决策成效的反馈。授权和监督可按风险、复杂性与团队成熟度调整。", "ref": "G §2.1.2–2.1.5 pp. 11–15｜PDF 116–120"}, {"kind": "原书", "title": "决策工件", "body": "商业论证说明项目为何值得投，章程提供授权，收益管理计划确定收益安排，管理计划整合各域工作。变更影响超出授权时按治理机制处理。", "ref": "G §2.1.6 pp. 17–19、28–31｜PDF 122–124、133–136；§4 pp. 115–116、125–127｜PDF 220–221、230–232"}, {"kind": "整理", "title": "应用示例｜运营商自助服务迁移", "body": "把“新入口上线”列为交付物，把“目标用户完成自助办理”列为结果，把“人工办理成本下降且投诉率维持阈值内”列为待验证收益。结项前约定运营接手人、比较基线和观察窗口。", "ref": "对应 S §2.1；G §2.1、§4"}]}, {"title": "专题 2｜生命周期、关注领域与裁剪", "items": [{"kind": "原书", "title": "方法选择", "body": "需求与方案较稳定时可采用预测型。需要反复学习、需求演进且反馈可得时可采用适应型。可按阶段或交付物组合为混合型。", "ref": "S §4.2–4.3 pp. 59–68｜PDF 82–91"}, {"kind": "原书", "title": "四个维度", "body": "生命周期阶段安排工作，开发方法组织交付物形成，交付节奏说明交付频率，关注领域归类管理活动。启动、规划、执行、监控和收尾可重叠。", "ref": "S §4.1–4.5 pp. 57–74｜PDF 80–97"}, {"kind": "原书", "title": "裁剪循环", "body": "选初始方法 → 适配组织要求 → 按项目交付物、团队、文化再调整 → 持续检视改进。可调整过程、参与方式和七域工作。", "ref": "G §3.3–3.6 pp. 104–112｜PDF 209–217"}, {"kind": "原书示例", "title": "电子病历上线", "body": "基础设施按预测型推进，用户界面开发与集成可采用适应型。", "ref": "S §4.2.3 p. 66｜PDF 89"}, {"kind": "整理", "title": "混合交付的接口", "body": "把采购验收、基础设施就绪、数据迁移窗口设为联合里程碑，同时让应用迭代持续获取用户反馈。两部分对接时约定共同的验收条件。", "ref": "对应 S §4.2.3–4.5；G §3"}]}, {"title": "专题 3｜七域联动与过程地图", "items": [{"kind": "原书", "title": "治理 9 项", "body": "启动项目或阶段、整合对齐计划、规划获取策略、管理执行、管理质量保证、管理项目知识、监控项目绩效、评估实施变更、关闭项目或阶段。", "ref": "G §2.1.6 pp. 15–33｜PDF 120–138"}, {"kind": "原书", "title": "范围 6 项", "body": "规划范围、引导并分析需求、定义范围、构建范围结构、监控范围、确认范围。范围结构可用 WBS 或待办分解。", "ref": "G §2.2.2 pp. 39–44｜PDF 144–149"}, {"kind": "原书", "title": "进度 3 项", "body": "规划进度、制定进度、监控进度。制定进度内部包含活动、依赖与历时等工作。", "ref": "G §2.3.2 pp. 48–55｜PDF 153–160"}, {"kind": "原书", "title": "财务 4 项", "body": "规划财务、估算成本、制定预算、监控财务。", "ref": "G §2.4.2 pp. 61–65｜PDF 166–170"}, {"kind": "原书", "title": "利益相关方 7 项", "body": "识别相关方，规划、管理、监控相关方参与，规划、管理、监控沟通。", "ref": "G §2.5.2 pp. 70–77｜PDF 175–182"}, {"kind": "原书", "title": "资源 5 项", "body": "规划资源、估算资源、获取资源、带领团队、监控资源配置。", "ref": "G §2.6.2 pp. 80–88｜PDF 185–193"}, {"kind": "原书", "title": "风险 6 项", "body": "规划、识别、分析、规划应对、实施应对、监控。威胁可规避、转移或减轻，机会可开拓、分享或提高，两者也可接受或上报。", "ref": "G §2.7.1–2.7.2 pp. 92–100｜PDF 197–205"}, {"kind": "整理", "title": "一项变更如何穿过七域", "body": "范围澄清新增工作 → 进度判断依赖与里程碑 → 财务和资源估算代价 → 风险评估新增暴露 → 沟通相关方并取得决定 → 治理授权、跟踪实施与结果。各域可并行评估。", "ref": "对应 G 表 2-1、§2.1.6.8、§2.1.8 pp. 9、28–31、35–36｜PDF 114、133–136、140–141"}]}, {"title": "专题 4｜从管理问题选择工件与工具", "items": [{"kind": "原书", "title": "范围与验收", "body": "范围陈述明确边界，WBS 分解到可管理的工作包，需求追踪矩阵连接需求及其来源和验证信息，确认范围促成正式验收。质量控制帮助验证交付物是否符合要求。", "ref": "G §2.2.2 pp. 39–44｜PDF 144–149；§4 pp. 128、131–132、143｜PDF 233、236–237、248；§5 pp. 165–167｜PDF 270–272"}, {"kind": "原书", "title": "进度与资源", "body": "关键路径法用网络逻辑判断约束完工的路径。资源平衡可因供给约束改变关键路径。燃尽图显示剩余工作，燃起图可同时展示完成量和总范围。", "ref": "G §5 pp. 150、160–161、175、192–194、213–214｜PDF 255、265–266、280、297–299、318–319"}, {"kind": "原书", "title": "财务与绩效", "body": "PV 是计划价值，EV 是已完成工作按预算计的价值，AC 是实际成本。SV＝EV−PV，CV＝EV−AC。完工估算 EAC 的计算口径取决于对未来效率的假设。", "ref": "G §2.4.2 pp. 61–65｜PDF 166–170；§5 表 5-1 pp. 207–210｜PDF 312–315"}, {"kind": "原书", "title": "风险与决策", "body": "概率与影响矩阵帮助定性排序。决策树用各情景的概率与净结果计算期望货币价值。敏感性分析考察哪些变量最影响结果，模拟用于探索可能的结果分布。", "ref": "G §2.7.2 pp. 96–100｜PDF 201–205；§5 pp. 163–164、187、198–199｜PDF 268–269、292、303–304"}, {"kind": "原书", "title": "协作与质量", "body": "RACI 澄清分工，参与评估矩阵显示相关方当前和目标参与程度，质量成本揭示预防、评价和失败之间的取舍，回顾会为团队提供改进反馈。", "ref": "G §5 pp. 158–159、194–195、200｜PDF 263–264、299–300、305"}]}, {"title": "专题 5｜组织能力、AI 与采购", "items": [{"kind": "原书", "title": "PMO 价值", "body": "面向不同客户提供贴合需要的服务，结合组织成熟度、情境及利益相关方反馈调整 PMO 的结构和职责。", "ref": "G X2 pp. 233–236｜PDF 338–341"}, {"kind": "原书", "title": "AI 人机分工", "body": "低复杂度工作可用自动化，如报告草稿。辅助用于风险登记册或排期的迭代完善。增强用于组合选择等复杂任务，人需验证结果并负责决策。", "ref": "G X3.1–X3.3 pp. 237–244｜PDF 342–349"}, {"kind": "原书", "title": "负责任的 AI 使用", "body": "核验可靠性，留意隐私与数据使用、偏差、安全、透明度、版权和资源消耗，以组织政策明确行为边界。", "ref": "G X3.3 pp. 239–244｜PDF 344–349"}, {"kind": "原书", "title": "采购决策链", "body": "自制或外购 → 采购策略 → 招标和选择 → 合同与执行监督 → 处理索赔。固定价、成本补偿、工料合同对范围确定性及买卖双方风险分配的要求不同。", "ref": "G X4.2–X4.9 pp. 246–254｜PDF 351–359"}, {"kind": "整理", "title": "组织级做法", "body": "将外部供应商的验收、信息保护与变更权限明确到治理安排，再决定 PMO 提供哪些共用模板和工具，哪些工作由团队自行选择。", "ref": "对应 G §2.1、X2–X4"}]}]}, "chapters": {"label": "章节索引", "title": "按章节回查", "desc": "《标准》4 章 ·《指南》5 章 · 5 个附录", "branches": [{"title": "前言｜第八版改了什么", "items": [{"kind": "原书", "title": "本次修订更新项目、项目管理等基础定义，将第七版十二项原则精炼为六项，把过程组重述为五个关注领域，并把相关管理实践整合为七个绩效域与四十个可裁剪过程", "body": "本次修订更新项目、项目管理等基础定义，将第七版十二项原则精炼为六项，把过程组重述为五个关注领域，并把相关管理实践整合为七个绩效域与四十个可裁剪过程。前言报告约 48,000 个研究数据点及两轮公开反馈。", "ref": "前言 pp. vii–ix｜PDF 8–10"}]}, {"title": "S 第1章｜引言", "items": [{"kind": "原书", "title": "项目是为创造价值而在特定情境下开展的临时性工作", "body": "项目是为创造价值而在特定情境下开展的临时性工作。其交付物能在项目结束后继续存在并产生结果。项目启动由需求、机会或变化驱动，商业论证解释投入理由。", "ref": "S §1.2–1.3 pp. 4–9｜PDF 27–32"}, {"kind": "原书", "title": "组织治理为项目治理提供决策、责任和监督框架", "body": "组织治理为项目治理提供决策、责任和监督框架。组合协调战略投资，项目集协调相关工作以获得合并管理的收益，项目交付结果，运营持续提供服务并可承接项目产出。", "ref": "S §1.3.2–1.3.4 pp. 7–12｜PDF 30–35"}]}, {"title": "S 第2章｜价值交付系统", "items": [{"kind": "原书", "title": "组合、项目集、项目、产品和运营形成价值交付系统", "body": "组合、项目集、项目、产品和运营形成价值交付系统。交付物促成结果，结果带来收益，也可能带来不利影响。价值因利益相关方而异。评价成功须同时看结果创造的价值和项目管理的效率，部分收益在收尾后才可观察。", "ref": "S §2.1 pp. 13–17｜PDF 36–40"}, {"kind": "原书", "title": "企业环境因素 EEF 是团队所处的内外部条件，组织过程资产 OPA 包括组织已有的规则、流程和知识库", "body": "企业环境因素 EEF 是团队所处的内外部条件，组织过程资产 OPA 包括组织已有的规则、流程和知识库。组织结构影响权力、资源和沟通。产品生命周期可跨越多个项目及持续运营。", "ref": "S §2.2–2.3 pp. 17–24｜PDF 40–47"}, {"kind": "原书", "title": "项目功能包括监督协调、获取反馈、促进支持、开展工作、应用专业知识、提供组织方向和提供资源", "body": "项目功能包括监督协调、获取反馈、促进支持、开展工作、应用专业知识、提供组织方向和提供资源。执行这些功能的人随情境变化。项目管理团队、发起人、客户或产品负责人、团队及用户各有不同贡献。", "ref": "S §2.4–2.5 pp. 24–33｜PDF 47–56"}]}, {"title": "S 第3章｜项目管理原则", "items": [{"kind": "原书", "title": "原则指导项目团队的判断与行为", "body": "原则指导项目团队的判断与行为。主动性、主人翁意识与价值导向构成项目管理思维，绩效域承接其管理实践。", "ref": "S §3.1–3.2 pp. 36–37｜PDF 59–60"}, {"kind": "原书", "title": "全局视角要求考虑系统联系和间接影响", "body": "全局视角要求考虑系统联系和间接影响。聚焦价值要求持续验证投入是否值得。质量要嵌入过程和交付物。负责任的领导以行动承担责任并处理冲突。可持续性融入所有项目领域。赋能文化使团队和利益相关方有条件参与决策与协作。", "ref": "S §3.3–3.8 pp. 38–55｜PDF 61–78"}, {"kind": "原书示例", "title": "六项原则分别用公益传播、企业内部系统、批发物流、政府多供应商项目、工程用材和多地域协作说明", "body": "六项原则分别用公益传播、企业内部系统、批发物流、政府多供应商项目、工程用材和多地域协作说明。各例的情境与取舍见第三部分。", "ref": "S §3.3.2–3.8.2 pp. 39、42、45、48、52、54｜PDF 62、65、68、71、75、77"}]}, {"title": "S 第4章｜项目生命周期", "items": [{"kind": "原书", "title": "阶段组织项目工作并可设置评审点", "body": "阶段组织项目工作并可设置评审点。开发方法可在预测型、混合型和适应型之间选择。需求稳定性、变更成本、可分批交付性、项目约束、组织文化和参与能力都会影响选择。交付节奏可为一次、多次、定期或持续。", "ref": "S §4.1–4.4 pp. 57–69｜PDF 80–92"}, {"kind": "原书", "title": "启动、规划、执行、监控、收尾是五个管理关注领域", "body": "启动、规划、执行、监控、收尾是五个管理关注领域。各领域可在一个阶段内交叠，相关活动可以反复开展。图 4-13 与图 4-14 分别展示预测型工程与适应型迭代中的重叠。", "ref": "S §4.5 pp. 69–74｜PDF 92–97"}]}, {"title": "G 第1章｜引言", "items": [{"kind": "原书", "title": "《标准》阐明原则和基础结构，《指南》围绕绩效域说明管理实践，并提供裁剪、输入输出、工具与技术", "body": "《标准》阐明原则和基础结构，《指南》围绕绩效域说明管理实践，并提供裁剪、输入输出、工具与技术。第八版用通用的过程示例支持多种交付方法。", "ref": "G §1.1–1.3 pp. 3–5｜PDF 108–110"}]}, {"title": "G 第2章｜项目管理绩效域", "items": [{"kind": "原书", "title": "七域在生命周期内并行互动", "body": "七域在生命周期内并行互动。表 2-1 把四十个示例过程映射到五个关注领域。每域的结果核查用于判断过程成果是否有实际作用。", "ref": "G §2、表 2-1 pp. 7–10｜PDF 112–115"}, {"kind": "原书", "title": "治理", "body": "贯穿授权、计划整合、质量保证、知识、变更与收尾。可在结构化治理与有护栏的自治之间安排决策权，配合战略指标、预警和反馈。", "ref": "G §2.1 pp. 10–37｜PDF 115–142"}, {"kind": "原书", "title": "范围", "body": "连接需求、边界、结构与验收。预测型可用范围基准和工作分解结构，适应型可通过优先级待办与分批验收处理演进中的范围。", "ref": "G §2.2 pp. 35–46｜PDF 140–151"}, {"kind": "原书", "title": "进度", "body": "按合适层级建模，处理依赖、历时、资源与里程碑，监控后更新预测。适应型可结合迭代节奏和完成速率来规划。", "ref": "G §2.3 pp. 47–58｜PDF 152–163"}, {"kind": "原书", "title": "财务", "body": "覆盖价值衡量、融资和资金需求、估算、预算与控制。成本基准、初始预算与储备的构成受组织政策影响，投资评估还应考虑全生命周期。", "ref": "G §2.4 pp. 58–67｜PDF 163–172"}, {"kind": "原书", "title": "利益相关方", "body": "持续识别、分析、规划、参与和监控。参与着眼于预期、支持与反馈，沟通着眼于信息的对象、内容、频率与渠道。", "ref": "G §2.5 pp. 67–78｜PDF 172–183"}, {"kind": "原书", "title": "资源", "body": "统筹人力、实体和虚拟资源，涉及估算、获取、带领团队以及监控供需和利用。团队表现依赖共同目标、协作和适当授权。", "ref": "G §2.6 pp. 79–92｜PDF 184–197"}, {"kind": "原书", "title": "风险", "body": "管理项目整体风险和个别风险，兼顾威胁与机会。风险偏好、阈值和暴露影响优先级与应对，执行后持续复查。", "ref": "G §2.7 pp. 92–102｜PDF 197–207"}]}, {"title": "G 第3章｜裁剪", "items": [{"kind": "原书", "title": "可裁剪生命周期、开发方法、过程和参与方式", "body": "可裁剪生命周期、开发方法、过程和参与方式。依次选择初始开发方法、适配组织、适配项目、持续改进。组织层考虑政策与治理，项目层审视交付物、团队和文化。", "ref": "G §3.1–3.5 pp. 103–110｜PDF 208–215"}, {"kind": "原书示例", "title": "表 3-1 从可观察症状出发", "body": "表 3-1 从可观察症状出发。质量差时先调查根因并改善过程。审批等待过长时可梳理授权并设定决策阈值。", "ref": "G §3.6、表 3-1 pp. 110–112｜PDF 215–217"}]}, {"title": "G 第4章｜输入和输出", "items": [{"kind": "原书", "title": "按字母排列的工件参考库", "body": "按字母排列的工件参考库。商业论证说明投入依据，收益管理计划说明如何实现和追踪收益，章程授权项目，管理计划整合实施和控制安排。", "ref": "G §4 pp. 115–116、125–127｜PDF 220–221、230–232"}, {"kind": "原书", "title": "需求追踪矩阵连接需求与来源及相关工件，基准用于对比实际表现，风险登记册记录个别风险，风险报告反映整体及摘要信息", "body": "需求追踪矩阵连接需求与来源及相关工件，基准用于对比实际表现，风险登记册记录个别风险，风险报告反映整体及摘要信息。工作绩效数据、信息、报告对应采集、分析和沟通的不同层次。", "ref": "G §4 pp. 131–132、137–140、143–144｜PDF 236–237、242–245、248–249"}]}, {"title": "G 第5章｜工具与技术", "items": [{"kind": "原书", "title": "按字母排列的工具参考库", "body": "按字母排列的工具参考库。选型应对应管理问题。示例包括分解和 WBS、关键路径、质量成本、决策树、概率与影响矩阵、资源优化、利益相关方参与评估、挣值和可视化控制。", "ref": "G §5 pp. 145–215｜PDF 250–320"}, {"kind": "原书示例", "title": "图 5-4 用两条路径比较总历时，图 5-5 用需求情景的概率和净收益比较决策，表 5-1 汇总挣值测算", "body": "图 5-4 用两条路径比较总历时，图 5-5 用需求情景的概率和净收益比较决策，表 5-1 汇总挣值测算。详见专题与案例。", "ref": "G §5 pp. 160–161、163–164、207–210｜PDF 265–266、268–269、312–315"}]}, {"title": "G 附录与后置资料", "items": [{"kind": "原书", "title": "X1 记录贡献者、评审者和 PMI 团队", "body": "X1 记录贡献者、评审者和 PMI 团队。X2 讨论 PMO 如何围绕客户、价值和组织成熟度选择服务与结构。", "ref": "G X1 pp. 217–231｜PDF 322–336；X2 pp. 233–236｜PDF 338–341"}, {"kind": "原书", "title": "X3 将 AI 用法分为自动化、辅助、增强，按任务复杂度配置人的参与，并讨论可靠性、隐私、透明度等责任问题", "body": "X3 将 AI 用法分为自动化、辅助、增强，按任务复杂度配置人的参与，并讨论可靠性、隐私、透明度等责任问题。", "ref": "G X3 pp. 237–244｜PDF 342–349"}, {"kind": "原书", "title": "X4 串联自制或外购、采购策略、招标、供应商选择、合同与索赔管理", "body": "X4 串联自制或外购、采购策略、招标、供应商选择、合同与索赔管理。X5 交代版本演进和原则迁移。", "ref": "G X4 pp. 245–254｜PDF 350–359；X5 pp. 255–259｜PDF 360–364"}, {"kind": "原书", "title": "两分册均有参考文献和索引", "body": "两分册均有参考文献和索引。《指南》另附书目和术语表，可回查定义与工具所在页。", "ref": "S p. 75、p. 77 起｜PDF 98、100 起；G pp. 261、263、265、277 起｜PDF 366、368、370、382 起"}]}]}, "topic1": {"label": "价值治理", "title": "价值、治理与收益", "desc": "战略 → 交付 → 使用结果 → 收益 → 价值", "branches": [{"title": "价值链", "items": [{"kind": "原书", "title": "战略目标 → 项目交付物 → 使用后产生的结果 → 实现收益 → 相对于投入形成价值", "body": "战略目标 → 项目交付物 → 使用后产生的结果 → 实现收益 → 相对于投入形成价值。", "ref": "S §1.2、§2.1 pp. 4–6、13–17｜PDF 27–29、36–40"}, {"kind": "原书", "title": "运营可以承接交付物并向上游反馈绩效", "body": "运营可以承接交付物并向上游反馈绩效。", "ref": "S §1.2、§2.1 pp. 4–6、13–17｜PDF 27–29、36–40"}]}, {"title": "双维度成功", "items": [{"kind": "原书", "title": "一边衡量时间、成本、范围、质量等执行效率", "body": "一边衡量时间、成本、范围、质量等执行效率，一边衡量组织和受益方获得的结果。", "ref": "S §2.1.2 pp. 16–17｜PDF 39–40"}, {"kind": "原书", "title": "结果可以是财务、社会、环境或合规收益", "body": "结果可以是财务、社会、环境或合规收益，观测时间可能晚于结项。", "ref": "S §2.1.2 pp. 16–17｜PDF 39–40"}]}, {"title": "治理的三个抓手", "items": [{"kind": "原书", "title": "战略对齐的目标指标、尽早提示偏离的信号、检验决策成效的反馈", "body": "战略对齐的目标指标、尽早提示偏离的信号、检验决策成效的反馈。", "ref": "G §2.1.2–2.1.5 pp. 11–15｜PDF 116–120"}, {"kind": "原书", "title": "授权和监督可按风险、复杂性与团队成熟度调整", "body": "授权和监督可按风险、复杂性与团队成熟度调整。", "ref": "G §2.1.2–2.1.5 pp. 11–15｜PDF 116–120"}]}, {"title": "决策工件", "items": [{"kind": "原书", "title": "商业论证说明项目为何值得投", "body": "商业论证说明项目为何值得投，章程提供授权，收益管理计划确定收益安排，管理计划整合各域工作。", "ref": "G §2.1.6 pp. 17–19、28–31｜PDF 122–124、133–136；§4 pp. 115–116、125–127｜PDF 220–221、230–232"}, {"kind": "原书", "title": "变更影响超出授权时按治理机制处理", "body": "变更影响超出授权时按治理机制处理。", "ref": "G §2.1.6 pp. 17–19、28–31｜PDF 122–124、133–136；§4 pp. 115–116、125–127｜PDF 220–221、230–232"}]}, {"title": "应用示例｜运营商自助服务迁移", "items": [{"kind": "整理", "title": "把“新入口上线”列为交付物", "body": "把“新入口上线”列为交付物，把“目标用户完成自助办理”列为结果，把“人工办理成本下降且投诉率维持阈值内”列为待验证收益。", "ref": "对应 S §2.1；G §2.1、§4"}, {"kind": "整理", "title": "结项前约定运营接手人、比较基线和观察窗口", "body": "结项前约定运营接手人、比较基线和观察窗口。", "ref": "对应 S §2.1；G §2.1、§4"}]}]}, "topic2": {"label": "交付与裁剪", "title": "生命周期、关注领域与裁剪", "desc": "开发方法 → 组织适配 → 项目适配 → 持续改进", "branches": [{"title": "方法选择", "items": [{"kind": "原书", "title": "需求与方案较稳定时可采用预测型", "body": "需求与方案较稳定时可采用预测型。", "ref": "S §4.2–4.3 pp. 59–68｜PDF 82–91"}, {"kind": "原书", "title": "需要反复学习、需求演进且反馈可得时可采用适应型", "body": "需要反复学习、需求演进且反馈可得时可采用适应型。", "ref": "S §4.2–4.3 pp. 59–68｜PDF 82–91"}, {"kind": "原书", "title": "可按阶段或交付物组合为混合型", "body": "可按阶段或交付物组合为混合型。", "ref": "S §4.2–4.3 pp. 59–68｜PDF 82–91"}]}, {"title": "四个维度", "items": [{"kind": "原书", "title": "生命周期阶段安排工作", "body": "生命周期阶段安排工作，开发方法组织交付物形成，交付节奏说明交付频率，关注领域归类管理活动。", "ref": "S §4.1–4.5 pp. 57–74｜PDF 80–97"}, {"kind": "原书", "title": "启动、规划、执行、监控和收尾可重叠", "body": "启动、规划、执行、监控和收尾可重叠。", "ref": "S §4.1–4.5 pp. 57–74｜PDF 80–97"}]}, {"title": "裁剪循环", "items": [{"kind": "原书", "title": "选初始方法 → 适配组织要求 → 按项目交付物、团队、文化再调整 → 持续检视改进", "body": "选初始方法 → 适配组织要求 → 按项目交付物、团队、文化再调整 → 持续检视改进。", "ref": "G §3.3–3.6 pp. 104–112｜PDF 209–217"}, {"kind": "原书", "title": "可调整过程、参与方式和七域工作", "body": "可调整过程、参与方式和七域工作。", "ref": "G §3.3–3.6 pp. 104–112｜PDF 209–217"}]}, {"title": "电子病历上线", "items": [{"kind": "原书示例", "title": "原书情境", "body": "基础设施按预测型推进，用户界面开发与集成可采用适应型。", "ref": "S §4.2.3 p. 66｜PDF 89"}]}, {"title": "混合交付的接口", "items": [{"kind": "整理", "title": "把采购验收、基础设施就绪、数据迁移窗口设为联合里程碑", "body": "把采购验收、基础设施就绪、数据迁移窗口设为联合里程碑，同时让应用迭代持续获取用户反馈。", "ref": "对应 S §4.2.3–4.5；G §3"}, {"kind": "整理", "title": "两部分对接时约定共同的验收条件", "body": "两部分对接时约定共同的验收条件。", "ref": "对应 S §4.2.3–4.5；G §3"}]}]}, "topic3": {"label": "七域与过程", "title": "七域联动与过程地图", "desc": "五个关注领域与七个绩效域交叉 · 四十个示例过程", "branches": [{"title": "治理 9 项", "items": [{"kind": "原书", "title": "要点", "body": "启动项目或阶段、整合对齐计划、规划获取策略、管理执行、管理质量保证、管理项目知识、监控项目绩效、评估实施变更、关闭项目或阶段。", "ref": "G §2.1.6 pp. 15–33｜PDF 120–138"}]}, {"title": "范围 6 项", "items": [{"kind": "原书", "title": "规划范围、引导并分析需求、定义范围、构建范围结构、监控范围、确认范围", "body": "规划范围、引导并分析需求、定义范围、构建范围结构、监控范围、确认范围。", "ref": "G §2.2.2 pp. 39–44｜PDF 144–149"}, {"kind": "原书", "title": "范围结构可用 WBS 或待办分解", "body": "范围结构可用 WBS 或待办分解。", "ref": "G §2.2.2 pp. 39–44｜PDF 144–149"}]}, {"title": "进度 3 项", "items": [{"kind": "原书", "title": "规划进度、制定进度、监控进度", "body": "规划进度、制定进度、监控进度。", "ref": "G §2.3.2 pp. 48–55｜PDF 153–160"}, {"kind": "原书", "title": "制定进度内部包含活动、依赖与历时等工作", "body": "制定进度内部包含活动、依赖与历时等工作。", "ref": "G §2.3.2 pp. 48–55｜PDF 153–160"}]}, {"title": "财务 4 项", "items": [{"kind": "原书", "title": "要点", "body": "规划财务、估算成本、制定预算、监控财务。", "ref": "G §2.4.2 pp. 61–65｜PDF 166–170"}]}, {"title": "利益相关方 7 项", "items": [{"kind": "原书", "title": "要点", "body": "识别相关方，规划、管理、监控相关方参与，规划、管理、监控沟通。", "ref": "G §2.5.2 pp. 70–77｜PDF 175–182"}]}, {"title": "资源 5 项", "items": [{"kind": "原书", "title": "要点", "body": "规划资源、估算资源、获取资源、带领团队、监控资源配置。", "ref": "G §2.6.2 pp. 80–88｜PDF 185–193"}]}, {"title": "风险 6 项", "items": [{"kind": "原书", "title": "规划、识别、分析、规划应对、实施应对、监控", "body": "规划、识别、分析、规划应对、实施应对、监控。", "ref": "G §2.7.1–2.7.2 pp. 92–100｜PDF 197–205"}, {"kind": "原书", "title": "威胁可规避、转移或减轻", "body": "威胁可规避、转移或减轻，机会可开拓、分享或提高，两者也可接受或上报。", "ref": "G §2.7.1–2.7.2 pp. 92–100｜PDF 197–205"}]}, {"title": "一项变更如何穿过七域", "items": [{"kind": "整理", "title": "范围澄清新增工作 → 进度判断依赖与里程碑 → 财务和资源估算代价 → 风险评估新增暴露 → 沟通相关方并取得决定 → 治理授权、跟踪实施与结果", "body": "范围澄清新增工作 → 进度判断依赖与里程碑 → 财务和资源估算代价 → 风险评估新增暴露 → 沟通相关方并取得决定 → 治理授权、跟踪实施与结果。", "ref": "对应 G 表 2-1、§2.1.6.8、§2.1.8 pp. 9、28–31、35–36｜PDF 114、133–136、140–141"}, {"kind": "整理", "title": "各域可并行评估", "body": "各域可并行评估。", "ref": "对应 G 表 2-1、§2.1.6.8、§2.1.8 pp. 9、28–31、35–36｜PDF 114、133–136、140–141"}]}]}, "topic4": {"label": "工件与工具", "title": "从管理问题选择工件与工具", "desc": "从范围、进度、财务、风险和协作问题选择工具", "branches": [{"title": "范围与验收", "items": [{"kind": "原书", "title": "范围陈述明确边界", "body": "范围陈述明确边界，WBS 分解到可管理的工作包，需求追踪矩阵连接需求及其来源和验证信息，确认范围促成正式验收。", "ref": "G §2.2.2 pp. 39–44｜PDF 144–149；§4 pp. 128、131–132、143｜PDF 233、236–237、248；§5 pp. 165–167｜PDF 270–272"}, {"kind": "原书", "title": "质量控制帮助验证交付物是否符合要求", "body": "质量控制帮助验证交付物是否符合要求。", "ref": "G §2.2.2 pp. 39–44｜PDF 144–149；§4 pp. 128、131–132、143｜PDF 233、236–237、248；§5 pp. 165–167｜PDF 270–272"}]}, {"title": "进度与资源", "items": [{"kind": "原书", "title": "关键路径法用网络逻辑判断约束完工的路径", "body": "关键路径法用网络逻辑判断约束完工的路径。", "ref": "G §5 pp. 150、160–161、175、192–194、213–214｜PDF 255、265–266、280、297–299、318–319"}, {"kind": "原书", "title": "资源平衡可因供给约束改变关键路径", "body": "资源平衡可因供给约束改变关键路径。", "ref": "G §5 pp. 150、160–161、175、192–194、213–214｜PDF 255、265–266、280、297–299、318–319"}, {"kind": "原书", "title": "燃尽图显示剩余工作", "body": "燃尽图显示剩余工作，燃起图可同时展示完成量和总范围。", "ref": "G §5 pp. 150、160–161、175、192–194、213–214｜PDF 255、265–266、280、297–299、318–319"}]}, {"title": "财务与绩效", "items": [{"kind": "原书", "title": "PV 是计划价值", "body": "PV 是计划价值，EV 是已完成工作按预算计的价值，AC 是实际成本。", "ref": "G §2.4.2 pp. 61–65｜PDF 166–170；§5 表 5-1 pp. 207–210｜PDF 312–315"}, {"kind": "原书", "title": "SV＝EV−PV", "body": "SV＝EV−PV，CV＝EV−AC。", "ref": "G §2.4.2 pp. 61–65｜PDF 166–170；§5 表 5-1 pp. 207–210｜PDF 312–315"}, {"kind": "原书", "title": "完工估算 EAC 的计算口径取决于对未来效率的假设", "body": "完工估算 EAC 的计算口径取决于对未来效率的假设。", "ref": "G §2.4.2 pp. 61–65｜PDF 166–170；§5 表 5-1 pp. 207–210｜PDF 312–315"}]}, {"title": "风险与决策", "items": [{"kind": "原书", "title": "概率与影响矩阵帮助定性排序", "body": "概率与影响矩阵帮助定性排序。", "ref": "G §2.7.2 pp. 96–100｜PDF 201–205；§5 pp. 163–164、187、198–199｜PDF 268–269、292、303–304"}, {"kind": "原书", "title": "决策树用各情景的概率与净结果计算期望货币价值", "body": "决策树用各情景的概率与净结果计算期望货币价值。", "ref": "G §2.7.2 pp. 96–100｜PDF 201–205；§5 pp. 163–164、187、198–199｜PDF 268–269、292、303–304"}, {"kind": "原书", "title": "敏感性分析考察哪些变量最影响结果", "body": "敏感性分析考察哪些变量最影响结果，模拟用于探索可能的结果分布。", "ref": "G §2.7.2 pp. 96–100｜PDF 201–205；§5 pp. 163–164、187、198–199｜PDF 268–269、292、303–304"}]}, {"title": "协作与质量", "items": [{"kind": "原书", "title": "要点", "body": "RACI 澄清分工，参与评估矩阵显示相关方当前和目标参与程度，质量成本揭示预防、评价和失败之间的取舍，回顾会为团队提供改进反馈。", "ref": "G §5 pp. 158–159、194–195、200｜PDF 263–264、299–300、305"}]}]}, "topic5": {"label": "PMO · AI · 采购", "title": "组织能力、AI 与采购", "desc": "组织能力、技术使用与外部供应策略", "branches": [{"title": "PMO 价值", "items": [{"kind": "原书", "title": "要点", "body": "面向不同客户提供贴合需要的服务，结合组织成熟度、情境及利益相关方反馈调整 PMO 的结构和职责。", "ref": "G X2 pp. 233–236｜PDF 338–341"}]}, {"title": "AI 人机分工", "items": [{"kind": "原书", "title": "低复杂度工作可用自动化", "body": "低复杂度工作可用自动化，如报告草稿。", "ref": "G X3.1–X3.3 pp. 237–244｜PDF 342–349"}, {"kind": "原书", "title": "辅助用于风险登记册或排期的迭代完善", "body": "辅助用于风险登记册或排期的迭代完善。", "ref": "G X3.1–X3.3 pp. 237–244｜PDF 342–349"}, {"kind": "原书", "title": "增强用于组合选择等复杂任务", "body": "增强用于组合选择等复杂任务，人需验证结果并负责决策。", "ref": "G X3.1–X3.3 pp. 237–244｜PDF 342–349"}]}, {"title": "负责任的 AI 使用", "items": [{"kind": "原书", "title": "要点", "body": "核验可靠性，留意隐私与数据使用、偏差、安全、透明度、版权和资源消耗，以组织政策明确行为边界。", "ref": "G X3.3 pp. 239–244｜PDF 344–349"}]}, {"title": "采购决策链", "items": [{"kind": "原书", "title": "自制或外购 → 采购策略 → 招标和选择 → 合同与执行监督 → 处理索赔", "body": "自制或外购 → 采购策略 → 招标和选择 → 合同与执行监督 → 处理索赔。", "ref": "G X4.2–X4.9 pp. 246–254｜PDF 351–359"}, {"kind": "原书", "title": "固定价、成本补偿、工料合同对范围确定性及买卖双方风险分配的要求不同", "body": "固定价、成本补偿、工料合同对范围确定性及买卖双方风险分配的要求不同。", "ref": "G X4.2–X4.9 pp. 246–254｜PDF 351–359"}]}, {"title": "组织级做法", "items": [{"kind": "整理", "title": "应用方法", "body": "将外部供应商的验收、信息保护与变更权限明确到治理安排，再决定 PMO 提供哪些共用模板和工具，哪些工作由团队自行选择。", "ref": "对应 G §2.1、X2–X4"}]}]}, "cases": {"label": "代表性案例", "title": "案例与图表", "desc": "按管理判断回看原书示例", "branches": [{"title": "六项原则的书中情境", "items": [{"kind": "原书示例", "title": "公益组织推广公共卫生", "body": "与地方政府项目对齐争取资助，同时承受更严格的传播约束，以扩大覆盖", "ref": "S §3.3.2 p. 39｜PDF 62"}, {"kind": "原书示例", "title": "内部技术系统上线", "body": "围绕实际采用率和满意度选择更简单的方案，降低功能和定制复杂度", "ref": "S §3.4.2 p. 42｜PDF 65"}, {"kind": "原书示例", "title": "批发物流进入新地区", "body": "从客户包装、交付时间、装卸期望倒推质量要求，结合监管要求设计流程", "ref": "S §3.5.2 p. 45｜PDF 68"}, {"kind": "原书示例", "title": "政府项目多供应商排班冲突", "body": "跨供应商追查根因并协商班次，降低对质量与生产率的影响", "ref": "S §3.6.2 p. 48｜PDF 71"}, {"kind": "原书示例", "title": "建设项目采购用材", "body": "兼顾回报、环境与社区影响，评估再生材料或其他用材方案", "ref": "S §3.7.2 p. 52｜PDF 75"}, {"kind": "原书示例", "title": "多地域与远程协作", "body": "让多元群体从早期参与，给成员机会共同处理分歧", "ref": "S §3.8.2 p. 54｜PDF 77"}]}, {"title": "交付、裁剪与工具", "items": [{"kind": "原书示例", "title": "定制住宅与医院电子病历", "body": "按交付物的不确定性决定在哪里迭代、在哪里稳定执行", "ref": "S §4.2.3 pp. 65–66｜PDF 88–89"}, {"kind": "原书示例", "title": "预测型工程与适应型迭代", "body": "比较两种情境下五个关注领域如何重叠，以及各活动强度如何变化", "ref": "S 图 4-13、4-14 pp. 73–74｜PDF 96–97"}, {"kind": "原书示例", "title": "路径 A–B–D 与 A–C–D", "body": "在图中网络假设下，25 与 30 的路径长度使后者成为关键路径", "ref": "G 图 5-4 p. 161｜PDF 266"}, {"kind": "原书示例", "title": "新建与改造工厂的决策树", "body": "对强弱需求的净收益按概率加权。书中设定下，新建的期望值为 3,600 万美元，改造为 4,600 万美元", "ref": "G 图 5-5 p. 164｜PDF 269"}, {"kind": "原书示例", "title": "质量差、审批久等裁剪症状", "body": "将症状映射到根因分析、过程改进或适当下放决策", "ref": "G 表 3-1 p. 112｜PDF 217"}]}, {"title": "AI 与运营商应用", "items": [{"kind": "原书示例", "title": "AI 监控与组合选择", "body": "比较自动预警与战略判断所需的不同程度的人类介入", "ref": "G 表 X3-1、图 X3-2 pp. 240–243｜PDF 345–348"}, {"kind": "整理", "title": "运营商自助服务迁移", "body": "分开记录交付、采用与业务收益，为运营交接确定衡量安排", "ref": "对应 S §2.1、G §2.1 及 §4"}]}]}}</script>
+<script>
+(() => {
+"use strict";
+const data = JSON.parse(document.getElementById("map-data").textContent);
+const map = document.getElementById("map");
+const views = document.getElementById("views");
+const query = document.getElementById("query");
+const status = document.getElementById("status");
+let current = "overview";
+let savedStates = null;
+
+function element(tag, className, value) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (value) node.textContent = value;
+  return node;
+}
+function addTab(id, label) {
+  const button = element("button", "", label);
+  button.type = "button";
+  button.dataset.view = id;
+  button.addEventListener("click", () => show(id));
+  views.append(button);
+}
+function branchNode(branch, defaultOpen) {
+  const li = element("li", "branch");
+  const group = element("details");
+  group.open = defaultOpen;
+  group.append(element("summary", "", branch.title));
+  const list = element("ul", "leaves");
+  for (const item of branch.items) {
+    const leaf = element("li", "leaf");
+    const detail = element("details");
+    const title = element("summary");
+    const tone = item.kind === "整理" ? " note" : item.kind === "原书示例" ? " case" : "";
+    title.append(element("span", "badge" + tone, item.kind), document.createTextNode(item.title));
+    detail.append(title, element("p", "", item.body));
+    if (item.ref) detail.append(element("p", "ref", item.ref));
+    leaf.append(detail);
+    list.append(leaf);
+  }
+  group.append(list);
+  li.append(group);
+  return li;
+}
+function show(id) {
+  current = id;
+  savedStates = null;
+  query.value = "";
+  for (const button of views.children) button.setAttribute("aria-pressed", String(button.dataset.view === id));
+  const view = data[id];
+  const root = element("div", "root");
+  root.append(element("strong", "", view.title), element("small", "", view.desc));
+  const branches = element("ul", "branches");
+  for (const [index, branch] of view.branches.entries()) branches.append(branchNode(branch, index === 0 || id.startsWith("topic")));
+  map.replaceChildren(root, branches);
+  status.textContent = view.branches.length + " 条分支 · 点击标题展开";
+}
+function filter() {
+  const term = query.value.trim().toLocaleLowerCase();
+  const branches = [...map.querySelectorAll(".branch")];
+  const details = [...map.querySelectorAll("details")];
+  if (term && !savedStates) savedStates = details.map(node => node.open);
+  let matches = 0;
+  for (const branch of branches) {
+    const branchTitle = branch.querySelector("summary").textContent.toLocaleLowerCase();
+    let visible = 0;
+    for (const leaf of branch.querySelectorAll(".leaf")) {
+      const found = !term || branchTitle.includes(term) || leaf.textContent.toLocaleLowerCase().includes(term);
+      leaf.hidden = !found;
+      if (found) visible++;
+      if (term) leaf.firstElementChild.open = found;
+    }
+    branch.hidden = visible === 0;
+    if (term) branch.firstElementChild.open = visible > 0;
+    matches += visible;
+  }
+  if (!term && savedStates) {
+    details.forEach((node, i) => { node.open = savedStates[i]; });
+    savedStates = null;
+  }
+  status.textContent = term ? "找到 " + matches + " 个节点" : data[current].branches.length + " 条分支 · 点击标题展开";
+}
+for (const [id, view] of Object.entries(data)) addTab(id, view.label);
+query.addEventListener("input", filter);
+for (const [id, state] of [["expand", true], ["collapse", false]]) {
+  document.getElementById(id).addEventListener("click", () => {
+    for (const detail of map.querySelectorAll("details")) {
+      if (!detail.closest("[hidden]")) detail.open = state;
+    }
+  });
+}
+show("overview");
+})();
+</script>
+</div>
