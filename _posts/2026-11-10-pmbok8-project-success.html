@@ -143,6 +143,13 @@ excerpt: "项目按期上线、通过验收之后，如何衡量用户采用和�
 .pmbok-case-extra dt{font-weight:700}
 .pmbok-case-extra dd{margin:0 0 6px}
 @media(max-width:700px){.pmbok-visuals .grid2,.pmbok-visuals .grid3{grid-template-columns:1fr}.pmbok-visuals figure{margin:4px;padding:8px}}
+.pmbok8 .pmbok-prose .table-wrap{margin:20px 0}
+.pmbok8 .pmbok-prose .table-wrap>table,.pmbok8 .pmbok-visuals .table-wrap>table{display:table;width:100%;margin:0}
+.pmbok8 .pmbok-prose .table-wrap>table th:first-child{width:clamp(6.5em,21%,10em);min-width:0}
+.pmbok8 .pmbok-reference{margin-top:28px;padding:18px 0 0;border-top:1px solid var(--line)}
+.pmbok8 .pmbok-reference h2{font-size:1.32rem;margin:0 0 8px}
+.pmbok8 .pmbok-reference p{margin:6px 0}
+@media(max-width:640px){.pmbok8 .pmbok-prose .table-wrap>table th,.pmbok8 .pmbok-prose .table-wrap>table td{padding:7px 8px}}
 </style>
 <div class="pmbok8">
 <div class="pmbok-prose">
@@ -377,4 +384,9 @@ for (const [id, state] of [["expand", true], ["collapse", false]]) {
 show("overview");
 })();
 </script>
+<section class="pmbok-reference" aria-labelledby="pmbok-reference-title">
+<h2 id="pmbok-reference-title">延伸参考</h2>
+<p><a href="/assets/pmbok8/casebook.html">PMBOK® 第 8 版案例与图表图解（Casebook）</a></p>
+<p>集中查阅 12 组图表、六项原则案例、40 个示例过程矩阵，以及关键路径和决策树的互动演练。各组图解附原书出处。</p>
+</section>
 </div>
