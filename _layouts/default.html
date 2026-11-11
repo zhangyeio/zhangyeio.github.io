@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="{{ site.lang | default: 'en' | escape }}">
   <head>
     {% assign asset_version = site.time | date: '%s' %}
     <meta charset="utf-8">
@@ -37,7 +37,7 @@
         <span class="nav-divider" aria-hidden="true">|</span>
         <a href="{{ '/' | relative_url }}">Posts</a>
         <a href="{{ '/archive/' | relative_url }}">Archive</a>
-        <a href="{{ '/about' | relative_url }}">About</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
       </div>
     </nav>
 
