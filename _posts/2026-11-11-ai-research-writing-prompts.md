@@ -12,6 +12,22 @@ excerpt: "从选题、文献检索与研究设计，到论文起草、语言修�
 <style>
 .post-content pre, .post-content pre code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: normal; }
 .post-content pre { max-width: 100%; box-sizing: border-box; }
+.post-content table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.post-content th, .post-content td {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  vertical-align: top;
+  text-align: left;
+}
+@media (max-width: 600px) {
+  .post-content th, .post-content td { padding: 9px 8px; font-size: 0.9em; }
+}
 </style>
 
 更新日期：2026 年 11 月 11 日
