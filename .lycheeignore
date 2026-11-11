@@ -13,3 +13,10 @@
 # Manually verified on 2026-11-04; these specific sources return HTTP 403 to CI bots.
 ^https://openai\.com/index/navier-stokes-solution/?$
 ^https://doi\.org/10\.1073/pnas\.2422633122/?$
+
+# Verified at the source on 2026-11-11; CI receives HTTP 403 or a protocol error.
+^https://help\.openai\.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt/?$
+^https://help\.openai\.com/en/articles/10500283-deep-research-in-chatgpt/?$
+^https://www\.mckinsey\.com/featured-insights/mckinsey-explainers/what-is-a-forward-deployed-engineer/?$
+^https://www\.alvarezandmarsal\.com/thought-leadership/the-rise-and-role-of-the-forward-deployed-engineer/?$
+^https://www\.alvarezandmarsal\.com/sites/default/files/2026-04/The%20Rise%20and%20Role%20of%20the%20Forward%20Deployed%20Engineer\.pdf$
