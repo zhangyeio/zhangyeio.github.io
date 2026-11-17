@@ -1,0 +1,504 @@
+---
+layout: post
+title: "TPM 实用 AI：全书精读与项目实操讲义"
+date: 2026-11-17 00:00:00 +0800
+permalink: /2026/11/17/tpm-practical-ai-reading-guide/
+categories: [AI 应用, 技术项目管理]
+tags: [TPM, AI 工作流, Agent, 项目管理]
+description: "《The Technical Program Manager’s Guide to Practical AI》的中文精读全文，包含章节脑图、项目实操、治理清单与 52 道自检题。"
+---
+
+<style>
+.tpm-guide{--map-node:#e4f0fb;--map-ink:#123e67;--map-edge:#5d788e;min-width:0}
+html[data-site-theme="dark"] .tpm-guide{--map-node:#263f56;--map-ink:#d9ecff;--map-edge:#a3b9cb}
+.tpm-guide [id]{scroll-margin-top:2rem}
+.tpm-guide .tpm-index{margin:1.6rem 0;padding:1rem 1.35rem;background:var(--surface-soft);border:1px solid var(--line);border-radius:10px}
+.tpm-guide .tpm-index h2{margin-top:0;font-size:1.25rem}
+.tpm-guide .tpm-index ol{margin:0;padding-left:1.6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.25rem 1.7rem}
+.tpm-guide figure{margin:1.5rem 0}
+.tpm-guide figcaption{color:var(--muted);font-size:.9rem;margin-top:.4rem}
+.tpm-guide .tpm-map,.tpm-guide .tpm-table{overflow:auto;max-width:100%;border-radius:8px}
+.tpm-guide .tpm-map{background:var(--surface);border:1px solid var(--line);padding:.7rem}
+.tpm-guide svg{display:block;width:100%;min-width:490px;height:auto}
+.tpm-guide svg a:hover rect,.tpm-guide svg a:focus rect{stroke:var(--map-ink);stroke-width:1.7}
+.tpm-guide .tpm-chapter{margin-top:2.8rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+.tpm-guide .tpm-chapter h2{margin:0;line-height:1.34}
+.tpm-guide .tpm-meta,.tpm-guide .tpm-ref{color:var(--muted);font-size:.93em}
+.tpm-guide .tpm-core{padding:.75rem 1rem;border-left:3px solid var(--map-edge);background:var(--surface-soft)}
+.tpm-guide .tpm-practice{margin:1.8rem 0;padding-left:clamp(.65rem,2vw,1.1rem);border-left:2px solid var(--line)}
+.tpm-guide .tpm-practice h3{margin-bottom:.2rem}
+.tpm-guide .tpm-practice h4{margin:1.2rem 0 .4rem;font-size:1.05rem}
+.tpm-guide .tpm-table{margin:1.05rem 0}
+.tpm-guide .tpm-table table{display:table;min-width:475px;width:100%;margin:0;border-collapse:collapse}
+.tpm-guide .tpm-table td,.tpm-guide .tpm-table th{text-align:left;vertical-align:top;overflow-wrap:anywhere;min-width:6.6rem}
+.tpm-guide .tpm-back{font-size:.9rem}
+</style>
+<div class="tpm-guide">
+<p>这份中文讲义整理自《The Technical Program Manager’s Guide to Practical AI》。从角色转型与技术选型，到项目启动、执行和收尾，再到领导力、职业管理与治理。各章保留关键英文术语、原书页码、应用案例及自检题。</p>
+<nav id="tpm-contents" class="tpm-index" aria-labelledby="tpm-contents-title"><h2 id="tpm-contents-title">文章目录</h2><ol>
+<li><a href="#tpm-ch1">AI 怎样改变 TPM 的角色</a></li>
+<li><a href="#tpm-ch2">AI 基础与核心概念</a></li>
+<li><a href="#tpm-ch3">从提示词到 Agent 编排</a></li>
+<li><a href="#tpm-ch4">从项目痛点选择 AI 用例</a></li>
+<li><a href="#tpm-ch5">AI 用于启动与规划</a></li>
+<li><a href="#tpm-ch6">AI 用于项目执行</a></li>
+<li><a href="#tpm-ch7">AI 用于交付与收尾</a></li>
+<li><a href="#tpm-ch8">AI 用于 TPM 领导力</a></li>
+<li><a href="#tpm-ch9">AI 用于职业管理</a></li>
+<li><a href="#tpm-ch10">负责任的 AI</a></li>
+<li><a href="#tpm-ch11">情商、影响力与协商</a></li>
+<li><a href="#tpm-ch12">持续学习与推动采用</a></li>
+<li><a href="#tpm-ch13">配套代码与 PDF 领取</a></li>
+</ol><p><a href="#tpm-map">查看章节关系脑图</a> · <a href="#tpm-review">复习记录</a></p></nav>
+<h2 id="tpm-map">全书章节关系脑图</h2><figure><div class="tpm-map" tabindex="0" role="region" aria-label="可滚动脑图">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="42 86 510 686" role="group" aria-label="全书章节关系脑图">
+<defs><marker id="tpm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="var(--map-edge)"/></marker></defs>
+<rect x="51" y="139" width="285" height="201" rx="5" fill="var(--surface)" stroke="var(--line)" stroke-width=".8"/><text x="179" y="154" font-size="9" font-weight="600" fill="var(--muted)"><tspan x="179" dy="0">第一部分 · The AI Shift</tspan></text>
+<rect x="51" y="374" width="480" height="220" rx="5" fill="var(--surface)" stroke="var(--line)" stroke-width=".8"/><text x="277" y="389" font-size="9" font-weight="600" fill="var(--muted)"><tspan x="277" dy="0">第二部分 · Practical AI Use Cases for TPMs</tspan></text>
+<rect x="199" y="628" width="332" height="137" rx="5" fill="var(--surface)" stroke="var(--line)" stroke-width=".8"/><text x="302" y="643" font-size="9" font-weight="600" fill="var(--muted)"><tspan x="302" dy="0">第三部分 · EQ Impact and Responsible AI</tspan></text>
+<polyline points="168,123 168,166" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="266,108 451,108 451,151" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="168,194 168,223" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="168,251 168,280" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="168,319 168,403" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="134,431 134,473" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="223,431 223,442 293,442 293,473" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="243,431 243,437 444,437 444,473" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="134,501 134,519" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="134,547 134,565" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="293,501 293,657" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="282,685 282,719" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="448,685 448,715 388,715 388,719" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)"/>
+<polyline points="515,672 540,672 540,367 257,367 257,403" fill="none" stroke="var(--map-edge)" marker-end="url(#tpm-arrow)" stroke-dasharray="4 3"/>
+<rect x="68" y="95" width="198" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="76" y="111" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="76" dy="0">Practical AI for TPMs</tspan></text>
+<a href="#tpm-ch13"><rect x="355" y="151" width="174" height="39" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="363" y="167" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="363" dy="0">第 13 章 配套代码与 PDF 领取</tspan><tspan x="363" dy="12">p.305</tspan></text></a>
+<a href="#tpm-ch1"><rect x="67" y="166" width="202" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="75" y="182" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="75" dy="0">第 1 章 角色演进 · p.3</tspan></text></a>
+<a href="#tpm-ch2"><rect x="67" y="223" width="202" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="75" y="239" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="75" dy="0">第 2 章 AI 基础 · p.15</tspan></text></a>
+<a href="#tpm-ch3"><rect x="67" y="280" width="202" height="39" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="75" y="296" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="75" dy="0">第 3 章 提示词、Skills 与 Agents</tspan><tspan x="75" dy="12">p.37</tspan></text></a>
+<a href="#tpm-ch4"><rect x="74" y="403" width="197" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="82" y="419" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="82" dy="0">第 4 章 识别与选择用例 · p.77</tspan></text></a>
+<a href="#tpm-ch5"><rect x="61" y="473" width="146" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="69" y="489" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="69" dy="0">第 5 章 启动与规划 · p.101</tspan></text></a>
+<a href="#tpm-ch8"><rect x="221" y="473" width="144" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="229" y="489" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="229" dy="0">第 8 章 TPM 领导力 · p.169</tspan></text></a>
+<a href="#tpm-ch9"><rect x="373" y="473" width="147" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="381" y="489" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="381" dy="0">第 9 章 职业管理 · p.227</tspan></text></a>
+<a href="#tpm-ch6"><rect x="61" y="519" width="146" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="69" y="535" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="69" dy="0">第 6 章 项目执行 · p.137</tspan></text></a>
+<a href="#tpm-ch7"><rect x="61" y="565" width="146" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="69" y="581" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="69" dy="0">第 7 章 交付与收尾 · p.153</tspan></text></a>
+<a href="#tpm-ch11"><rect x="211" y="657" width="142" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="219" y="673" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="219" dy="0">第 11 章 情商与影响力 · p.271</tspan></text></a>
+<a href="#tpm-ch10"><rect x="370" y="657" width="156" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="378" y="673" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="378" dy="0">第 10 章 负责任的 AI · p.257</tspan></text></a>
+<a href="#tpm-ch12"><rect x="213" y="719" width="228" height="28" rx="7" fill="var(--map-node)" stroke="var(--line)" stroke-width=".8"/><text x="221" y="735" font-size="9.1" font-weight="600" fill="var(--map-ink)"><tspan x="221" dy="0">第 12 章 持续学习与推动采用 · p.297</tspan></text></a>
+<rect x="179" y="199" width="90" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="184" y="211" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="184" dy="0">理解角色为何变化</tspan></text>
+<rect x="179" y="256" width="112" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="184" y="268" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="184" dy="0">把技术概念转为工作方式</tspan></text>
+<rect x="179" y="345" width="99" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="184" y="357" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="184" dy="0">用交互方式实现用例</tspan></text>
+<rect x="80" y="449" width="104" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="85" y="461" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="85" dy="0">三幕框架的起点</tspan></text>
+<rect x="235" y="449" width="115" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="240" y="461" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="240" dy="0">扩展到项目组合与团队</tspan></text>
+<rect x="389" y="449" width="114" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="394" y="461" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="394" dy="0">扩展到个人职业工作流</tspan></text>
+<rect x="150" y="502" width="142" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="155" y="514" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="155" dy="0">把范围、假设与依赖带入执行</tspan></text>
+<rect x="150" y="548" width="142" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="155" y="560" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="155" dy="0">把决策、风险与经验带入收尾</tspan></text>
+<rect x="306" y="602" width="130" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="311" y="614" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="311" dy="0">领导工作依赖协商与信任</tspan></text>
+<rect x="422" y="606" width="102" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="427" y="618" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="427" dy="0">治理贯穿各类用例</tspan></text>
+<rect x="215" y="693" width="104" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="220" y="705" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="220" dy="0">用影响力推动变革</tspan></text>
+<rect x="391" y="691" width="100" height="18" rx="6" fill="var(--surface-soft)" stroke="var(--line)" stroke-width=".8"/><text x="396" y="703" font-size="8.55" font-weight="600" fill="var(--map-ink)"><tspan x="396" dy="0">把治理纳入推广</tspan></text>
+</svg>
+</div><figcaption>节点标注原书起始页，点按即可跳到本文对应章节。窄屏可横向滑动。</figcaption></figure>
+<h2>建议阅读顺序</h2><p><strong>1 → 2 → 3 → 4 → 10 → 5 → 6 → 7 → 8 → 11 → 9 → 12</strong>。有项目管理经验的读者可把治理提前到项目实操前。第 13 章按需查阅。正文引用采用原书页码。</p>
+<section class="tpm-chapter" id="tpm-ch1"><h2>第 1 章 · AI 怎样改变 TPM 的角色</h2><p class="tpm-meta">How AI Is Changing the TPM Role<br>原书第 3–13 页 · 原书 PDF 第 34–44 页</p><p class="tpm-core"><strong>核心问题</strong>　部分团队的工作提速后，怎样让跨团队依赖、风险和决策也跟上？</p>
+<h3>局部提速如何让周报过时</h3>
+<p>Bella 管理一个涉及 12 个团队的云迁移项目。周一，平台团队用代码 Agent 在一个下午生成了 40 个服务的脚本，原计划要两个 Sprint。周二，两个服务暴露出共享数据库依赖。周三，安全团队发出访问策略草案。周四，另一个团队暂停切换（cutover）等待评审。周五，Bella 手上的依赖表仍停在上周四。团队都在正常做事，问题出在信息汇总的节奏。TPM 要设计依赖由谁确认、在哪更新、谁会及时收到变化。<span class="tpm-ref">〔第 3–5 页〕</span></p>
+<h3>三种 TPM 与杠杆效应</h3>
+<ul>
+<li>Traditional TPM（Bella）依靠成熟流程推动执行。AI-Aware TPM（Chris）用 AI 做规划和日常分析，收益主要集中于个人。AI-Enabled TPM（Daniella）把做法变成团队可复用的流程，必要时引入 Agent。传统的执行、对齐与协同能力是共同基础。<span class="tpm-ref">〔第 5–7 页〕</span></li>
+<li>Leverage 是用同等投入取得更大产出。书中列出模板与框架、进阶工具、文档系统、AI 工具与技能四类杠杆。Daniella 第一周省下五小时，把时间用于架构评审、路线图讨论与建立关键工作关系，到第 12 周已为认证框架变更做好准备。<span class="tpm-ref">〔第 9–12 页〕</span></li>
+<li>长期忙于事务会形成链条：Tactical Trap（事务陷阱）→ Context Gap（背景缺口）→ Reactive Positioning（被动响应）→ Reclassification（角色被重新定位）。其组织表现包括状态滞后于决策、依赖协调变成反复救火。<span class="tpm-ref">〔第 12–13 页〕</span></li>
+</ul>
+<h3>原书案例｜接手停滞项目</h3>
+<p>用获批工具整理文档，提取 North Star 与目标终态、已做决定及决策人、待认领问题、团队或系统依赖、互相矛盾的说法。每项附原句，不确定处标记待确认。产物是一页 Program Brief 和访谈问题清单。作者建议分享前抽查三条，回原材料核实，TPM 对分享的信息负责。<span class="tpm-ref">〔第 7–8 页〕</span></p>
+<section class="tpm-practice"><h3>Quick Win：交接会前的项目简报</h3><p class="tpm-meta">原书第 7–8 页</p><h4>练习设定</h4>
+<p>你接手一个停滞的接口联调项目。输入是已获准在工具内使用的章程、上周周报、工单和会议纪要。请工具整理五类信息，每项保留材料名称、日期和原句，自行推断的内容标记待确认。以下记录为讲义示例。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">类别</th><th scope="col">样例事实或疑问</th><th scope="col">交接会确认</th></tr></thead><tbody>
+<tr><td>North Star</td><td>章程列出端到端联通目标，未明确生产验收口径</td><td>请赞助人确认完成标准</td></tr>
+<tr><td>已做决定</td><td>纪要称首批接入 A 系统，未写决策人</td><td>核实决策是否生效</td></tr>
+<tr><td>未决问题</td><td>两份纪要给出不同接口负责人</td><td>指定一位主责人</td></tr>
+<tr><td>跨团队依赖</td><td>环境开通依赖运维工单 ENV-21</td><td>确认交付时间和阻塞</td></tr>
+<tr><td>矛盾</td><td>周报写下周可联调，工单仍显示环境未开通</td><td>问清周报是否为有条件预测</td></tr>
+</tbody></table></div>
+<h4>一页简报怎样交付</h4>
+<p>简报只放目标、当前状态、关键依赖和待做决定。把资料不一致处转成访谈问题。分享前抽查三条，优先覆盖会影响联调承诺的状态、负责人和目标口径。根据匹配结果更新简报和问题清单，由 TPM 对外说明。</p></section>
+<h3>章末自检</h3><ol>
+<li>Bella、Chris、Daniella 分别代表哪三个阶段？Chris 到 Daniella 的关键变化是什么？</li>
+<li>接手停滞项目时应提取哪五类信息？分享前怎样核验？</li>
+<li>事务陷阱到角色重新定位之间有哪两步？任选一步给出可观察信号。</li>
+<li><strong>应用题</strong>　周报说下周可联调，工单说环境未开通，两份纪要对接口负责人表述不同。你会给 AI 什么材料，要求什么产物，核验什么，在会上推动什么决定？</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch2"><h2>第 2 章 · AI 基础与核心概念</h2><p class="tpm-meta">AI Fundamentals and Core Concepts<br>原书第 15–36 页 · 原书 PDF 第 46–67 页</p><p class="tpm-core"><strong>核心问题</strong>　如何把“我们想加 AI”拆成可估算、可执行、可验收的工作？</p>
+<h3>先确定任务类型</h3>
+<ul>
+<li>AI 是大类。ML（Machine Learning）通过数据学习规律。GenAI（Generative AI）生成新内容。Agent 把模型、工具和执行逻辑连起来，按目标感知、计划、行动、观察，并据结果调整。<span class="tpm-ref">〔第 16–22 页〕</span></li>
+<li>Predictive / Discriminative 用于预测、分类或抽取，例如给工单分类，或识别合同中的金额。用 Precision、Recall、F1 评估。精确率关注已标出的条目有多少是真的，召回率关注真实条目有多少被找到了。<span class="tpm-ref">〔第 22–25 页〕</span></li>
+<li>Generative 用于生成答复、文档或其他内容。Agentic 则需要判断工具能读写什么、何时停止、失败时怎样处理。PEAS 定义 Agent 的 Performance（成功标准）、Environment（运行环境）、Actuators（可执行动作）和 Sensors（可接收信号）。<span class="tpm-ref">〔第 21–22、25–28 页〕</span></li>
+</ul>
+<h3>RAG 与 Fine-Tuning 的判断</h3>
+<p>RAG（检索增强生成）先检索相关材料，再把材料加入模型上下文。它的交付重点包括文档更新、检索质量、权限和延迟。Fine-Tuning（微调）用示例调整模型权重，适合改善反复出现的任务行为；项目要预算样本制作、质量检查、评估及版本管理。依赖内部文档时，书中建议先用 RAG 建基线。助手引用旧制度时，先区分库里没有新版、检索没有找到新版，还是模型拿到新版后仍答错。<span class="tpm-ref">〔第 25–27 页〕</span></p>
+<h3>数据与上线的工作量</h3>
+<p>DataOps 管理数据采集、清洗、治理和供给。MLOps 把训练、发布、监控和更新连成循环。数据量、类型、实时性、标注质量和历史偏差都进入交付计划。高频、规则难以写清、有一定错误容忍度或有人审查的任务值得试 AI；明确的确定性规则可先用常规自动化。<span class="tpm-ref">〔第 18–20、28–34 页〕</span></p>
+<h3>原书案例｜欺诈模型的影子上线</h3>
+<p>新模型 Challenger 在真实流量上影子运行两周，Champion（现役模型）继续决定真实业务结果。团队先比较表现，再作切换决定。排期因此需要双跑、评估和切换门槛。<span class="tpm-ref">〔第 19 页〕</span></p>
+<section class="tpm-practice"><h3>技术选型、成本估算与验收</h3><p class="tpm-meta">原书第 18–19、22–32 页</p><h4>四个影响估算的变量</h4>
+<p>模型大小影响性能、延迟和费用，具体取舍用任务样本比较。Token 是模型处理文本的单位，输入和输出通常分别计量。上下文窗口限制一次能放多少材料，大输入仍要看模型能否准确找出关键事实。温度等采样设置影响输出波动，低温也需要评估。<span class="tpm-ref">〔原书第 22–24 页〕</span></p>
+<h4>Embedding、向量检索与故障定位</h4>
+<p>Embedding 将内容编码成数值向量，向量库按相似度找候选材料，余弦相似度是书中给出的例子。RAG 的错误可以拆成资料缺失或过时、资料存在但没找到、资料已找到但生成答错。先看检索结果和引用，再找模型侧问题。<span class="tpm-ref">〔原书第 23–27 页〕</span></p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">现象</th><th scope="col">优先检查</th><th scope="col">可验收证据</th></tr></thead><tbody>
+<tr><td>总引旧制度</td><td>版本、索引刷新、权限</td><td>新版题目能命中已批准文件</td></tr>
+<tr><td>有文档但找不到</td><td>切分、检索词、召回范围</td><td>人工已知答案能在候选中出现</td></tr>
+<tr><td>候选正确仍答错</td><td>上下文组织、指令、生成评估</td><td>正确引用、错误拒答和冲突样本结果</td></tr>
+</tbody></table></div>
+<h4>估算示例｜数字为练习假设</h4>
+<p>若每天 1,000 次请求，平均输入 2,000 Token、输出 300 Token，每天分别约为 200 万和 30 万 Token。再按输入、输出各自单价估算，并将检索、重试、峰值延迟写入评审。上线验收同时看质量、延迟、费用和权限。生产监控要能追踪数据漂移、版本和异常，以便决定何时更新模型。</p></section>
+<h3>章末自检</h3><ol>
+<li>预测或抽取、生成和 Agent 分别产出什么？</li>
+<li>RAG 与微调分别改变系统的哪一部分？</li>
+<li>PEAS 四项分别回答什么问题？</li>
+<li><strong>应用题</strong>　制度助手总引用旧版。如何定位问题？怎样的测试结果才会让你考虑微调？</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch3"><h2>第 3 章 · 从提示词到 Agent 编排</h2><p class="tpm-meta">Modalities of AI Interactions<br>原书第 37–73 页 · 原书 PDF 第 68–104 页</p><p class="tpm-core"><strong>核心问题</strong>　什么时候该保留一次性对话，什么时候值得升级到模板、Skill 或 Agent？</p>
+<h3>把隐含判断写进 RTCFC</h3>
+<p>Role 是角色，Task 是要完成的任务，Context 是必要背景，Format 是输出格式，Constraints 是限制与验证要求。以长篇架构文档为例，定义依赖类型、输出来源与目标系统、失效影响和原文证据，结果才适合进入工程讨论。Meta-prompting 让 AI 协助设计提示词；Prep–Execute 先定分析方法，再拿材料执行。核验优先看会改变决定的事实，也要主动寻找输出遗漏。<span class="tpm-ref">〔第 38–51 页〕</span></p>
+<h3>按复用需求逐步升级</h3>
+<p>One-off Prompt 处理一次性任务。Reusable Template 固定结构，为项目名、输入和日期留位置。Skill 打包指令、上下文、输出格式和核验流程，交给同事也能复用。Agent 可以由事件或计划触发并调用工具。步骤稳定、运行频繁、错误代价可控时，才适合考虑持续自动运行。共享 Skill 应像共享代码一样审阅。<span class="tpm-ref">〔第 37–38、51–57 页〕</span></p>
+<h3>三种编排与生产约束</h3>
+<p>Router 做分类与分流。Supervisor 分派不同子任务并汇总。Swarm 让多个角色独立审阅同一材料，分歧本身就是信息。生产流程要关注上下文范围、Observability（可观测性）、Checkpointing（检查点恢复）、写权限、成本或步数上限和异常处理。验证要覆盖真实评估样本、延迟预算、费用和失败路径，例如 API 停机或输入无法识别。<span class="tpm-ref">〔第 57–65 页〕</span></p>
+<p>五个 TPM 工作领域是 Process（流程）、Synthesis（综合分析）、Distributing（信息分发）、Accountability（责任落实）和 Troubleshooting（排障）。可先找重复量大的活动，再决定省下的时间最值得投在哪里。<span class="tpm-ref">〔第 65–73 页〕</span></p>
+<h3>原书案例｜Slack 到 Jira</h3>
+<p>Slack 新消息触发模型提取问题、优先级和责任团队，并返回 JSON。Router 把草稿送入对应 Jira 流程，人同意后才真正创建工单。Daniella 用 20 条以往的人工分流记录做对照，发现三条分错，据此改进。<span class="tpm-ref">〔第 54–56、64–65 页〕</span></p>
+<section class="tpm-practice"><h3>Agent 上线检查表：Slack → Jira</h3><p class="tpm-meta">原书第 49–65 页</p><h4>先定义输入、证据和动作</h4>
+<p>触发器仅监听指定项目频道。模型输出请求摘要、团队、优先级、证据和待确认项。Router 将合规草稿送到指定审批人，明确获批后才写 Jira。书中用 20 条人工分流记录与模型输出比较，发现三条分错。评估还要覆盖歧义、无关消息、多语言和附件。<span class="tpm-ref">〔原书第 54–56、64–65 页〕</span></p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">失败路径</th><th scope="col">处理方式（讲义示例）</th><th scope="col">验收观察</th></tr></thead><tbody>
+<tr><td>责任团队不明</td><td>记录候选团队与证据，转人工分流</td><td>草稿不会写入错误看板</td></tr>
+<tr><td>审批被拒</td><td>保留拒绝原因和草稿版本，结束本次运行</td><td>无工单被创建</td></tr>
+<tr><td>Jira 暂时不可用</td><td>保存批准结果，按上限重试，到期提醒</td><td>恢复时同一请求只建一次</td></tr>
+<tr><td>输入含外部指令</td><td>将消息仅作数据处理，限定工具权限</td><td>消息内容无法改变授权范围</td></tr>
+</tbody></table></div>
+<h4>上线时逐项确认</h4>
+<ul>
+<li>评估：准备正确输出和边界案例，人工抽查关键事实、遗漏及引用。</li>
+<li>可观测性：记录触发、分类、审批、执行结果和失败地点，能追到对应请求。</li>
+<li>恢复与止损：保存检查点，定义重试上限、超时、Token 或费用上限和停机人。</li>
+<li>权限：先读后写，限制项目、动作和数据，明确谁能批准和从何时开始放量。</li>
+</ul></section>
+<h3>章末自检</h3><ol>
+<li>RTCFC 五项分别是什么？</li>
+<li>Router、Supervisor 和 Swarm 各适合解决什么问题？</li>
+<li>为什么 Agent 需要可观测性、检查点和执行上限？</li>
+<li><strong>应用题</strong>　设计群聊转工单流程。写明触发器、输出字段、审批和测试样本，以及工单平台不可用时的行为。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch4"><h2>第 4 章 · 从项目痛点选择 AI 用例</h2><p class="tpm-meta">From TPM Challenges to AI Use Cases<br>原书第 77–99 页 · 原书 PDF 第 108–130 页</p><p class="tpm-core"><strong>核心问题</strong>　面对几十个 AI 想法，如何找到当前最值得投入的一个？</p>
+<h3>定位问题、项目阶段与工作支柱</h3>
+<p>项目三幕是 Initiating &amp; Planning（启动与规划）、Executing（执行）、Closing &amp; Monitoring（收尾与监控）。从当前阶段找问题，再识别六类机会：降低认知负荷、处理重复工作、提高质量、支持决策、扩大沟通覆盖、积累组织知识。项目临时接手适合降低认知负荷，多受众汇报适合扩大沟通覆盖。<span class="tpm-ref">〔第 78–84 页〕</span></p>
+<p>书中的三大 TPM 支柱是 Technical（系统和架构风险）、Program（交付和依赖）、Management（人员、沟通与变革）。同一次架构评审里识别关键依赖，并让两个团队就新的交付计划达成一致，可以同时涉及三项。<span class="tpm-ref">〔第 84–86 页〕</span></p>
+<h3>给机会分级，再定义怎么验收</h3>
+<p>Quick Win 的初步价值通常以分钟或天计，协作负担低。High-Value 通常以周计，需要至少一个团队配合。Strategic 常以月计，需要部门或组织层面对齐。具体投入随数据状况和协作范围变化。用例目录还可按生命周期、支柱和角色筛选。<span class="tpm-ref">〔第 86–98 页〕</span></p>
+<ul>
+<li>Plan：明确输入、触发、目标与约束。一次性任务由人发起，成熟后可以定时触发。</li>
+<li>Act：确定模型、上下文、记忆、Skill 和执行框架各自做什么。</li>
+<li>Observe：定义输出、验收证据、可观测结果和下游交接。Connectors（连接器）为各步提供受控的系统访问。人负责定义问题、判断产出是否可进入下游。<span class="tpm-ref">〔第 88–91 页〕</span></li>
+</ul>
+<h3>应用案例｜用周报试点验证价值</h3>
+<p>每周需要收集五个团队近况。第一阶段用已获准访问的五份状态更新拟一页简报，经 TPM 核验日期、里程碑及未决事项，再实际记录时间与错误类型。形成稳定结果后，再考虑连接工单系统、定时运行和扩大受众。这是按原书框架展开的应用。<span class="tpm-ref">〔第 83、86–91 页〕</span></p>
+<section class="tpm-practice"><h3>用例导航与成熟度自评</h3><p class="tpm-meta">原书第 82–98 页</p><h4>用阶段与支柱锁定第一项试验</h4>
+<p>下表是按书中用例目录做的选读导航，工作量会随权限、团队和系统接入范围变化。T 为 Technical，P 为 Program，M 为 Management。原书第 97 页还指向可本地运行的 TPM Use Case Navigator。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">工作情境</th><th scope="col">起步用例</th><th scope="col">范围及出处</th></tr></thead><tbody>
+<tr><td>临时接手项目</td><td>提取目标、决定、依赖与分歧</td><td>Quick Win · P · 第 7–8 页</td></tr>
+<tr><td>启动阶段需承诺日期</td><td>验证假设、对齐分歧、检查依赖</td><td>第 5 章 · T/P/M</td></tr>
+<tr><td>执行期反复漏报</td><td>周一简报或 RAID 候选抽取</td><td>第 6 章 · P/M</td></tr>
+<tr><td>项目待移交</td><td>知识库与尾项分类</td><td>第 7 章 · T/P/M</td></tr>
+<tr><td>多个项目争同一资源</td><td>3P 汇总或容量影响分析</td><td>第 8 章 · P/M</td></tr>
+</tbody></table></div>
+<h4>轻量自评｜可在试点前后各填一次</h4>
+<p>按「很少／有时／持续」评价下列行为，并记录一个实际例子。① 我能识别真实痛点并尝试轻量用例。② 我能让 AI 整理证据并核验关键主张。③ 我会按受众调整同一组事实的表达。④ 我能把经验变为别人能运行的流程。⑤ 我知道什么任务适合确定性自动化。此表为基于原书第 97–98 页的练习改编。</p>
+<h4>试点卡</h4>
+<p>痛点｜当前耗时或错误｜首个交付物｜来源及权限｜验收人｜两周后的继续或停用条件。先拿一批有代表性的输入，核实结果会不会改善实际工作。</p></section>
+<h3>章末自检</h3><ol>
+<li>六类机会是什么？</li>
+<li>三个 TPM 支柱分别关注什么？一个用例能否跨多个支柱？</li>
+<li>Plan、Act、Observe 分别解决哪些问题？</li>
+<li><strong>应用题</strong>　在自动周报、跨系统依赖识别和自动资源调整中选一项，为它标出机会、阶段、复杂度及首次可验证交付物。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch5"><h2>第 5 章 · AI 用于启动与规划</h2><p class="tpm-meta">AI for Initiation and Planning<br>原书第 101–136 页 · 原书 PDF 第 132–167 页</p><p class="tpm-core"><strong>核心问题</strong>　高层只给一个方向和日期时，怎样提早找出会改变范围、依赖或关键路径的事实？</p>
+<h3>五份产物如何串起来</h3>
+<ul>
+<li>Program Charter from Mandate：章程草稿要附 Inference Log（推断日志）。低置信推断应成为干系人访谈议题。大量事实更正可能意味着材料不足；大量意图更正可能意味着授权本身模糊。<span class="tpm-ref">〔第 105–110 页〕</span></li>
+<li>Alignment Gap Detector：把各方原话放进 Conflict Register（分歧登记表），保留“可能”“前提是”等限定。发言最多的人可能在归纳中被过度代表，应检查沉默方。<span class="tpm-ref">〔第 111–116 页〕</span></li>
+<li>Assumption Extractor：从范围文档找被当成已确定、却没写证据的前提。候选要追到原句，记录错误会影响什么以及谁负责验证。<span class="tpm-ref">〔第 117–122 页〕</span></li>
+<li>Multi-document Dependency Synthesis：归一系统别名，标出无人负责、相互矛盾和循环依赖。工程负责人确认后，再按经核定的工期和门槛排关键路径。<span class="tpm-ref">〔第 122–128 页〕</span></li>
+<li>Persona Swarm Pre-mortem：让 SRE、安全工程、资深工程及产品等视角独立推演失败。每条叙事给出最早可观察信号，再由人讨论优先级。它读取前四步产物。<span class="tpm-ref">〔第 128–135 页〕</span></li>
+</ul>
+<h3>贯穿所有产物的六个检查</h3>
+<p>AI 加速归纳，人判断事实；每项输出有模型之外的检查；流畅度不等于覆盖；先决定产物支撑的业务决定；为每个用例保留反馈信号；产物发布后仍要更新并由责任人确认。<span class="tpm-ref">〔第 103–105 页〕</span></p>
+<h3>原书案例｜三个支付平台整合</h3>
+<p>项目有第三季度期限、许可风险、四个工程团队和 14 位干系人。依赖分析发现，两个仍在流通的文档对 ledger-api 是否支持异步批量写入说法不同。工程团队需确认版本和实际行为。倒排时，假如合同评审花两周，计划有十周余量；按上一次真实用时十一周计算，余量只剩一周。这条差异应在承诺日期前进入指导委员会。<span class="tpm-ref">〔第 105、123–127 页〕</span></p>
+<section class="tpm-practice"><h3>贯穿案例一：三套网管系统合并的规划</h3><p class="tpm-meta">依据原书第 105–128 页改编</p><h4>设定与决策</h4>
+<p>以下是运营商练习，编号、日期与取值均为示例。三个网管系统计划在年底前整合。旧文档称所有告警接口兼容，维护方说部分命令已变更。环境开通还依赖安全审批。当前要决定哪些承诺可以写进计划。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">产物</th><th scope="col">最少字段</th><th scope="col">示例记录</th></tr></thead><tbody>
+<tr><td>章程及推断日志</td><td>目标、边界、推断、来源、置信度、确认人</td><td>I-01：假设三个系统同批切换；由赞助人确认</td></tr>
+<tr><td>分歧登记表</td><td>双方原话、来源日期、影响、裁决人</td><td>C-01：接口版本兼容性说法不同；由接口负责人裁决</td></tr>
+<tr><td>假设日志</td><td>原句、隐含前提、受影响范围、验证方式</td><td>A-01：安全审批可在两周完成；查同类审批记录</td></tr>
+<tr><td>依赖图</td><td>源系统、目标系统、方向、版本、责任人</td><td>D-01：联调依赖 ENV-21；运维提供验证信号</td></tr>
+<tr><td>事前推演</td><td>失败情境、前置信号、缓解动作、责任人</td><td>F-01：回滚环境不完整；在演练时验证全链路回退</td></tr>
+</tbody></table></div>
+<h4>接受标准</h4>
+<p>章程草稿需标出模型推断，分歧表保留限定词，假设与依赖有可追溯来源。工程负责人确认接口版本后，TPM 才能将其写入关键路径。安全审批工期由流程负责人确认，范围或日期变化交业务赞助人决策。</p></section>
+<section class="tpm-practice"><h3>贯穿案例二：从依赖图到关键路径</h3><p class="tpm-meta">原书第 117–135 页及讲义延伸</p><h4>倒排演练｜以下工期为假设</h4>
+<p>依赖链是「安全审批 → 环境开通 → 接口联调 → 灰度切换」。假设其他环节合计需要六周，预计还有十二周。如果安全审批两周，计划还有四周余量；如果历史同类审批花五周，余量仅剩一周。把两种工期和来源同时写入决定材料，由责任人确认可承诺的日期或缩减范围。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">最容易出现的问题</th><th scope="col">怎样验证</th><th scope="col">触发动作</th></tr></thead><tbody>
+<tr><td>别名被误合并</td><td>核对登记台账和系统 ID</td><td>无法确认时分开节点待审</td></tr>
+<tr><td>版本信息冲突</td><td>对照真实接口与最新批准文档</td><td>由工程签认版本后倒排</td></tr>
+<tr><td>承诺被误读</td><td>保留“若…则…”等原文限定</td><td>未满足前提时不锁定时间</td></tr>
+<tr><td>回退方案未经验证</td><td>用生产相近环境演练</td><td>演练失败则缩小灰度范围或延后</td></tr>
+</tbody></table></div>
+<h4>Pre-mortem 的人工会议</h4>
+<p>假定半年后整合失败，分别让运维、安全、架构、业务视角说明失败时间线、最早信号和哪份产物本该捕捉。把多方重复提出的风险去重，再由负责人决定是否加控制、如何验证和何时重新评审。章节案例的原则是人工核验优先，且五项规划产物连续使用。</p></section>
+<h3>章末自检</h3><ol>
+<li>为什么章程草稿要附推断日志？</li>
+<li>分歧登记表和假设日志分别捕捉什么？</li>
+<li>五份规划产物按什么顺序工作？为什么事前验尸应该读取前四份？</li>
+<li><strong>应用题</strong>　三套网管系统年底合并，接口清单和安全认证时间有冲突。列出五份产物，并说明日期承诺前必须核实哪两条证据。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch6"><h2>第 6 章 · AI 用于项目执行</h2><p class="tpm-meta">AI for Program Execution<br>原书第 137–151 页 · 原书 PDF 第 168–182 页</p><p class="tpm-core"><strong>核心问题</strong>　项目开始运转后，怎样让沟通、风险、知识和健康指标跟上变化？</p>
+<h3>同一事实，按受众改写侧重点</h3>
+<p>Stakeholder Personas 记录受众关注点和沟通偏好。项目亮红灯时，工程负责人需要原因和行动，赞助人需要决定与时限，客户团队需要对客影响。所有版本使用同一组事实。Monday Morning Debrief 从获准访问的任务、消息和文档中汇总近期变化，由 TPM 审阅后发送。<span class="tpm-ref">〔第 139–144 页〕</span></p>
+<h3>从 RAID 抽取走到持续风险管理</h3>
+<p>本章的 RAID 指 Risks（风险）、Actions（行动）、Issues（问题）、Decisions（决定）。从记录抽取候选条目，按发生可能性、影响和距下一里程碑的紧迫度排序，标出久未更新的项。还可以回看类似项目的历史风险，或把“等决定才能继续”等自然语言信号列成待确认项。风险需要有人确认来源、影响和处置动作。<span class="tpm-ref">〔第 144–147 页〕</span></p>
+<h3>项目知识和项目健康各回答什么</h3>
+<p>Program Brain 把可访问的项目历史变成可问答上下文，支持查询决策、生成当前状态和新人上手。它依赖输入更新、权限与来源质量。健康度看板回答是否需要干预，例如关键缺陷率、修复速度、容量或排期发生怎样的变化。先明确会据什么信号采取行动，再让 AI 帮忙写查询和计算指标。<span class="tpm-ref">〔第 147–151 页〕</span></p>
+<h3>原书案例｜把周一简报变成风险输入</h3>
+<p>在周一简报上加入动态风险缓解台账。AI 收集候选风险，整理标题、解释、影响和可能缓解措施。TPM 检查它是不是旧风险的新表现、会影响哪个里程碑、谁可以确认，并把行动落实到台账。这样简报会推动处置，即使某条风险最初只来自一条暗示性的评论。<span class="tpm-ref">〔第 141–146 页〕</span></p>
+<section class="tpm-practice"><h3>贯穿案例三：执行简报、RAID 与健康度</h3><p class="tpm-meta">依据原书第 139–150 页改编</p><h4>从资料变成可落实的工作</h4>
+<p>对照上章的 I-01、C-01、A-01、D-01、F-01，每周从已批准的信息源整理变化。先生成候选 RAID，再由 TPM 或责任人核对。下表为练习字段和样例。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">编号与类型</th><th scope="col">候选项与证据</th><th scope="col">归属、下一步与截止</th></tr></thead><tbody>
+<tr><td>D-01 / Risk</td><td>ENV-21 未开通，联调剩五天</td><td>运维确认环境就绪日期；周三复核</td></tr>
+<tr><td>C-01 / Issue</td><td>版本文档互相冲突，接口评审未签认</td><td>接口负责人提供签认；下次评审前</td></tr>
+<tr><td>F-01 / Action</td><td>回退演练尚未安排</td><td>发布经理约演练；灰度前完成</td></tr>
+<tr><td>A-01 / Decision</td><td>经确认批准分批接入，纪要 DT-03</td><td>记录决定人、备选范围及生效日</td></tr>
+</tbody></table></div>
+<h4>健康度阈值｜示例需按项目实际校准</h4>
+<p>联调开始前三个工作日，关键环境仍无确认即列红色候选；必测接口频繁失败、修复趋势持续恶化时提示提前干预。确认数据日期、来源和影响后才升级。所有受众共享一套事实：工程版写定位与行动，赞助人版写交付影响和待决事项，客户协同版写影响范围与下一次更新时间。</p>
+<h4>每周比较</h4>
+<p>同时看关键风险有没有提前暴露、简报错漏和纠正次数、重复风险是否被合并。留一份原始资料索引，方便状态改变时回查。</p></section>
+<h3>章末自检</h3><ol>
+<li>同一事件发给不同受众，什么应保持一致，什么可以调整？</li>
+<li>本章 RAID 四项是什么？风险可以按哪些维度排序？</li>
+<li>Program Brain 和健康度看板分别回答哪类问题？</li>
+<li><strong>应用题</strong>　联调前关键缺陷上升，工单三天未更新。写出简报信息源、候选风险、人工复核项和升级条件。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch7"><h2>第 7 章 · AI 用于交付与收尾</h2><p class="tpm-meta">AI for Delivery and Closure<br>原书第 153–167 页 · 原书 PDF 第 184–198 页</p><p class="tpm-core"><strong>核心问题</strong>　怎样让复盘改变下一项目，让运维真正接得住当前系统？</p>
+<h3>把情绪和工程证据一起看</h3>
+<p>定性材料包括复盘发言与群聊，定量材料包括 Jira 交付、Git PR 周期、范围变更、缺陷遥测及风险历史。优先找多种证据能支持的系统性瓶颈，明确它怎样影响交付和下一步行动。<span class="tpm-ref">〔第 154–157 页〕</span></p>
+<h3>原书案例｜晚期 Schema 不一致</h3>
+<p>第 4、5 个 Sprint 的 PR 周期异常，同时群聊反馈数据访问层出现未记录的破坏性变更。示例把二者追到同一工程缺口：跨团队 Schema 变更仍依赖手工文档。下一项目可以把 Protobuf / GraphQL 的兼容性校验纳入 CI。这使复盘结论可以直接进入工程计划和验收。<span class="tpm-ref">〔第 155–157 页〕</span></p>
+<h3>沉淀三类可交接的资料</h3>
+<ul>
+<li>Contributor Highlights：结合技术难度、实际影响和工作背景记录贡献；可见活动量不能替代贡献判断。涉及人员资料时保留隐私边界和人工监督。<span class="tpm-ref">〔第 157–160 页〕</span></li>
+<li>Program Brain：剔除过时方案与未经证实的讨论，保留生产规格和已接受的 ADR（架构决策记录）。开放给新人之前，用关键架构问题测试回答和出处。<span class="tpm-ref">〔第 160–163 页〕</span></li>
+<li>Operational Handoff：将余额分为近期尾部风险、技术债、延后产品需求。给高优先级事项写下游影响和建议责任方，由交出与接收负责人确认。书中案例还规定核对生产遥测、设置暂停移交阈值，并保护员工隐私。<span class="tpm-ref">〔第 163–166 页〕</span></li>
+</ul>
+<section class="tpm-practice"><h3>贯穿案例四：复盘、知识留存与移交</h3><p class="tpm-meta">依据原书第 154–166 页改编</p><h4>把复盘证据放在一起</h4>
+<p>复盘陈述「联调延迟」后，找环境工单时间线、接口版本决策、缺陷记录与团队反馈。若多份证据共同指向旧版接口说明，下一项目的行动可设为「关键接口版本与兼容性验证结果都签认后才开放联调」。归档生产规格、已接受的 ADR 和发布前后的控制阈值，清理草稿与过时文档。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">移交分级</th><th scope="col">示例</th><th scope="col">运维验收</th></tr></thead><tbody>
+<tr><td>近期尾部风险</td><td>少数告警未按约定时限同步</td><td>具名负责人、监控、预案与复核时间</td></tr>
+<tr><td>管理型技术债</td><td>部分脚本仍靠手工修复</td><td>约定清理窗口与下游影响</td></tr>
+<tr><td>延后功能</td><td>告警标签体验优化</td><td>交产品待办，记录追踪编号</td></tr>
+</tbody></table></div>
+<h4>四个移交关口</h4>
+<p>原书案例在移交前设双边批准、遥测异常检查、尾部风险熔断和员工数据边界。可用同样结构评审当前项目，实际阈值由团队约定。没有接收责任人、关键风险超过认可门槛或生产遥测异常时，暂停并开专项复核。<span class="tpm-ref">〔原书第 163–166 页〕</span></p>
+<h4>跨章学习任务</h4>
+<p>从第 5 章的依赖 D-01 开始，追到第 6 章风险记录和第 7 章交接包。指出每次转移新增的证据，以及哪条信息缺失会改变上线或移交决定。</p></section>
+<h3>章末自检</h3><ol>
+<li>为什么复盘要把团队反馈和遥测放在一起？</li>
+<li>哪些文档应进入长期项目知识库，哪些应剔除？</li>
+<li>尾项分哪三类？接收方审批有什么作用？</li>
+<li><strong>应用题</strong>　上线后有 16 项待办，其中一项影响 SLA，三项是技术债。请设计移交包并定义暂停条件。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch8"><h2>第 8 章 · AI 用于 TPM 领导力</h2><p class="tpm-meta">AI for TPM Leadership<br>原书第 169–224 页 · 原书 PDF 第 200–255 页</p><p class="tpm-core"><strong>核心问题</strong>　管理多个项目和一支团队后，怎样让 AI 改善领导决策，同时保留对证据与人的判断？</p>
+<h3>组合层需要项目事实和战略上下文</h3>
+<p>3P Report 用 Progress（进展）、Plans（计划）、Problems（问题）形成项目报告。组合层叠加战略目标、优先级、承诺和依赖。项目红灯原样保留，组合颜色回答公司关键目标是否受威胁。报表缺失、来源未验证和阻塞问题要可见。管理层读到的应包括需要决定什么、为什么是现在以及截止时间。<span class="tpm-ref">〔第 171–185 页〕</span></p>
+<h3>资源、承诺与机会</h3>
+<p>Weekly Commitments Watch 同时产出 Drift Report（已观察到的承诺变化）和 Silence Log（近期无信息的依赖）。无更新意味着需要确认。Capacity Impact Analysis 把方案放在资源、已有承诺与依赖约束下比较。用 Five Whys（五问法）和提问式对话检验新项目的根因、资源和时机。<span class="tpm-ref">〔第 185–197 页〕</span></p>
+<h3>用同一标准整理人员证据</h3>
+<p>招聘比较要按同一评价标准列证据、置信度和真正的分歧，留意表达流利可能掩盖实际证据不足。入职资料更新、一对一准备、反馈草稿和晋升证据整理可以用 AI 辅助。人员决定和沟通仍由负责人承担。标准化简报后，可持续监测范围、关键依赖与人力变化，将它们分成噪声、值得观察和需要立即决策。<span class="tpm-ref">〔第 198–224 页〕</span></p>
+<h3>原书案例｜组合报告双轨验证</h3>
+<p>AI 报告与人工周报并行两到三个周期。比较健康评级、遗漏、事实和出处，再由项目负责人确认后提交管理层。如果发现 AI 总把缺报项目当健康状态，这属于评估失败，应先修正规则再扩大应用。最后一句是对并行验证的应用。<span class="tpm-ref">〔第 179–185 页〕</span></p>
+<section class="tpm-practice"><h3>项目组合汇报：3P、容量与承诺</h3><p class="tpm-meta">原书第 171–197 页</p><h4>先写项目报告，再生成组合视图</h4>
+<p>项目级 3P 保留时间、负责人、来源与状态。组合层额外判断哪些问题会伤到核心战略目标，把需要管理层决定的事项放在前面。红色项目仍显示红色，缺报项目标记为缺报，并注明谁能补齐。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">产物</th><th scope="col">字段示例</th><th scope="col">看什么</th></tr></thead><tbody>
+<tr><td>项目 3P</td><td>项目、负责人、日期、进展、计划、问题、证据</td><td>下一里程碑与阻塞</td></tr>
+<tr><td>组合简报</td><td>关键目标、项目状态、跨项目依赖、缺报、待决定事项</td><td>管理层需决定什么及截止</td></tr>
+<tr><td>容量分析</td><td>现有承诺、资源冲击、延误估计、置信度</td><td>吸收增量、调整范围、等补充资源的后果</td></tr>
+<tr><td>Drift Report</td><td>变动、来源、影响、确认者</td><td>承诺已出现变化</td></tr>
+<tr><td>Silence Log</td><td>依赖、上次更新、应答人、跟进日期</td><td>长时间没有信号</td></tr>
+</tbody></table></div>
+<h4>校验和门槛</h4>
+<p>AI 与人工报告双轨跑两到三个周期，逐项比较漏报、健康评级和出处。记录哪些问题需要项目负责人确认。容量分析中区分实际承诺和假设；候选方案的日期必须回到资源数据和依赖。<span class="tpm-ref">〔原书第 179–193 页〕</span></p></section>
+<section class="tpm-practice"><h3>领导决策：证据、复盘与重排</h3><p class="tpm-meta">原书第 193–224 页</p><h4>人才工作</h4>
+<p>招聘按同一 rubric 汇总证据和分歧，注意流利叙述与真实贡献的区别。入职可检查材料是否过时；一对一可整理历史承诺；晋升可对比目标级别的证据强度。工作场景、员工利益及决定由人确认。<span class="tpm-ref">〔第 198–216 页〕</span></p>
+<h4>把重排请求写成选择</h4>
+<p>每条变化分成“噪声”“值得观察”“现在要决定”。重大变化应说明哪项 OKR 受影响、要挪走什么资源、哪些已有决定会被推翻，以及什么新证据会改变判断。第一次应用可与人工判断并行比较。<span class="tpm-ref">〔第 220–223 页〕</span></p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">决策日志字段</th><th scope="col">练习示例</th></tr></thead><tbody>
+<tr><td>决定与日期</td><td>示例：周三批准分两批切换</td></tr>
+<tr><td>理由</td><td>环境未按时开通，首批接口风险可控</td></tr>
+<tr><td>预期结果</td><td>缩小首批范围，保留后续窗口</td></tr>
+<tr><td>可能推翻的信号</td><td>灰度告警超过约定阈值或接收团队拒签</td></tr>
+<tr><td>复查</td><td>灰度后补实测结果与后续决定</td></tr>
+</tbody></table></div>
+<p>第 223 页建议留下决定、理由、预期、纠偏信号和日期。定期对照结果，可看出是常低估某类风险，还是总在证据不足时重排。表格内事件为示例。</p></section>
+<h3>章末自检</h3><ol>
+<li>3P 是什么？项目和组合健康度分别回答什么？</li>
+<li>Drift Report 和 Silence Log 怎样配合？</li>
+<li>为什么新组合报告要与人工报告并行比较？</li>
+<li><strong>应用题</strong>　一个非核心项目红灯，一个支撑季度 OKR 的项目缺报，另一个发生依赖变更。设计管理层报告和所需决定。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch9"><h2>第 9 章 · AI 用于职业管理</h2><p class="tpm-meta">AI for Career Management<br>原书第 227–253 页 · 原书 PDF 第 258–284 页</p><p class="tpm-core"><strong>核心问题</strong>　怎样积累真实的职业证据，再用于简历、面试和选择机会？</p>
+<h3>先建立三份底稿</h3>
+<ul>
+<li>Story Log（经历日志）：记录日期、情境、行动、结果、教训、技能和成长点。可以先口述，再让 AI 追问取舍、他人贡献和具体效果。遗漏字段保留空缺。</li>
+<li>Career Matrix（职级或能力矩阵）：列出目标级别需要的能力与证据，对照经历识别已有能力和待补经验。</li>
+<li>Career Direction Statement（职业方向陈述）：定义希望承担的范围、想积累的能力和能接受的取舍，给后续选择一个参照。<span class="tpm-ref">〔第 228–233 页〕</span></li>
+</ul>
+<h3>把底稿用于真实机会</h3>
+<p>简历先拆目标岗位要求，从日志挑可验证的结果，再检查术语和应用材料。面试模拟要求模型追问判断和证据，留意过度肯定。谈判可用来练表达并列事实缺口。技能差距可用多份岗位说明交叉对照。长期运转时，把经历采集和求职状态维护做成例行工作。<span class="tpm-ref">〔第 233–253 页〕</span></p>
+<h3>原书案例｜George 的外部 Offer</h3>
+<p>新岗有他想做的平台项目，也有值班要求。当前工作以维护为主，George 是家庭唯一收入来源，储备有限。Regret Minimization（最小化遗憾）倾向新机会；Value Maximization（价值最大化）要等股权条款清楚；Stability Weighting（稳定性加权）更看重家庭缓冲和组织变动。事实没变，权重变了。AI 可以把不确定条件变成待核实问题，选择由人负责。<span class="tpm-ref">〔第 244–248 页〕</span></p>
+<section class="tpm-practice"><h3>职业证据：经历日志到岗位匹配</h3><p class="tpm-meta">原书第 229–244、249–252 页</p><h4>可填写的 Story Log</h4>
+<p>日期｜情境及任务｜自己的动作与判断｜团队协作｜可核实结果｜教训｜相关技能｜成长点。先口述，允许遗漏，准备好再由 AI 追问。完成记录前检查保密内容、实际贡献与量化指标来源。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">岗位要求</th><th scope="col">可使用的证据示例</th><th scope="col">还要补什么</th></tr></thead><tbody>
+<tr><td>跨团队交付</td><td>三个团队对上线口径有分歧，组织工作坊并确认共享验收表</td><td>核对签字和上线结果</td></tr>
+<tr><td>技术依赖管理</td><td>用接口矩阵和环境责任清单定位阻塞</td><td>补最早信号及如何推动解决</td></tr>
+<tr><td>规模或业务成效</td><td>汇总覆盖范围、阶段成效与复盘动作</td><td>核对数字来源及可披露性</td></tr>
+</tbody></table></div>
+<h4>使用方法</h4>
+<p>针对岗位先拆要求，再按“已有证据、部分证据、缺失证据”匹配经历。面试练习让 AI 追问当时有哪些选项、为什么这样选、怎样知道结果算成功。定期将新里程碑和失败案例写入日志，使资料在求职前已经可用。</p></section>
+<h3>章末自检</h3><ol>
+<li>三份职业底稿分别记录什么？</li>
+<li>用 AI 调整简历时，哪些内容要回真实项目证据？</li>
+<li>为什么同一份 Offer 在三套框架下会得出不同倾向？</li>
+<li><strong>应用题</strong>　任选一个项目写一条经历日志，再选一项目标岗位要求，指出已有证据和待补证据。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch10"><h2>第 10 章 · 负责任的 AI</h2><p class="tpm-meta">Responsible AI<br>原书第 257–269 页 · 原书 PDF 第 288–300 页</p><p class="tpm-core"><strong>核心问题</strong>　AI 输出会影响业务决定、甚至可以执行动作时，怎样把治理放进日常流程？</p>
+<h3>五项原则及其落点</h3>
+<ul>
+<li>Accountability（问责）：关键节点有具名人类负责人，核对依据，并明确错误后的处置责任。<span class="tpm-ref">〔第 260–261 页〕</span></li>
+<li>Fairness（公平）：检查摘要是否遗漏少数视角或偏重某种表达方式。设计一致的录入和评价标准，并观察不同输入群体的错误表现。<span class="tpm-ref">〔第 261–262 页〕</span></li>
+<li>Transparency &amp; Explainability（透明与可解释性）：标记 AI 参与和人的判断，记录来源、结果、审批和变更理由，让决定可以追溯。<span class="tpm-ref">〔第 262–263 页〕</span></li>
+<li>Privacy, Security &amp; Compliance（隐私、安全与合规）：先确认数据分类、获批工具和权限。对 Agent 给最小必要访问，限制写入和外发，难撤回操作留审批。<span class="tpm-ref">〔第 263–265 页〕</span></li>
+<li>Correctness &amp; Safety（正确性与安全）：依错误的后果决定核验强度。涉及客户、资金或其他重大后果时建立人工复核，定义失败时怎么处理。<span class="tpm-ref">〔第 266–267 页〕</span></li>
+</ul>
+<h3>注意不受信任的输入与写权限</h3>
+<p>邮件、网页或外部文档可能含有误导性内容。如果读取它的 Agent 也能改权限、对外发信或写生产系统，失误会产生实际后果。评审时问它需要哪些访问、最坏能做什么，以及谁能批准或停止。<span class="tpm-ref">〔第 264–267 页〕</span></p>
+<h3>应用案例｜AI 风险排序进入管理层评审</h3>
+<p>先保留各团队证据与分歧，标明 AI 起草的部分。指定 TPM 核实会改变排序的关键主张，再把最终排序、调整理由和审批者写入决策记录。接入工单平台时，由人批准建议后再写入。此例综合本章原则，供练习使用。<span class="tpm-ref">〔第 261–267 页〕</span></p>
+<section class="tpm-practice"><h3>Responsible AI 三张操作清单</h3><p class="tpm-meta">原书第 261–267 页</p><h4>清单一：提交资料前</h4>
+<p>□ 分清公共、内部、敏感资料，确认组织允许的工具与数据范围。□ 核对数据保留与处理规则。□ 只提供完成任务需要的材料，去除无关个人信息和秘密。资料来源不明时请责任人确认。<span class="tpm-ref">〔第 263–265 页〕</span></p>
+<h4>清单二：给 Agent 授权前</h4>
+<p>□ 明确需要读取的空间、能写入的位置和允许运行的动作。□ 检查外部文档、消息等不受信任输入进入流程的路径。□ 对外发、删除或权限修改等难撤销动作设置具名批准人和记录。□ 定义谁能暂停流程。<span class="tpm-ref">〔第 264–266 页〕</span></p>
+<h4>清单三：输出进入下游前</h4>
+<p>□ 标注 AI 参与范围，留证据和人工修改理由。□ 检查是否系统性遗漏某类输入或视角。□ 按错误后果决定核验强度。□ 指定责任人、复核点和错误处置。如果会影响客户、资金或其他重大事项，先核对关键证据和人工批准。<span class="tpm-ref">〔第 261–267 页〕</span></p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">审批记录字段</th><th scope="col">练习示例</th></tr></thead><tbody>
+<tr><td>输出及用途</td><td>风险排序；用于跨部门评审</td></tr>
+<tr><td>证据与歧义</td><td>引用工单与责任人确认；保留两项未决</td></tr>
+<tr><td>复核和批准</td><td>由指定 TPM 对影响排序的主张复核</td></tr>
+<tr><td>下游与停止条件</td><td>获批后出报告；证据冲突时暂缓发布</td></tr>
+</tbody></table></div></section>
+<h3>章末自检</h3><ol>
+<li>五项 Responsible AI 原则是什么？</li>
+<li>为什么有写权限的 Agent 要格外关注输入来源？</li>
+<li>怎样根据错误后果决定复核强度？</li>
+<li><strong>应用题</strong>　设计一个可读取投诉并建议升级的 Agent。说明访问边界、证据记录、审批和识别系统性低估的方法。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch11"><h2>第 11 章 · 情商、影响力与协商</h2><p class="tpm-meta">The Growing Importance of EQ in a World of AI<br>原书第 271–294 页 · 原书 PDF 第 302–325 页</p><p class="tpm-core"><strong>核心问题</strong>　怎样把 AI 释放出来的时间用于更好的协商、信任与跨团队行动？</p>
+<h3>EQ 在 TPM 工作中的作用</h3>
+<p>EQ（Emotional Intelligence，情商）涉及觉察自己的反应、理解对方的顾虑以及调整互动方式。AI 可提前整理数据和选项、模拟对话。开会时，要从语气、沉默、上下文和过往承诺判断对方是在缺信息、担忧风险，还是在保护某项责任。带有情绪的反馈、冲突和变革沟通最好由人直接把关。<span class="tpm-ref">〔第 272–283、289–293 页〕</span></p>
+<h3>三种谈判工具</h3>
+<ul>
+<li>Interest-based Negotiation（基于利益的谈判）：从各方表态追到背后的目标、约束和风险，并围绕真实利益设计方案。</li>
+<li>Tactical Empathy（策略性共情）：复述、点明感受到的顾虑，再用开放问题给对方确认或纠正的机会。</li>
+<li>BATNA（谈不成时的最佳替代方案）：会前明确谈不成还有哪条路，由此知道可接受的边界。冲突升温时先降温，再缩小问题范围。<span class="tpm-ref">〔第 284–289 页〕</span></li>
+</ul>
+<h3>原书案例｜新字段是否必填</h3>
+<p>Chris 的订单系统项目要让新字段经过多套微服务。首席工程师担心必填会破坏老客户集成，双方争论一个多月。Chris 听懂了对方在保护兼容性，讨论才转向如何控制破坏风险。书中选择先设为必填，出问题时可放宽为可选。这一做法依赖系统的可逆性，迁移到其他项目时应先检验。<span class="tpm-ref">〔第 287–289 页〕</span></p>
+<p>作者建议一次训练一项 EQ 行为，直到它在真实场景里更稳定。例如 Bella 用一句自我提醒，在感觉自己快跟着对方提高语气时，先反思再降温。<span class="tpm-ref">〔第 293–294 页〕</span></p>
+<section class="tpm-practice"><h3>EQ 自评与冲突降温演练</h3><p class="tpm-meta">原书第 276–293 页</p><h4>用三次会议建立个人基线</h4>
+<p>会前问：我在什么情况下会急于反驳？会中问：我能复述对方在保护的责任吗？会后问：我有没有调整表达，使大家能讨论证据？可参照书中列出的 EQ 自测章节。用实际行为记一次例子，选择一项练习。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">步骤</th><th scope="col">谈话动作</th><th scope="col">运营商情境示例</th></tr></thead><tbody>
+<tr><td>先降低温度</td><td>承认顾虑，复述对方意思</td><td>“我听到你担心演练没完成就无法保证回退。”</td></tr>
+<tr><td>找到共同目标</td><td>把立场还原为业务和技术利益</td><td>业务在保护窗口，运维在保护可恢复性</td></tr>
+<tr><td>定义可验证条件</td><td>找双方能承认的证据和小范围方案</td><td>核对回退时间，讨论先选非关键链路灰度</td></tr>
+<tr><td>预先准备 BATNA</td><td>写清达不成一致的下一步</td><td>若演练未达门槛，保留变更窗口并分批确认</td></tr>
+</tbody></table></div>
+<h4>AI 可协助的准备</h4>
+<p>用它整理事实、演练可能的反对意见或检查语气。敏感反馈与争议性决定由本人直接沟通。每次记录当下能观察到的变化，如会议是否重新转向事实、是否形成双方接受的下一步。</p></section>
+<h3>章末自检</h3><ol>
+<li>三种谈判工具各解决什么问题？</li>
+<li>为什么高情绪沟通需要人直接把关？</li>
+<li>字段争议中，工程师真正想保护什么？</li>
+<li><strong>应用题</strong>　业务要求月底上线，运维坚持先完成容灾演练。写出双方利益、会上你会说的两句话和一条替代路径。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch12"><h2>第 12 章 · 持续学习与推动采用</h2><p class="tpm-meta">Staying Relevant and Leading the Way<br>原书第 297–303 页 · 原书 PDF 第 328–334 页</p><p class="tpm-core"><strong>核心问题</strong>　AI 工具不断变化，怎样形成持续、可交接的工作方式并带团队采用？</p>
+<h3>筛选新工具的五问</h3>
+<p>它解决哪个 TPM 问题？能试的最轻量版本是什么？结果如何核验？会接触哪些数据？什么条件下停用？书中建议定期回看流程，淘汰已经不再节省时间的做法。长期可积累的是跨团队协调、技术沟通、风险判断、信任与问责。<span class="tpm-ref">〔第 298–299 页〕</span></p>
+<h3>把个人经验记录成团队资产</h3>
+<p>从一次性 Prompt 进入可复用 Template，再进入带上下文和核验步骤的 Workflow，最后按需使用 Specialized Agent。Workflow Library 保存指令、上下文文件、输出格式和验证清单，使同事能稳定复用、维护和退役。把省出的时间投入风险沟通和关系建设，是第 1 章杠杆逻辑的延续。<span class="tpm-ref">〔第 300–302 页〕</span></p>
+<h3>把组织采用作为项目群推进</h3>
+<p>先选共同痛点，再让两三个愿尝试的团队小规模试点。测省下的时间、风险提前多少出现、输出纠正频次。分享模板与复盘，成熟后纳入团队默认做法及入职材料并明确负责人，与安全、法务和隐私团队制定工作边界。对持怀疑态度的同事，可从一个真正能解决其问题的 Quick Win 入手。<span class="tpm-ref">〔第 302–303 页〕</span></p>
+<h3>应用案例｜把周报试验推广到团队</h3>
+<p>两个团队用同一模板起草周报，每次核验里程碑、责任人和待决事项。试点记录时间、重要遗漏和返工次数。结果稳定后，把输入示例、模板、验证清单与维护人纳入工作流库。此例用作者的推广步骤说明如何落地。<span class="tpm-ref">〔第 299–303 页〕</span></p>
+<section class="tpm-practice"><h3>两周试点与工作流库</h3><p class="tpm-meta">原书第 298–303 页</p><h4>先写试点问卷</h4>
+<p>当前共同痛点是什么？最轻量试验是什么？产物如何核验？会动到哪些数据？什么时候停用？找两个有意愿的团队先试，明确责任人和对照基线。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">项目</th><th scope="col">开始前填写</th><th scope="col">试点结束填写</th></tr></thead><tbody>
+<tr><td>范围与负责人</td><td>团队、材料、审批人、运行频率</td><td>两周实际覆盖和异常</td></tr>
+<tr><td>效率</td><td>每次人工整理耗时</td><td>AI 起草加核验的总耗时</td></tr>
+<tr><td>准确性</td><td>人工周报关键字段</td><td>重要错误、遗漏、修正次数</td></tr>
+<tr><td>风险可见性</td><td>历史发现和升级时间</td><td>关键风险是否更早被发现</td></tr>
+<tr><td>采用决定</td><td>推广／继续试／停用的条件</td><td>结论、证据、负责人和复查日</td></tr>
+</tbody></table></div>
+<h4>复用包最少要交什么</h4>
+<p>共享说明、模板、输入样例、输出结构、人工核验清单、权限约束、维护人和停用规则。邀请另一团队独立跑一次，记录需要口头补充的步骤，把必要内容写回文档。扩到团队默认工作时，再安排入职材料与维护节奏。</p></section>
+<h3>章末自检</h3><ol>
+<li>用哪五个问题评估新工具？</li>
+<li>从一次性 Prompt 到 Specialized Agent 依次经历哪些阶段？</li>
+<li>可交接的工作流库要保留什么？为何需要停用条件？</li>
+<li><strong>应用题</strong>　设计一个两周 AI 试点，说明痛点、试点对象、指标、人工验证和推广或停止的条件。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section class="tpm-chapter" id="tpm-ch13"><h2>第 13 章 · 配套代码与 PDF 领取</h2><p class="tpm-meta">Unlock the Code Bundle and the PDF Version<br>原书第 305–307 页 · 原书 PDF 第 336–338 页</p><p class="tpm-core"><strong>核心问题</strong>　怎样领取书中配套资源，并将样例用于练习核验？</p>
+<h3>原书的领取步骤</h3>
+<p>打开 Packt 的领取页面，按书名检索并选对版次，登录账户，按购买渠道完成验证。原书说明，Packt 官网直接购买可从账户访问，其他渠道请按页面要求准备购买凭证。<span class="tpm-ref">〔第 305–307 页〕</span></p>
+<h3>应用案例｜用样例重跑第 5 章</h3>
+<p>可先重跑章程与 Inference Log 用例。用示例结构检查结果是否有清晰字段，对照样例输入逐项追查哪些推断有文档依据，哪些需找人核实。这是把附件用作练习的方式。</p>
+<section class="tpm-practice"><h3>附录：配套资源使用索引</h3><p class="tpm-meta">原书前言及第 305–307 页</p><h4>资源怎样帮助学习</h4>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">资源</th><th scope="col">用法</th><th scope="col">和讲义配合</th></tr></thead><tbody>
+<tr><td>配套 PDF</td><td>查原文和图表</td><td>用每章原书页码复核</td></tr>
+<tr><td>提示词或 Skill</td><td>用样例跑一次并对照字段</td><td>先选第 1 章简报或第 5 章章程</td></tr>
+<tr><td>样例输入</td><td>找冲突、缺口和可信证据</td><td>刻意调整一条输入再看输出差异</td></tr>
+<tr><td>示例输出</td><td>了解作者产物的形态</td><td>检查哪些是原文事实、推断和待确认</td></tr>
+<tr><td>用例导航器</td><td>按阶段、难度和职责找案例</td><td>第 4 章原书第 97 页介绍</td></tr>
+</tbody></table></div>
+<h4>复做记录</h4>
+<p>选定用例｜使用了什么版本的材料｜关键结果｜原文或可观察事实｜错漏和调整｜是否值得复用。配套附件的具体领取方式请对照本章原书说明。</p></section>
+<h3>章末自检</h3><ol>
+<li>在领取页面找到书名后还要核对什么？</li>
+<li>书中如何区分两种购买渠道？</li>
+<li>提示词、样例输入与示例输出各能用来查什么？</li>
+<li><strong>应用题</strong>　选一个书中用例，说明用配套材料检查哪项结果，以及哪条证据仍需亲自验证。</li>
+</ol><p class="tpm-back"><a href="#tpm-contents">返回目录</a></p></section>
+<section id="tpm-review" class="tpm-chapter"><h2>复习记录</h2><p>作答后记下遗漏的概念、理解偏差或需要重做的题目。复查时先试着用自己的话解释，再看原书页码。</p>
+<div class="tpm-table" tabindex="0" role="region" aria-label="可滚动的表格"><table><thead><tr><th scope="col">章</th><th scope="col">待复习知识点</th><th scope="col">原书页码与再练动作</th><th scope="col">复查日期</th></tr></thead><tbody>
+<tr><td>1</td><td> </td><td> </td><td> </td></tr>
+<tr><td>2</td><td> </td><td> </td><td> </td></tr>
+<tr><td>3</td><td> </td><td> </td><td> </td></tr>
+<tr><td>4</td><td> </td><td> </td><td> </td></tr>
+<tr><td>5</td><td> </td><td> </td><td> </td></tr>
+<tr><td>6</td><td> </td><td> </td><td> </td></tr>
+<tr><td>7</td><td> </td><td> </td><td> </td></tr>
+<tr><td>8</td><td> </td><td> </td><td> </td></tr>
+<tr><td>9</td><td> </td><td> </td><td> </td></tr>
+<tr><td>10</td><td> </td><td> </td><td> </td></tr>
+<tr><td>11</td><td> </td><td> </td><td> </td></tr>
+<tr><td>12</td><td> </td><td> </td><td> </td></tr>
+<tr><td>13</td><td> </td><td> </td><td> </td></tr>
+</tbody></table></div>
+<p><a href="/assets/tpm-practical-ai-reading-guide/TPM_Practical_AI_Reading_Guide_ZH.pdf">下载 32 页 PDF</a></p></section></div>
