@@ -10,26 +10,46 @@ excerpt: "AI 已能实时生成可交互的虚拟场景，为什么 Rockstar 依
 ---
 
 <style>
-.gta6-figure{margin:1.8rem 0 2.3rem;border:1px solid var(--line,#d7dee6);border-radius:12px;overflow:hidden;background:var(--surface-soft,#f5f7fa)}
-.gta6-figure .gta6-diagram-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px}
-.gta6-figure img{display:block;width:100%;min-width:820px;height:auto;border-radius:9px}
-.gta6-figure figcaption{padding:.2rem 1.1rem 1rem;color:var(--muted,#607185);font-size:.92rem;line-height:1.7}
-.gta6-figure figcaption a{white-space:nowrap}
-.gta6-table{max-width:100%;overflow-x:auto;margin:1.25rem 0;border-radius:10px}
-.gta6-table table{display:table!important;width:100%;min-width:650px;border-collapse:collapse;margin:0}
-.gta6-table th,.gta6-table td{vertical-align:top;padding:.65rem .8rem;min-width:130px}
+/* 本文独立布局：正文为连续单栏；图表可适应阅读区域。 */
+main:has(.gta6-contents){width:min(100%,1020px)}
+.post:has(.gta6-contents){min-width:0}
+.post:has(.gta6-contents) .post-content{min-width:0;overflow-wrap:break-word;word-break:normal}
+.post:has(.gta6-contents) .post-content>p{line-height:1.9;margin-block:1.15rem;text-align:justify;text-justify:inter-ideograph}
+.post:has(.gta6-contents) .post-content h2{margin-top:2.6rem}
+.gta6-figure{width:100%;max-width:100%;margin:1.8rem 0 2.3rem;border:1px solid var(--line,#d7dee6);border-radius:12px;overflow:hidden;background:var(--surface-soft,#f5f7fa)}
+.gta6-figure .gta6-diagram-scroll{width:100%;max-width:100%;overflow:visible;padding:0}
+.gta6-figure picture,.gta6-figure a{display:block;width:100%;max-width:100%;min-width:0}
+.post-content .gta6-figure img{display:block;width:100%;max-width:100%;min-width:0;height:auto;margin:0;border-radius:0;box-shadow:none}
+.gta6-figure figcaption{padding:.7rem 1rem 1rem;color:var(--muted,#607185);font-size:.92rem;line-height:1.7;overflow-wrap:anywhere}
+.gta6-figure figcaption a{display:inline;width:auto;white-space:normal}
+.gta6-table{max-width:100%;overflow-x:auto;margin:1.25rem 0;border-radius:10px;border:1px solid var(--line,#dce3eb)}
+.post-content .gta6-table table{display:table!important;table-layout:fixed;min-width:0;width:100%;margin:0;border:0;overflow:visible;border-collapse:collapse}
+.post-content .gta6-table th,.post-content .gta6-table td{min-width:0;vertical-align:top;padding:.7rem .75rem;overflow-wrap:anywhere;word-break:normal}
 .gta6-note{border-left:4px solid #4c88bb;padding:.85rem 1.1rem;background:var(--surface-soft,#f3f6f9);border-radius:0 9px 9px 0;margin:1.25rem 0}
 .gta6-contents{border:1px solid var(--line,#dce3eb);background:var(--surface-soft,#f7f9fc);border-radius:11px;padding:1.1rem 1.25rem;margin:1.7rem 0}
 .gta6-contents h2{margin:0 0 .65rem!important;font-size:1.15rem}
 .gta6-contents ol{margin:.2rem 0;padding-left:1.35rem;columns:2;column-gap:2rem}
 .gta6-contents li{break-inside:avoid;margin:.28rem 0}
-@media(max-width:640px){.gta6-contents ol{columns:1}.gta6-figure img{min-width:780px}.gta6-table table{min-width:600px}}
+@media(max-width:700px){
+  .post:has(.gta6-contents){padding:18px}
+  .post:has(.gta6-contents) .post-content>p{text-align:left}
+  .gta6-contents ol{columns:1}
+  .post-content .gta6-table table{font-size:.84rem}
+  .post-content .gta6-table th,.post-content .gta6-table td{padding:.45rem .35rem}
+  .gta6-figure figcaption{font-size:.84rem}
+}
+@media(max-width:420px){
+  .post:has(.gta6-contents){padding:14px}
+  .gta6-table{overflow:visible}
+  .post-content .gta6-table table{font-size:.77rem}
+  .post-content .gta6-table th,.post-content .gta6-table td{padding:.4rem .25rem}
+}
 </style>
 
 > **一篇科技与游戏工业的交叉评论**｜GTA 6、Rockstar、World Models、生成式 AI、NPC、游戏引擎  
 > **核心判断：生成一个看上去存在的世界，与交付一个长期可玩、能够维持规则的世界，是两种不同的工程能力。**
 
-2026 年 11 月 19 日，《Grand Theft Auto VI》（下称 GTA 6）正式在 PlayStation 5 与 Xbox Series X|S 平台推出。这本应是一个有关开放世界游戏、叙事、画面与商业纪录的故事，却恰好撞上了人工智能领域的一次技术转折。
+2026 年 11 月 19 日，《Grand Theft Auto VI》（下称 GTA 6）正式在 PlayStation 5 与 Xbox Series X\|S 平台推出。这本应是一个有关开放世界游戏、叙事、画面与商业纪录的故事，却恰好撞上了人工智能领域的一次技术转折。
 
 2026 年 10 月，Google DeepMind 公开了 **Genie 4**：一个能够根据输入实时生成可交互视听环境的世界模型（World Model）。在其 11 月 18 日公布的模型卡中，官方确认它支持最高 720p、24 FPS 的实时视频与同步音频生成。另一方面，Take-Two 首席执行官 Strauss Zelnick 早在 **2026 年 2 月** 就明确表示，生成式 AI 对 Rockstar 打造 GTA 6 的工作“没有参与”，并强调 Rockstar 的世界由人工精心设计。
 
@@ -76,8 +96,8 @@ PCG 解决的是“如何以规则和参数规模化生产内容”。开发者�
 </tbody></table></div>
 
 <figure class="gta6-figure">
-<div class="gta6-diagram-scroll"><a href="{{ '/assets/images/gta6-ai-world/game-ai-vs-pcg-vs-genai.svg' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="打开传统游戏 AI、程序化内容生成、生成式 AI 对比高清图"><img src="{{ '/assets/images/gta6-ai-world/game-ai-vs-pcg-vs-genai.svg' | relative_url }}" width="1440" height="790" alt="三种技术的对比：传统游戏 AI 负责规则与行为，程序化内容生成负责规模化，生成式 AI 负责条件生成与丰富表达" loading="eager"></a></div>
-<figcaption>图 1｜传统游戏 AI、PCG 与生成式 AI 的机制、场景和工程边界。<a href="{{ '/assets/images/gta6-ai-world/game-ai-vs-pcg-vs-genai.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">打开 SVG 原图</a>；手机端可横向滚动，放大不失真。</figcaption>
+<div class="gta6-diagram-scroll"><a href="{{ '/assets/images/gta6-ai-world/game-ai-vs-pcg-vs-genai.svg' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="打开传统游戏 AI、程序化内容生成、生成式 AI 对比高清图"><picture><source media="(max-width: 700px)" srcset="{{ '/assets/images/gta6-ai-world/game-ai-vs-pcg-vs-genai-mobile.svg' | relative_url }}"><img src="{{ '/assets/images/gta6-ai-world/game-ai-vs-pcg-vs-genai.svg' | relative_url }}" width="1440" height="790" alt="三种技术的对比：传统游戏 AI 负责规则与行为，程序化内容生成负责规模化，生成式 AI 负责条件生成与丰富表达" loading="eager"></picture></a></div>
+<figcaption>图 1｜传统游戏 AI、PCG 与生成式 AI 的机制、场景和工程边界。<a href="{{ '/assets/images/gta6-ai-world/game-ai-vs-pcg-vs-genai.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">打开 SVG 原图</a>；手机端自动显示竖版布局，放大不失真。</figcaption>
 </figure>
 
 一个成熟的游戏可以同时使用三者。**“GTA 6 的创作没有使用生成式 AI”绝不等同于“游戏没有 AI”。** 同样，能够生成一张看似真实的城市图片，也不等于能够维护一个玩家可持续交互的城市。
@@ -203,8 +223,8 @@ Ubisoft 在 2024 年公布的 **NEO NPC** 研究原型，正是这一方向的�
 </tbody></table></div>
 
 <figure class="gta6-figure">
-<div class="gta6-diagram-scroll"><a href="{{ '/assets/images/gta6-ai-world/hybrid-game-ai-four-layer-architecture.svg' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="打开混合式游戏 AI 四层架构高清图"><img src="{{ '/assets/images/gta6-ai-world/hybrid-game-ai-four-layer-architecture.svg' | relative_url }}" width="1440" height="1040" alt="混合式游戏 AI 的四层架构：底层为世界状态层，其上为行为决策层、生成表达层及叙事控制层，模型输出必须经校验才能更新状态" loading="lazy"></a></div>
-<figcaption>图 2｜混合式游戏 AI 的四层参考架构。<strong>世界状态是权威事实源；生成内容经过叙事、权限和规则校验，才能作用于游戏。</strong> <a href="{{ '/assets/images/gta6-ai-world/hybrid-game-ai-four-layer-architecture.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">打开 SVG 原图</a>；手机端可横向滚动。</figcaption>
+<div class="gta6-diagram-scroll"><a href="{{ '/assets/images/gta6-ai-world/hybrid-game-ai-four-layer-architecture.svg' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="打开混合式游戏 AI 四层架构高清图"><picture><source media="(max-width: 700px)" srcset="{{ '/assets/images/gta6-ai-world/hybrid-game-ai-four-layer-architecture-mobile.svg' | relative_url }}"><img src="{{ '/assets/images/gta6-ai-world/hybrid-game-ai-four-layer-architecture.svg' | relative_url }}" width="1440" height="1040" alt="混合式游戏 AI 的四层架构：底层为世界状态层，其上为行为决策层、生成表达层及叙事控制层，模型输出必须经校验才能更新状态" loading="lazy"></picture></a></div>
+<figcaption>图 2｜混合式游戏 AI 的四层参考架构。<strong>世界状态是权威事实源；生成内容经过叙事、权限和规则校验，才能作用于游戏。</strong> <a href="{{ '/assets/images/gta6-ai-world/hybrid-game-ai-four-layer-architecture.svg' | relative_url }}" target="_blank" rel="noopener noreferrer">打开 SVG 原图</a>；手机端自动显示竖版布局。</figcaption>
 </figure>
 
 以酒吧里的 NPC 为例。玩家说出一句威胁的话，语言模型可以提出“角色生气并准备离开”的候选反应；行为层判断是否存在可执行路径；叙事层检查其是否违反角色设定；世界状态层最终记录角色的合法行为。
