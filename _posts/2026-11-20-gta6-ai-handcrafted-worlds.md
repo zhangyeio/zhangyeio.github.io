@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI 能生成整个世界，为什么 GTA 6 仍坚持人工打造？"
-date: 2026-11-20 09:00:00 +0800
+date: 2026-11-20 08:00:00 +0800
 permalink: /2026/11/20/gta6-ai-handcrafted-worlds/
 categories: [人工智能, 游戏科技, 科技评论]
 tags: [GTA6, Rockstar, 生成式AI, WorldModels, NPC, 游戏引擎]
