@@ -9,6 +9,29 @@ description: "智能体时代，真正稀缺的不只是生产与执行能力，
 excerpt: "当 AI 从回答问题走向自主执行，生产能力与人类理解、验证和责任能力之间会出现怎样的缺口？本文提出认知主权、认知债务与验证工程框架。"
 ---
 
+{::nomarkdown}
+<style>
+.cognitive-figure { margin: 1.8rem 0; padding: clamp(.65rem, 2vw, 1.15rem); border: 1px solid var(--line, #dce4e8); border-radius: 12px; background: #f8fbfc; color: #243740; }
+.cognitive-figure :is(svg) { display: block; width: 100%; height: auto; max-width: 680px; margin-inline: auto; font-family: inherit; }
+.cognitive-figure figcaption { margin-top: .7rem; color: #465c66; font-size: .875rem; line-height: 1.55; text-align: center; }
+.cognitive-figure .cognitive-plot { overflow-x: auto; }
+.cognitive-figure .cognitive-chart-title { display: block; margin-bottom: .55rem; }
+.cognitive-figure .cognitive-bar-row { display: grid; grid-template-columns: 6em minmax(3rem, 1fr) 3em; align-items: center; gap: .6rem; margin: .5rem 0; font-size: .875rem; }
+.cognitive-figure .cognitive-bar { height: .85rem; border-radius: .25rem; background: #26746e; }
+.cognitive-figure .cognitive-bar-ai { background: #a15b20; }
+.post-content:has(.cognitive-figure) table { width: 100%; margin: 1.6rem 0; border: 1px solid var(--line, #dce4e8); border-spacing: 0; border-collapse: separate; border-radius: 10px; overflow: hidden; font-size: .92rem; line-height: 1.6; }
+.post-content:has(.cognitive-figure) table :is(th, td) { padding: .7rem .85rem; vertical-align: top; text-align: start; border: 0; border-bottom: 1px solid var(--line, #dce4e8); overflow-wrap: anywhere; background: transparent; }
+.post-content:has(.cognitive-figure) table thead th { background: #e5eff4; color: #174458; font-weight: 700; }
+.post-content:has(.cognitive-figure) table tbody tr:nth-child(even) { background: var(--surface-soft, #f6f9fa); }
+.post-content:has(.cognitive-figure) table tbody tr:last-child td { border-bottom: 0; }
+@media (max-width: 640px) {
+  .cognitive-figure .cognitive-plot svg { min-width: 460px; }
+  .post-content:has(.cognitive-figure) table { display: block; max-width: 100%; min-width: 0; overflow-x: auto; }
+  .post-content:has(.cognitive-figure) table :is(th, td) { min-width: 7.5rem; padding: .55rem .65rem; }
+}
+</style>
+{:/nomarkdown}
+
 ## 智能体时代的认知主权、验证工程与人类责任
 
 *When AI Thinks for Us: Cognitive Sovereignty, Verification Engineering, and Human Accountability in the Agentic Era*
@@ -29,7 +52,12 @@ excerpt: "当 AI 从回答问题走向自主执行，生产能力与人类理解
 
 表面上看，这是一场令人振奋的生产力革命。但有一个问题很少被认真讨论：**当十个智能体同时工作时，负责理解、判断和验收这些成果的人，仍然可能只有一个。** 智能体的执行能力可以通过增加计算资源和并行会话快速扩展，但人类的注意力、专业知识、理解能力和责任承担能力，并不会以同样的速度扩展。这种不对称性，可能成为智能体时代最重要的生产力瓶颈之一。
 
-> **图示：** 图 1 · 生产能力与认知容量失衡（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 1 · 生产能力与认知容量失衡"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 275" aria-label="图 1 · 生产能力与认知容量失衡"><defs><marker id="arr0" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><path d="M65 25V230H650" fill="none" stroke="#84949b" /><path d="M65 65H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 105H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 145H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 185H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 210Q350 201 635 35L635 145Q350 170 65 210Z" fill="#b36c26" fill-opacity=".12" /><path d="M65 210Q350 201 635 35" fill="none" stroke="#26746e" stroke-width="4" /><path d="M65 210Q350 170 635 145" fill="none" stroke="#426caa" stroke-width="3" /><path d="M65 210Q350 200 635 190" fill="none" stroke="#64748b" stroke-dasharray="6 5" stroke-width="2" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="540" y="24">AI 生产能力</text><text fill="#426caa" font-size="14" font-weight="400" text-anchor="middle" x="515" y="139">验证与审查能力</text><text fill="#64748b" font-size="14" font-weight="400" text-anchor="middle" x="520" y="185">人类注意力</text><text fill="#b36c26" font-size="19" font-weight="600" text-anchor="middle" x="480" y="95">认知缺口</text><text fill="#64748b" font-size="14" font-weight="400" text-anchor="middle" x="360" y="260">智能体使用与时间 →</text></svg></div>
+<figcaption>图 1 · 生产能力与认知容量失衡（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 工业革命解决了人类体力的规模化问题，信息革命解决了知识传播与信息处理的规模化问题，而人工智能革命正在解决认知任务的规模化执行问题。然而，认知任务的执行可以规模化，并不意味着认知责任也能够同步规模化。我们正在进入一个新的技术阶段：生成的成本不断下降，但确认生成内容值得信任的成本，未必会同步下降。
 
@@ -63,7 +91,12 @@ excerpt: "当 AI 从回答问题走向自主执行，生产能力与人类理解
 
 在传统编程过程中，工程师为了实现一个功能，需要阅读文档、理解接口、分析异常、调试错误，并逐步建立对系统的理解。这些看似低效的过程，恰恰构成了专业能力形成的重要机制。而智能体工作流可能压缩甚至跳过这些过程。
 
-> **图示：** 图 2 · 任务完成与知识形成的分离（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 2 · 任务完成与知识形成的分离"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 240" aria-label="图 2 · 任务完成与知识形成的分离"><defs><marker id="arr1" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#26746e" fill-opacity=".075" height="70" rx="9" stroke="#26746e" stroke-opacity=".65" width="656" x="12" y="20" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="48.0">传统知识生产</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="71.0">问题 → 探索 → 推理 → 验证 → 结论</text><rect fill="#426caa" fill-opacity=".075" height="70" rx="9" stroke="#426caa" stroke-opacity=".65" width="656" x="12" y="115" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="143.0">智能体工作模式</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="166.0">问题 → AI 完成认知任务 → 结论</text><text fill="#b36c26" font-size="18" font-weight="600" text-anchor="middle" x="340" y="220">获得成果 ≠ 获得能力</text></svg></div>
+<figcaption>图 2 · 任务完成与知识形成的分离（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 问题不在于人类不再亲自完成所有认知活动，而在于我们可能在获得答案的同时，失去了形成答案所需要的知识。这是一个长期的人力资本问题，而不仅仅是短期的生产效率问题。
 
@@ -91,7 +124,12 @@ Steven Shaw 和 Gideon Nave 在《Thinking—Fast, Slow, and Artificial》中讨
 
 因此，更合理的分析方法，是将 AI 委托程度与人类认知主导程度视为两个相对独立的维度。
 
-> **图示：** 图 3 · 人机认知协作二维模型（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 3 · 人机认知协作二维模型"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 285" aria-label="图 3 · 人机认知协作二维模型"><defs><marker id="arr2" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#64748b" fill-opacity=".075" height="105" rx="9" stroke="#64748b" stroke-opacity=".65" width="255" x="100" y="20" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="227.5" y="65.5">自主认知</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="227.5" y="88.5">低委托 · 高主导</text><rect fill="#26746e" fill-opacity=".075" height="105" rx="9" stroke="#26746e" stroke-opacity=".65" width="255" x="365" y="20" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="492.5" y="65.5">认知增强</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="492.5" y="88.5">高委托 · 高主导</text><rect fill="#b36c26" fill-opacity=".075" height="105" rx="9" stroke="#b36c26" stroke-opacity=".65" width="255" x="100" y="137" /><text fill="#b36c26" font-size="16" font-weight="600" text-anchor="middle" x="227.5" y="182.5">认知受限</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="227.5" y="205.5">低委托 · 低主导</text><rect fill="#b84949" fill-opacity=".075" height="105" rx="9" stroke="#b84949" stroke-opacity=".65" width="255" x="365" y="137" /><text fill="#b84949" font-size="16" font-weight="600" text-anchor="middle" x="492.5" y="182.5">认知投降</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="492.5" y="205.5">高委托 · 低主导</text><text fill="#64748b" font-size="15" font-weight="400" text-anchor="middle" x="360" y="270">AI 任务委托程度 →</text><text fill="#64748b" font-size="14" text-anchor="middle" transform="rotate(-90 32 130)" x="32" y="130">人类认知主导程度</text></svg></div>
+<figcaption>图 3 · 人机认知协作二维模型（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 真正理想的状态不是回到低自动化水平，而是在最大限度利用人工智能的同时，维持足够高的人类认知主导程度。**技术进步的目标应该是认知增强，而不是认知替代之后的被动依赖。**
 
@@ -121,7 +159,12 @@ Steven Shaw 和 Gideon Nave 在《Thinking—Fast, Slow, and Artificial》中讨
 
 假设一个 AI 系统在某类任务中具有很高的平均正确率。如果大部分任务风险较低，那么偶尔发生错误可能不会造成严重后果。但如果错误集中在安全边界、权限管理、金融计算或生产环境等关键环节，平均正确率就无法充分反映真实风险。
 
-> **图示：** 图 4 · 低频高损失风险（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 4 · 低频高损失风险"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 210" aria-label="图 4 · 低频高损失风险"><defs><marker id="arr3" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="35" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="66" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="97" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="128" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="159" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="190" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="221" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="252" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="283" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="314" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="345" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="376" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="407" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="438" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="469" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="500" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="531" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="562" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="593" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="624" y="12" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="35" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="66" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="97" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="128" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="159" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="190" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="221" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="252" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="283" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="314" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="345" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="376" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="407" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="438" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="469" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="500" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="531" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="562" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="593" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="624" y="38" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="35" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="66" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="97" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="128" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="159" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="190" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="221" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="252" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="283" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="314" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="345" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="376" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="407" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="438" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="469" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="500" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="531" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="562" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="593" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="624" y="64" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="35" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="66" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="97" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="128" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="159" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="190" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="221" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="252" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="283" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="314" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="345" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="376" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="407" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="438" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="469" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="500" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="531" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="562" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="593" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="624" y="90" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="35" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="66" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="97" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="128" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="159" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="190" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="221" y="116" /><rect fill="#b84949" height="20" opacity="1" rx="3" width="24" x="252" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="283" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="314" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="345" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="376" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="407" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="438" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="469" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="500" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="531" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="562" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="593" y="116" /><rect fill="#26746e" height="20" opacity="0.5" rx="3" width="24" x="624" y="116" /><text fill="#b84949" font-size="19" font-weight="600" text-anchor="middle" x="340" y="168">一个严重错误可能抵消大量成功</text><text fill="#64748b" font-size="14" font-weight="400" text-anchor="middle" x="340" y="193">平均正确率不能替代风险分析</text></svg></div>
+<figcaption>图 4 · 低频高损失风险（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 人工智能的可靠性提升，有可能降低错误发生的概率，但也可能通过扩大使用范围、提高任务自主性和减少人工监督，增加错误的影响范围。因此，更强大的模型并不必然意味着更低的系统性风险。模型能力只是系统安全的一个组成部分。
 
@@ -158,7 +201,12 @@ Steven Shaw 和 Gideon Nave 在《Thinking—Fast, Slow, and Artificial》中讨
 
 #### 2. 认知债务的生命周期
 
-> **图示：** 图 5 · 认知债务形成与暴露机制（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 5 · 认知债务形成与暴露机制"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 425" aria-label="图 5 · 认知债务形成与暴露机制"><defs><marker id="arr4" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#426caa" fill-opacity=".075" height="60" rx="9" stroke="#426caa" stroke-opacity=".65" width="510" x="85" y="8" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="31.0">大量委托认知任务</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="54.0">AI 自主生成成果</text><path d="M340 68 L340 89" fill="none" marker-end="url(#arr4)" stroke="#64748b" stroke-width="1.7" /><rect fill="#64748b" fill-opacity=".075" height="60" rx="9" stroke="#64748b" stroke-opacity=".65" width="510" x="85" y="91" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="114.0">理解过程被压缩</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="137.0">缺少探索与调试</text><path d="M340 151 L340 172" fill="none" marker-end="url(#arr4)" stroke="#64748b" stroke-width="1.7" /><rect fill="#b36c26" fill-opacity=".075" height="60" rx="9" stroke="#b36c26" stroke-opacity=".65" width="510" x="85" y="174" /><text fill="#b36c26" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="197.0">知识与成果脱节</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="220.0">心智模型未更新</text><path d="M340 234 L340 255" fill="none" marker-end="url(#arr4)" stroke="#64748b" stroke-width="1.7" /><rect fill="#b36c26" fill-opacity=".075" height="60" rx="9" stroke="#b36c26" stroke-opacity=".65" width="510" x="85" y="257" /><text fill="#b36c26" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="280.0">隐性债务积累</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="303.0">正常运行掩盖风险</text><path d="M340 317 L340 338" fill="none" marker-end="url(#arr4)" stroke="#64748b" stroke-width="1.7" /><rect fill="#b84949" fill-opacity=".075" height="60" rx="9" stroke="#b84949" stroke-opacity=".65" width="510" x="85" y="340" /><text fill="#b84949" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="363.0">复杂变更或故障</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="386.0">理解不足开始暴露</text></svg></div>
+<figcaption>图 5 · 认知债务形成与暴露机制（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 认知债务之所以危险，是因为它往往不会立即产生负面反馈。代码正常运行，报告得到认可，项目按期交付，绩效指标持续改善。从短期来看，组织甚至可能因为积累认知债务而获得更好的经营指标。但是，这些指标无法回答一个重要问题：当外部智能系统失效、环境发生变化或者出现前所未有的问题时，组织是否仍然具备独立解决问题的能力？
 
@@ -174,7 +222,12 @@ Steven Shaw 和 Gideon Nave 在《Thinking—Fast, Slow, and Artificial》中讨
 
 这一问题在人工智能时代获得了新的表现形式。Anthropic 在关于内部工程师和研究人员工作方式的研究中，将相关现象称为监督悖论（Paradox of Supervision）：有效监督 AI 所需要的专业能力，可能因为过度依赖 AI 而逐渐减弱。
 
-> **图示：** 图 6 · 监督悖论的自我强化循环（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 6 · 监督悖论的自我强化循环"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 342" aria-label="图 6 · 监督悖论的自我强化循环"><defs><marker id="arr5" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#426caa" fill-opacity=".075" height="60" rx="9" stroke="#426caa" stroke-opacity=".65" width="510" x="85" y="8" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="31.0">AI 自动化程度提高</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="54.0">常规任务大量委托</text><path d="M340 68 L340 89" fill="none" marker-end="url(#arr5)" stroke="#64748b" stroke-width="1.7" /><rect fill="#64748b" fill-opacity=".075" height="60" rx="9" stroke="#64748b" stroke-opacity=".65" width="510" x="85" y="91" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="114.0">独立实践减少</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="137.0">知识与经验形成减弱</text><path d="M340 151 L340 172" fill="none" marker-end="url(#arr5)" stroke="#64748b" stroke-width="1.7" /><rect fill="#b36c26" fill-opacity=".075" height="60" rx="9" stroke="#b36c26" stroke-opacity=".65" width="510" x="85" y="174" /><text fill="#b36c26" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="197.0">监督能力可能下降</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="220.0">更难识别复杂错误</text><path d="M340 234 L340 255" fill="none" marker-end="url(#arr5)" stroke="#64748b" stroke-width="1.7" /><rect fill="#b84949" fill-opacity=".075" height="60" rx="9" stroke="#b84949" stroke-opacity=".65" width="510" x="85" y="257" /><text fill="#b84949" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="280.0">进一步依赖 AI</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="303.0">自主解决问题成本提高</text></svg></div>
+<figcaption>图 6 · 监督悖论的自我强化循环（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 这一悖论对企业的人才培养尤其重要。过去，资深工程师的专业判断通常来自大量实际工作经验：编写代码、处理故障、参与系统设计、理解业务需求以及承担错误决策的后果。如果初级工程师从进入行业开始，就将大部分实践任务交给 AI，那么企业未来的资深工程师将如何形成？如果组织不再需要大量初级人员完成基础工作，那么过去通过这些工作建立起来的人才培养机制，又将如何持续？
 
@@ -204,7 +257,15 @@ Steven Shaw 和 Gideon Nave 在《Thinking—Fast, Slow, and Artificial》中讨
 
 2026年1月29日，Anthropic 发布研究《How AI Assistance Impacts the Formation of Coding Skills》。研究采用随机对照实验，观察开发者在学习新的 Python 异步编程库时，有无 AI 辅助对任务完成和知识掌握的影响。
 
-> **图示：** AI 辅助与编程技能形成实验无 AI 辅助 67%有 AI 辅助 50%平均得分差距：17 个百分点；p = 0.01。；来源：Anthropic，2026 年 1 月。小样本、短期技能测验；并非长期能力退化的直接证据。
+{::nomarkdown}
+<figure class="cognitive-figure">
+<strong class="cognitive-chart-title">AI 辅助与编程技能形成实验</strong>
+<div class="cognitive-bar-row"><span>无 AI 辅助</span><span class="cognitive-bar" style="width:67%" aria-hidden="true"></span><strong>67%</strong></div>
+<div class="cognitive-bar-row"><span>有 AI 辅助</span><span class="cognitive-bar cognitive-bar-ai" style="width:50%" aria-hidden="true"></span><strong>50%</strong></div>
+<div>平均得分相差 17 个百分点，p = 0.01。</div>
+<figcaption>来源：Anthropic，2026 年 1 月。小样本、短期技能测验；并非长期能力退化的直接证据。</figcaption>
+</figure>
+{:/nomarkdown}
 
 研究中，AI 辅助组平均完成任务的时间略短，但时间差异没有达到统计显著水平；技能测验得分差异则具有统计显著性。[[14]](#ref-14) 更值得关注的是，不同 AI 使用方式对应着不同的学习表现。直接要求 AI 完成代码，与利用 AI 理解概念、解释设计及检查自身理解，并不是同一种认知活动。这意味着，决定学习效果的并不只是是否使用 AI，更重要的是使用 AI 的方式。
 
@@ -235,7 +296,12 @@ Bastani 等研究者在2025年发表于 PNAS 的论文《Generative AI Without G
 
 Risko 和 Gilbert 在2016年的认知卸载研究综述中，已经讨论过人类借助外部环境与工具减轻认知负担的机制及其认知后果。[[7]](#ref-7) 从这一角度来看，人类不必将认知能力的边界限定在自己的大脑之内。人工智能可以成为认知能力的延伸。它可以帮助我们发现未知领域，揭示思维盲区，生成反例，比较不同理论，并将复杂问题转化为能够理解和验证的形式。
 
-> **图示：** 图 7 · 替代性认知与增强性认知（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 7 · 替代性认知与增强性认知"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 210" aria-label="图 7 · 替代性认知与增强性认知"><defs><marker id="arr6" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#64748b" fill-opacity=".075" height="135" rx="9" stroke="#64748b" stroke-opacity=".65" width="310" x="20" y="20" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="175.0" y="80.5">替代性认知</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="175.0" y="103.5">人类 → AI → 直接接收结论</text><rect fill="#26746e" fill-opacity=".075" height="135" rx="9" stroke="#26746e" stroke-opacity=".65" width="310" x="350" y="20" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="505.0" y="80.5">增强性认知</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="505.0" y="103.5">人类 ↔ AI → 共同形成理解</text><text fill="#26746e" font-size="17" font-weight="600" text-anchor="middle" x="340" y="193">关键差异：是否形成新的理解</text></svg></div>
+<figcaption>图 7 · 替代性认知与增强性认知（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 替代性认知可能使人类逐渐成为知识的消费者，增强性认知则能够帮助人类扩展自己的知识体系。真正值得追求的，不是脱离 AI 的纯粹独立思考，而是即使在人机深度协作的条件下，仍然能够保持判断的独立性。
 
@@ -251,7 +317,12 @@ Risko 和 Gilbert 在2016年的认知卸载研究综述中，已经讨论过人�
 
 #### 1. 认知主权的六个维度
 
-> **图示：** 图 8 · 认知主权六维模型（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 8 · 认知主权六维模型"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 300" aria-label="图 8 · 认知主权六维模型"><defs><marker id="arr7" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#26746e" fill-opacity=".075" height="68" rx="9" stroke="#26746e" stroke-opacity=".65" width="315" x="20" y="15" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="177.5" y="42.0">目标定义权</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="177.5" y="65.0">决定做什么</text><rect fill="#26746e" fill-opacity=".075" height="68" rx="9" stroke="#26746e" stroke-opacity=".65" width="315" x="345" y="15" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="502.5" y="42.0">认知理解权</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="502.5" y="65.0">理解为什么</text><rect fill="#26746e" fill-opacity=".075" height="68" rx="9" stroke="#26746e" stroke-opacity=".65" width="315" x="20" y="98" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="177.5" y="125.0">证据判断权</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="177.5" y="148.0">判断是否正确</text><rect fill="#26746e" fill-opacity=".075" height="68" rx="9" stroke="#26746e" stroke-opacity=".65" width="315" x="345" y="98" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="502.5" y="125.0">决策否决权</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="502.5" y="148.0">决定是否采纳</text><rect fill="#26746e" fill-opacity=".075" height="68" rx="9" stroke="#26746e" stroke-opacity=".65" width="315" x="20" y="181" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="177.5" y="208.0">能力重建权</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="177.5" y="231.0">恢复独立理解</text><rect fill="#26746e" fill-opacity=".075" height="68" rx="9" stroke="#26746e" stroke-opacity=".65" width="315" x="345" y="181" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="502.5" y="208.0">责任承担</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="502.5" y="231.0">面对实际后果</text><text fill="#26746e" font-size="18" font-weight="600" text-anchor="middle" x="340" y="278">认知主权：保持有效治理能力</text></svg></div>
+<figcaption>图 8 · 认知主权六维模型（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 **第一，目标定义权（Goal Sovereignty）。** 人工智能可以帮助我们寻找实现目标的最佳路径，但目标本身涉及价值选择。企业应该追求利润最大化、客户体验、长期竞争力，还是社会价值？产品应该优先考虑用户增长、隐私保护，还是使用效率？这些目标之间可能存在冲突，而解决冲突并不只是一个技术优化问题。如果目标由 AI 默认设定，人类即使仍然保留执行审批权，也可能已经失去了最重要的决策权。
 
@@ -293,7 +364,12 @@ Risko 和 Gilbert 在2016年的认知卸载研究综述中，已经讨论过人�
 
 #### 1. 生产级 AI 系统需要多层保障架构
 
-> **图示：** 图 9 · 生产级智能体系统六层保障架构（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 9 · 生产级智能体系统六层保障架构"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 416" aria-label="图 9 · 生产级智能体系统六层保障架构"><defs><marker id="arr8" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#26746e" fill-opacity=".075" height="55" rx="9" stroke="#26746e" stroke-opacity=".65" width="540" x="70" y="10" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="30.5">第六层：责任与治理</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="53.5">审批机制 · 责任主体 · 风险接受</text><rect fill="#426caa" fill-opacity=".075" height="55" rx="9" stroke="#426caa" stroke-opacity=".65" width="540" x="70" y="76" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="96.5">第五层：持续监控与恢复</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="119.5">异常检测 · 审计日志 · 回滚机制</text><rect fill="#426caa" fill-opacity=".075" height="55" rx="9" stroke="#426caa" stroke-opacity=".65" width="540" x="70" y="142" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="162.5">第四层：独立验证</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="185.5">事实核查 · 测试 · Evals · 专家评审</text><rect fill="#64748b" fill-opacity=".075" height="55" rx="9" stroke="#64748b" stroke-opacity=".65" width="540" x="70" y="208" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="228.5">第三层：执行约束</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="251.5">权限控制 · 沙箱 · 工具授权</text><rect fill="#64748b" fill-opacity=".075" height="55" rx="9" stroke="#64748b" stroke-opacity=".65" width="540" x="70" y="274" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="294.5">第二层：智能体编排</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="317.5">任务规划 · 上下文 · 多智能体协作</text><rect fill="#64748b" fill-opacity=".075" height="55" rx="9" stroke="#64748b" stroke-opacity=".65" width="540" x="70" y="340" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="360.5">第一层：基础模型</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="383.5">推理能力 · 生成能力 · 多模态能力</text></svg></div>
+<figcaption>图 9 · 生产级智能体系统六层保障架构（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 基础模型负责生成和推理，智能体编排负责组织任务，执行约束负责控制行为边界，独立验证负责检验结果，监控与恢复负责处理运行风险，治理层负责决定哪些风险可以被接受。这六层缺少任何一个关键环节，都可能使模型能力无法安全地转化为实际生产能力。
 
@@ -318,7 +394,12 @@ Risko 和 Gilbert 在2016年的认知卸载研究综述中，已经讨论过人�
 
 假设企业要求 AI 开发一项折扣计算功能。业务规则是：先计算商品折扣，再基于折后价格计算税费。但智能体错误地理解成先计算税费，再应用折扣。随后，它按照同一个错误的理解编写了自动化测试。最终，测试全部通过。从软件工程角度看，问题并不是缺少测试，而是测试和实现共同继承了错误的需求假设。（例如固定金额折扣、特定计税规则等情形；单纯比例乘法在某些条件下可能交换顺序而结果不变。）
 
-> **图示：** 图 10 · 相关性错误造成虚假验证成功（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 10 · 相关性错误造成虚假验证成功"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 300" aria-label="图 10 · 相关性错误造成虚假验证成功"><defs><marker id="arr9" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#b84949" fill-opacity=".075" height="55" rx="9" stroke="#b84949" stroke-opacity=".65" width="330" x="175" y="10" /><text fill="#b84949" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="30.5">错误的需求理解</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="53.5">共享错误假设</text><path d="M340 65 L175 100" fill="none" marker-end="url(#arr9)" stroke="#64748b" stroke-width="1.7" /><path d="M340 65 L505 100" fill="none" marker-end="url(#arr9)" stroke="#64748b" stroke-width="1.7" /><rect fill="#64748b" fill-opacity=".075" height="65" rx="9" stroke="#64748b" stroke-opacity=".65" width="320" x="15" y="101" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="175.0" y="126.5">AI 编写功能代码</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="175.0" y="149.5">错误的业务逻辑</text><rect fill="#64748b" fill-opacity=".075" height="65" rx="9" stroke="#64748b" stroke-opacity=".65" width="320" x="345" y="101" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="505.0" y="126.5">AI 编写测试代码</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="505.0" y="149.5">错误的预期结果</text><path d="M175 166 L340 199" fill="none" marker-end="url(#arr9)" stroke="#64748b" stroke-width="1.7" /><path d="M505 166 L340 199" fill="none" marker-end="url(#arr9)" stroke="#64748b" stroke-width="1.7" /><rect fill="#26746e" fill-opacity=".075" height="50" rx="9" stroke="#26746e" stroke-opacity=".65" width="330" x="175" y="200" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="230.0">✓ 所有测试通过</text><text fill="#b84949" font-size="18" font-weight="600" text-anchor="middle" x="340" y="284">真实业务需求仍未满足</text></svg></div>
+<figcaption>图 10 · 相关性错误造成虚假验证成功（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 这也是为什么多个智能体相互审查，并不必然能够消除所有风险。即使它们使用不同模型，也可能共享相似的训练数据、错误的上下文、不完整的业务需求或相同的评价标准。独立性不是由智能体的数量决定的，而是由验证所依据的信息、方法和判断标准决定的。
 
@@ -362,7 +443,12 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 #### 1. 三层可观测性架构
 
-> **图示：** 图 11 · 三层可观测性架构（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 11 · 三层可观测性架构"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 218" aria-label="图 11 · 三层可观测性架构"><defs><marker id="arr10" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#26746e" fill-opacity=".075" height="55" rx="9" stroke="#26746e" stroke-opacity=".65" width="540" x="70" y="10" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="30.5">认知可观测性</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="53.5">人类理解 · 决策依据 · 知识缺口 · 责任</text><rect fill="#426caa" fill-opacity=".075" height="55" rx="9" stroke="#426caa" stroke-opacity=".65" width="540" x="70" y="76" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="96.5">智能体可观测性</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="119.5">模型调用 · 工具使用 · 上下文 · 任务轨迹</text><rect fill="#64748b" fill-opacity=".075" height="55" rx="9" stroke="#64748b" stroke-opacity=".65" width="540" x="70" y="142" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="162.5">技术可观测性</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="185.5">Logs · Metrics · Traces · 系统状态</text></svg></div>
+<figcaption>图 11 · 三层可观测性架构（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 | 可观测性层级 | 观察对象 | 核心问题 |
 | --- | --- | --- |
@@ -516,7 +602,12 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 企业没有必要对每项 AI 工作进行同样程度的人工审查。如果对所有低风险任务实施严格审批，自动化的价值就会被严重削弱。如果对高风险任务完全放任智能体执行，又可能产生无法接受的后果。因此，自主性应该由任务风险决定，而不是单纯由模型能力决定。
 
-> **图示：** 图 12 · 风险与智能体自主性之间的约束关系（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 12 · 风险与智能体自主性之间的约束关系"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 275" aria-label="图 12 · 风险与智能体自主性之间的约束关系"><defs><marker id="arr11" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><path d="M65 25V230H650" fill="none" stroke="#84949b" /><path d="M65 65H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 105H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 145H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 185H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 25H650V186Q340 95 65 55Z" fill="#b84949" fill-opacity=".09" /><path d="M65 55Q340 95 650 186L650 226Q340 145 65 95Z" fill="#b36c26" fill-opacity=".16" /><path d="M65 95Q340 145 650 226V230H65Z" fill="#26746e" fill-opacity=".1" /><text fill="#b84949" font-size="17" font-weight="600" text-anchor="middle" x="450" y="52">不可接受的自主性</text><text fill="#b36c26" font-size="16" font-weight="600" text-anchor="middle" x="335" y="125">加强验证与审批</text><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="250" y="210">受控自主执行</text><text fill="#64748b" font-size="14" font-weight="400" text-anchor="middle" x="360" y="260">任务风险与不可逆程度 →</text></svg></div>
+<figcaption>图 12 · 风险与智能体自主性之间的约束关系（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 | 风险级别 | 典型任务 | 智能体权限 | 验证机制 |
 | --- | --- | --- | --- |
@@ -545,7 +636,12 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 #### 1. 初学者与专家应该采用不同的 AI 使用策略
 
-> **图示：** 图 13 · 不同专业发展阶段的 AI 使用策略（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 13 · 不同专业发展阶段的 AI 使用策略"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 284" aria-label="图 13 · 不同专业发展阶段的 AI 使用策略"><defs><marker id="arr12" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#64748b" fill-opacity=".075" height="55" rx="9" stroke="#64748b" stroke-opacity=".65" width="540" x="70" y="10" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="30.5">初学者：AI 作为教师</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="53.5">概念解释 · 提示引导 · 独立练习</text><rect fill="#426caa" fill-opacity=".075" height="55" rx="9" stroke="#426caa" stroke-opacity=".65" width="540" x="70" y="76" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="96.5">进阶学习者：AI 作为结对伙伴</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="119.5">协作开发 · 代码评审 · 知识迁移</text><rect fill="#26746e" fill-opacity=".075" height="55" rx="9" stroke="#26746e" stroke-opacity=".65" width="540" x="70" y="142" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="162.5">成熟专业人员：AI 作为执行助手</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="185.5">任务委托 · 自动化 · 独立验证</text><rect fill="#26746e" fill-opacity=".075" height="55" rx="9" stroke="#26746e" stroke-opacity=".65" width="540" x="70" y="208" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="228.5">领域专家：AI 作为认知增强系统</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="251.5">探索假设 · 跨域创新 · 风险治理</text></svg></div>
+<figcaption>图 13 · 不同专业发展阶段的 AI 使用策略（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 初学者需要通过实践建立心智模型，因此不应该过早地将全部学习活动委托给 AI。专家已经拥有较为成熟的心智模型，可以更多地利用 AI 扩展执行能力，但需要警惕长期缺少实践导致的判断失准。
 
@@ -561,7 +657,12 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 **第三阶段：独立迁移。** 在新的问题或不同场景中，学习者重新使用已经掌握的知识。目的在于验证知识是否真正内化，而不只是能够复述 AI 提供的答案。
 
-> **图示：** 图 14 · 面向能力形成的学习闭环（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 14 · 面向能力形成的学习闭环"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 195" aria-label="图 14 · 面向能力形成的学习闭环"><defs><marker id="arr13" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#64748b" fill-opacity=".075" height="85" rx="9" stroke="#64748b" stroke-opacity=".65" width="210" x="10" y="20" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="115.0" y="55.5">独立构建</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="115.0" y="78.5">暴露知识缺口</text><rect fill="#426caa" fill-opacity=".075" height="85" rx="9" stroke="#426caa" stroke-opacity=".65" width="210" x="235" y="20" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="55.5">AI 协作</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="78.5">扩展认知能力</text><rect fill="#26746e" fill-opacity=".075" height="85" rx="9" stroke="#26746e" stroke-opacity=".65" width="210" x="460" y="20" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="565.0" y="55.5">独立迁移</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="565.0" y="78.5">验证真实掌握</text><path d="M220 62 L235 62" fill="none" marker-end="url(#arr13)" stroke="#64748b" stroke-width="1.7" /><path d="M445 62 L460 62" fill="none" marker-end="url(#arr13)" stroke="#64748b" stroke-width="1.7" /><path d="M565 105V148H115V108" fill="none" marker-end="url(#arr13)" stroke="#26746e" stroke-width="2" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340" y="179">任务完成 → 知识内化 → 能力迁移</text></svg></div>
+<figcaption>图 14 · 面向能力形成的学习闭环（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 在智能体时代，真正的学习成果不应该用提交了多少代码、生成了多少文档或者完成了多少课程来衡量。而应该考察学习者是否能够在新的环境中解释、应用、验证和迁移所获得的知识。
 
@@ -585,7 +686,12 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 #### 1. 完整的人机协作工作流
 
-> **图示：** 图 15 · 人类主导的智能体认知工程生命周期（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 15 · 人类主导的智能体认知工程生命周期"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 674" aria-label="图 15 · 人类主导的智能体认知工程生命周期"><defs><marker id="arr14" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#26746e" fill-opacity=".075" height="60" rx="9" stroke="#26746e" stroke-opacity=".65" width="510" x="85" y="8" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="31.0">01 价值与目标定义</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="54.0">Intent Engineering · 人类</text><path d="M340 68 L340 89" fill="none" marker-end="url(#arr14)" stroke="#64748b" stroke-width="1.7" /><rect fill="#426caa" fill-opacity=".075" height="60" rx="9" stroke="#426caa" stroke-opacity=".65" width="510" x="85" y="91" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="114.0">02 上下文与约束构建</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="137.0">Context Engineering · 人类 + AI</text><path d="M340 151 L340 172" fill="none" marker-end="url(#arr14)" stroke="#64748b" stroke-width="1.7" /><rect fill="#426caa" fill-opacity=".075" height="60" rx="9" stroke="#426caa" stroke-opacity=".65" width="510" x="85" y="174" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="197.0">03 规格与验收设计</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="220.0">Specification · 人类 + AI</text><path d="M340 234 L340 255" fill="none" marker-end="url(#arr14)" stroke="#64748b" stroke-width="1.7" /><rect fill="#64748b" fill-opacity=".075" height="60" rx="9" stroke="#64748b" stroke-opacity=".65" width="510" x="85" y="257" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="280.0">04 自主规划与执行</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="303.0">Agent Engineering · AI 主导</text><path d="M340 317 L340 338" fill="none" marker-end="url(#arr14)" stroke="#64748b" stroke-width="1.7" /><rect fill="#426caa" fill-opacity=".075" height="60" rx="9" stroke="#426caa" stroke-opacity=".65" width="510" x="85" y="340" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="363.0">05 独立验证与评测</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="386.0">Evaluation &amp; Verification · 人类 + AI</text><path d="M340 400 L340 421" fill="none" marker-end="url(#arr14)" stroke="#64748b" stroke-width="1.7" /><rect fill="#26746e" fill-opacity=".075" height="60" rx="9" stroke="#26746e" stroke-opacity=".65" width="510" x="85" y="423" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="446.0">06 风险审查与验收</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="469.0">Human Governance · 人类主导</text><path d="M340 483 L340 504" fill="none" marker-end="url(#arr14)" stroke="#64748b" stroke-width="1.7" /><rect fill="#426caa" fill-opacity=".075" height="60" rx="9" stroke="#426caa" stroke-opacity=".65" width="510" x="85" y="506" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="529.0">07 运行监控与恢复</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="552.0">Observability &amp; Operations · 人类 + AI</text><path d="M340 566 L340 587" fill="none" marker-end="url(#arr14)" stroke="#64748b" stroke-width="1.7" /><rect fill="#26746e" fill-opacity=".075" height="60" rx="9" stroke="#26746e" stroke-opacity=".65" width="510" x="85" y="589" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="612.0">08 知识沉淀与能力更新</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="635.0">Cognitive Feedback · 人类 + AI</text></svg></div>
+<figcaption>图 15 · 人类主导的智能体认知工程生命周期（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 在这一体系中，人工智能可以承担大部分实际执行工作，但价值定义、风险接受和最终责任仍然具有明确的人类主体。
 
@@ -626,7 +732,12 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | 性能 | 延迟、吞吐量、并发与成本测试 |
 | 恢复能力 | 故障注入、备份与回滚演练 |
 
-> **图示：** 图 16 · 企业 RAG 系统的人机混合交付架构（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 16 · 企业 RAG 系统的人机混合交付架构"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 410" aria-label="图 16 · 企业 RAG 系统的人机混合交付架构"><defs><marker id="arr15" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#26746e" fill-opacity=".075" height="55" rx="9" stroke="#26746e" stroke-opacity=".65" width="380" x="150" y="10" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="30.5">人类项目负责人 / FDE</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="53.5">价值定义、授权与验收</text><path d="M340 65 L340 95" fill="none" marker-end="url(#arr15)" stroke="#64748b" stroke-width="1.7" /><rect fill="#426caa" fill-opacity=".075" height="60" rx="9" stroke="#426caa" stroke-opacity=".65" width="320" x="15" y="100" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="175.0" y="123.0">需求与架构 Agent</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="175.0" y="146.0">业务规则、系统规格</text><rect fill="#426caa" fill-opacity=".075" height="60" rx="9" stroke="#426caa" stroke-opacity=".65" width="320" x="345" y="100" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="505.0" y="123.0">开发 Agent</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="505.0" y="146.0">编码、工具集成</text><rect fill="#426caa" fill-opacity=".075" height="60" rx="9" stroke="#426caa" stroke-opacity=".65" width="320" x="15" y="172" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="175.0" y="195.0">独立评测 Agent</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="175.0" y="218.0">测试集、反例、评测</text><rect fill="#426caa" fill-opacity=".075" height="60" rx="9" stroke="#426caa" stroke-opacity=".65" width="320" x="345" y="172" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="505.0" y="195.0">安全审查 Agent</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="505.0" y="218.0">权限、安全、异常</text><path d="M340 232 L340 254" fill="none" marker-end="url(#arr15)" stroke="#64748b" stroke-width="1.7" /><rect fill="#26746e" fill-opacity=".075" height="60" rx="9" stroke="#26746e" stroke-opacity=".65" width="460" x="110" y="255" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="278.0">人类独立验收与风险接受</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="301.0">专业评审、剩余风险、上线决策</text><path d="M340 315 L340 338" fill="none" marker-end="url(#arr15)" stroke="#64748b" stroke-width="1.7" /><rect fill="#64748b" fill-opacity=".075" height="56" rx="9" stroke="#64748b" stroke-opacity=".65" width="460" x="110" y="340" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="373.0">生产监控 · 知识更新 · 持续评测</text></svg></div>
+<figcaption>图 16 · 企业 RAG 系统的人机混合交付架构（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 两种模式的核心差异不是采用了多少 AI，而是 AI 生成的成果能否通过可靠的验证体系转化为真正的企业价值。这也说明，Demo 与 Production 之间的距离，并不会因为大模型具有强大的生成能力而自动消失。
 
@@ -705,7 +816,12 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 但与此同时，它也可能产生一种新的不平等。即使两个人使用相同的模型、相同的工具、相同的计算资源，他们最终形成的认知能力也可能截然不同。一个人利用 AI 不断提出问题、主动学习、验证证据、修正假设、构建系统性知识。另一个人利用 AI 直接获取答案、跳过理解、接受总结、追求快速完成。在短期内，两个人可能拥有相似的工作产出。但经过长期累积，他们之间的专业判断、知识迁移和独立解决问题能力，可能逐渐形成显著差异。
 
-> **图示：** 图 17 · 认知增强与认知依赖的潜在长期分化（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 17 · 认知增强与认知依赖的潜在长期分化"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 275" aria-label="图 17 · 认知增强与认知依赖的潜在长期分化"><defs><marker id="arr16" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><path d="M65 25V230H650" fill="none" stroke="#84949b" /><path d="M65 65H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 105H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 145H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 185H650" stroke="#cbd5d8" stroke-dasharray="4 5" /><path d="M65 135Q350 110 635 30L635 205Q350 170 65 135Z" fill="#64748b" fill-opacity=".09" /><path d="M65 135Q350 110 635 30" fill="none" stroke="#26746e" stroke-width="4" /><path d="M65 135Q350 170 635 205" fill="none" stroke="#b36c26" stroke-width="4" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="535" y="25">认知增强路径</text><text fill="#b36c26" font-size="16" font-weight="600" text-anchor="middle" x="535" y="222">认知依赖路径</text><text fill="#64748b" font-size="18" font-weight="600" text-anchor="middle" x="490" y="120">潜在认知差距</text><text fill="#64748b" font-size="14" font-weight="400" text-anchor="middle" x="360" y="260">智能体使用与时间 →</text></svg></div>
+<figcaption>图 17 · 认知增强与认知依赖的潜在长期分化（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 过去的数字鸿沟（Digital Divide）主要表现为能否访问互联网、能否获得数字设备，以及是否具有使用数字工具的能力。智能体时代可能出现新的认知鸿沟（Cognitive Divide）。这种鸿沟不一定来自是否拥有人工智能，而可能来自是否具有利用人工智能形成新知识、维持独立判断和治理复杂系统的能力。如果这一趋势成立，那么人工智能教育的核心任务就不仅是教会更多人使用 AI，而是教会更多人如何通过 AI 增强自己的认知能力。
 
@@ -731,7 +847,12 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 未来，优秀的专业人员可能不再是能够独立完成最多工作的人，而是能够将最强大的外部智能，与自身的专业知识、批判性思维、价值判断和责任意识有效结合的人。未来，优秀的企业可能不再是拥有最多智能体、生成最多代码或者自动化比例最高的企业，而是能够将人工智能的生产能力转化为经过验证、可以维护、值得信任的长期价值的企业。
 
-> **图示：** 图 18 · 人类智能治理能力金字塔（概念示意，非实测数据）
+{::nomarkdown}
+<figure class="cognitive-figure">
+<div class="cognitive-plot" tabindex="0" role="region" aria-label="图 18 · 人类智能治理能力金字塔"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 680 340" aria-label="图 18 · 人类智能治理能力金字塔"><defs><marker id="arr17" orient="auto" markerHeight="8" markerWidth="8" refX="7" refY="4"><path d="M0 0L8 4L0 8Z" fill="#64748b" /></marker></defs><rect fill="#26746e" fill-opacity=".075" height="57" rx="9" stroke="#26746e" stroke-opacity=".65" width="310" x="185.0" y="10" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="31.5">价值与责任</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="54.5">Values &amp; Accountability</text><rect fill="#26746e" fill-opacity=".075" height="57" rx="9" stroke="#26746e" stroke-opacity=".65" width="390" x="145.0" y="75" /><text fill="#26746e" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="96.5">治理与决策</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="119.5">Governance &amp; Judgment</text><rect fill="#426caa" fill-opacity=".075" height="57" rx="9" stroke="#426caa" stroke-opacity=".65" width="470" x="105.0" y="140" /><text fill="#426caa" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="161.5">理解与验证</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="184.5">Understanding &amp; Verification</text><rect fill="#64748b" fill-opacity=".075" height="57" rx="9" stroke="#64748b" stroke-opacity=".65" width="550" x="65.0" y="205" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="226.5">智能体协作</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="249.5">Agent Collaboration</text><rect fill="#64748b" fill-opacity=".075" height="57" rx="9" stroke="#64748b" stroke-opacity=".65" width="630" x="25.0" y="270" /><text fill="#64748b" font-size="16" font-weight="600" text-anchor="middle" x="340.0" y="291.5">模型与算力</text><text fill="#213b43" font-size="12" font-weight="400" text-anchor="middle" x="340.0" y="314.5">Models &amp; Computing</text></svg></div>
+<figcaption>图 18 · 人类智能治理能力金字塔（概念示意，非实测数据）</figcaption>
+</figure>
+{:/nomarkdown}
 
 模型提供智能，智能体提供执行能力，验证体系提供可信证据，治理机制提供风险边界，而人类与社会提供目标、价值和责任。这五个层次共同决定人工智能能够为人类创造什么样的未来。
 
