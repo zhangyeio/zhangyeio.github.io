@@ -19,15 +19,51 @@ excerpt: "当 AI 从回答问题走向自主执行，生产能力与人类理解
 .cognitive-figure .cognitive-bar-row { display: grid; grid-template-columns: 6em minmax(3rem, 1fr) 3em; align-items: center; gap: .6rem; margin: .5rem 0; font-size: .875rem; }
 .cognitive-figure .cognitive-bar { height: .85rem; border-radius: .25rem; background: #26746e; }
 .cognitive-figure .cognitive-bar-ai { background: #a15b20; }
-.post-content:has(.cognitive-figure) table { width: 100%; margin: 1.6rem 0; border: 1px solid var(--line, #dce4e8); border-spacing: 0; border-collapse: separate; border-radius: 10px; overflow: hidden; font-size: .92rem; line-height: 1.6; }
-.post-content:has(.cognitive-figure) table :is(th, td) { padding: .7rem .85rem; vertical-align: top; text-align: start; border: 0; border-bottom: 1px solid var(--line, #dce4e8); overflow-wrap: anywhere; background: transparent; }
-.post-content:has(.cognitive-figure) table thead th { background: #e5eff4; color: #174458; font-weight: 700; }
-.post-content:has(.cognitive-figure) table tbody tr:nth-child(even) { background: var(--surface-soft, #f6f9fa); }
-.post-content:has(.cognitive-figure) table tbody tr:last-child td { border-bottom: 0; }
+.post-content .cognitive-table {
+  max-width: 100%;
+  margin: 1.6rem 0;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.post-content .cognitive-table:focus-visible { outline: 2px solid var(--link-hover); outline-offset: 2px; }
+.post-content .cognitive-table table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  border-collapse: collapse;
+  font-size: .92rem;
+  line-height: 1.55;
+}
+.post-content .cognitive-table :is(th, td) {
+  min-width: 0;
+  padding: .68rem .82rem;
+  vertical-align: top;
+  text-align: start;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  overflow-wrap: anywhere;
+}
+.post-content .cognitive-table thead th {
+  background: var(--surface-soft);
+  background: color-mix(in srgb, var(--surface) 90%, var(--link-hover));
+  color: var(--text);
+  font-weight: 700;
+}
+.post-content .cognitive-table tbody tr:nth-child(even) { background: var(--surface-soft); }
+.post-content .cognitive-table tbody tr:last-child td { border-bottom: 0; }
+.post-content .cognitive-table :is(th, td):first-child { font-weight: 600; }
+.post-content .cognitive-table-two th:first-child { width: 32%; }
+.post-content .cognitive-table-three th:first-child { width: 26%; }
+.post-content .cognitive-table-wide table { min-width: 31rem; }
 @media (max-width: 640px) {
   .cognitive-figure .cognitive-plot svg { min-width: 460px; }
-  .post-content:has(.cognitive-figure) table { display: block; max-width: 100%; min-width: 0; overflow-x: auto; }
-  .post-content:has(.cognitive-figure) table :is(th, td) { min-width: 7.5rem; padding: .55rem .65rem; }
+  .post-content .cognitive-table :is(th, td) { padding: .52rem .55rem; }
 }
 </style>
 {:/nomarkdown}
@@ -71,6 +107,8 @@ excerpt: "当 AI 从回答问题走向自主执行，生产能力与人类理解
 
 纵观人类文明史，技术进步始终伴随着认知能力的外部化。文字将记忆外部化，书籍将知识外部化，计算器将算术外部化，搜索引擎将信息检索外部化，而大语言模型正在将部分推理、表达、综合分析和任务规划外部化。
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 技术阶段 | 主要外部化能力 | 人类保留的核心角色 |
 | --- | --- | --- |
 | 文字与书籍 | 记忆、知识存储 | 理解与解释 |
@@ -80,6 +118,8 @@ excerpt: "当 AI 从回答问题走向自主执行，生产能力与人类理解
 | 生成式 AI | 表达、推理、内容生产 | 判断与验证 |
 | AI Agent | 规划、执行、工具调用 | 目标设定与治理 |
 | 多智能体系统 | 分工、协作、复杂任务执行 | 系统设计与责任管理 |
+
+</div>
 
 生成式人工智能的特殊性，在于它不再只是帮助我们获得信息，而是能够直接提供经过组织、解释和推理的结论。搜索引擎通常提供信息来源，要求使用者阅读、比较、筛选并形成观点。大语言模型则可以直接提供一个看起来已经完成上述认知活动的答案。智能体进一步改变了这一过程：它不仅能够告诉我们应该做什么，还能够替我们执行这些决定。
 
@@ -108,11 +148,15 @@ excerpt: "当 AI 从回答问题走向自主执行，生产能力与人类理解
 
 #### 1. 三种认知状态
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 认知状态 | 核心特征 | 人类是否保留判断权 |
 | --- | --- | --- |
 | Cognitive Offloading 认知卸载 | 委托执行，保留理解与监督 | 是 |
 | Cognitive Deferral 认知让渡 | 将 AI 结论作为默认前提 | 部分保留 |
 | Cognitive Surrender 认知投降 | 将 AI 判断直接内化为自身判断 | 实质性丧失 |
+
+</div>
 
 例如，一名产品经理让 AI 分析一百份客户访谈，并对其结论进行抽样核查、反例分析和业务判断，这是认知卸载。如果他直接将 AI 生成的用户需求排序作为产品规划的依据，却没有检查样本代表性和分析方法，这可能构成认知让渡。如果他甚至无法解释产品为什么应该开发某项功能，却依然确信 AI 的方案正确，并以自己的名义提交给管理层，那么他可能已经陷入认知投降。
 
@@ -143,6 +187,8 @@ Steven Shaw 和 Gideon Nave 在《Thinking—Fast, Slow, and Artificial》中讨
 
 在人类交流中，表达清晰、逻辑严密、使用专业术语，通常会成为判断一个人是否具有专业能力的间接信号。然而，大语言模型能够在事实错误、逻辑漏洞或证据不足的情况下，仍然产生高度流畅的表达。于是，一个过去相对有用的判断机制逐渐失效。
 
+<div class="cognitive-table cognitive-table-two" markdown="1">
+
 | 传统质量信号 | 在生成式 AI 时代的局限 |
 | --- | --- |
 | 语言流畅 | 不代表事实正确 |
@@ -152,6 +198,8 @@ Steven Shaw 和 Gideon Nave 在《Thinking—Fast, Slow, and Artificial》中讨
 | 自信的表达 | 不代表结论可靠 |
 | 多个模型意见一致 | 不代表证据相互独立 |
 | 自动化测试全部通过 | 不代表系统满足真实需求 |
+
+</div>
 
 在人工智能时代，成果的表面精致程度正在变得廉价。真正昂贵的是可验证的事实、有效的推理和经得起反驳的判断。
 
@@ -180,6 +228,8 @@ Steven Shaw 和 Gideon Nave 在《Thinking—Fast, Slow, and Artificial》中讨
 
 #### 1. 认知债务的五种类型
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 债务类型 | 英文名称 | 典型表现 |
 | --- | --- | --- |
 | 知识债务 | Knowledge Debt | 使用了尚未理解的技术或概念 |
@@ -187,6 +237,8 @@ Steven Shaw 和 Gideon Nave 在《Thinking—Fast, Slow, and Artificial》中讨
 | 意图债务 | Intent Debt | 无法解释需求与设计决策背后的真实目的 |
 | 验证债务 | Verification Debt | 接受了尚未充分验证的成果 |
 | 技能债务 | Skill Debt | 因长期缺乏实践而无法维持关键能力 |
+
+</div>
 
 以 AI 开发一个企业级知识库系统为例。智能体可以自动完成向量数据库选型、Embedding 模型接入、RAG 检索架构设计、用户权限管理和系统部署。然而，如果开发者无法解释以下问题，那么即使系统正常运行，认知债务也可能已经产生：
 
@@ -239,11 +291,15 @@ Steven Shaw 和 Gideon Nave 在《Thinking—Fast, Slow, and Artificial》中讨
 
 讨论 AI 对人类认知的影响时，一个常见错误是将三种不同的指标混为一谈。
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 指标 | 核心问题 | 评价方式 |
 | --- | --- | --- |
 | 生产效率 | 是否更快完成任务？ | 时间、成本、交付数量 |
 | 学习效率 | 是否真正掌握新知识？ | 独立测试、知识迁移 |
 | 长期认知能力 | 是否能够持续独立判断和解决问题？ | 长期跟踪、复杂任务表现 |
+
+</div>
 
 一个人可以借助 AI 更快地完成任务，却没有因此学到更多知识。也可以在某个阶段牺牲部分生产效率，通过 AI 辅导获得更深入的专业理解。这三者之间存在联系，但不能相互替代。
 
@@ -277,6 +333,8 @@ Bastani 等研究者在2025年发表于 PNAS 的论文《Generative AI Without G
 
 #### 4. 现有证据支持什么，又不能证明什么？
 
+<div class="cognitive-table cognitive-table-two" markdown="1">
+
 | 判断 | 现有证据状况 |
 | --- | --- |
 | AI 可以降低部分任务的认知负担 | 有研究支持 |
@@ -287,6 +345,8 @@ Bastani 等研究者在2025年发表于 PNAS 的论文《Generative AI Without G
 | 所有智能体工作流都会导致认知退化 | 尚无充分证据 |
 | AI 无法增强批判性思维 | 不成立 |
 | 认知主权是一个成熟的可量化心理学指标 | 尚未建立 |
+
+</div>
 
 科学研究尚未给出一个简单的结论，即人工智能究竟会使人类更加聪明还是更加愚钝。更合理的解释是：人工智能改变了认知活动的成本结构，而不同的人机协作设计，会产生不同的认知结果。
 
@@ -342,6 +402,8 @@ Risko 和 Gilbert 在2016年的认知卸载研究综述中，已经讨论过人�
 
 在某些领域，人类已经无法通过直接观察判断机器的计算结果是否正确。现代科学研究依赖高性能计算，金融系统依赖复杂的风险模型，航空系统依赖自动化控制，芯片设计依赖电子设计自动化工具。人类不需要在所有局部任务上超越机器，才能对这些系统实施有效治理。关键在于建立一种新的能力结构。
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 能力层级 | 核心能力 | AI 时代的重要性 |
 | --- | --- | --- |
 | L1 执行能力 | 直接完成具体任务 | 部分可以自动化 |
@@ -349,6 +411,8 @@ Risko 和 Gilbert 在2016年的认知卸载研究综述中，已经讨论过人�
 | L3 验证能力 | 判断成果是否符合要求 | 日益重要 |
 | L4 元认知能力 | 判断自己知道什么、不知道什么 | 高度重要 |
 | L5 治理能力 | 定义目标、约束、授权和责任 | 核心能力 |
+
+</div>
 
 未来，人类不一定需要拥有比 AI 更强的局部执行能力，但需要建立足以治理这些能力的制度、知识和验证机制。这是一种元能力（Meta-Competence）。例如，一名企业 CEO 不需要比公司的每一名专业人员更加优秀，但必须能够理解不同专业能力如何形成组织价值，如何识别重大风险，以及如何建立有效的决策机制。
 
@@ -407,6 +471,8 @@ Risko 和 Gilbert 在2016年的认知卸载研究综述中，已经讨论过人�
 
 Goodhart 定律经常被概括为：当一个指标成为目标时，它就可能不再是一个好的指标。智能体工程同样面临这种问题。如果智能体的目标被定义为让测试全部通过，那么它可能选择能够满足测试、却无法满足真实需求的实现方式。如果客服智能体被优化为提高问题解决率，它可能过早地将客户投诉标记为已解决。如果研究智能体被要求提供大量引用，它可能增加相关性较低的资料，而不是提高研究质量。
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 优化指标 | 真正目标 | 潜在偏差 |
 | --- | --- | --- |
 | 测试通过率 | 系统正确性 | 测试覆盖不足 |
@@ -415,6 +481,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | 文档数量 | 组织知识沉淀 | 内容重复或无人理解 |
 | 智能体任务完成率 | 业务价值实现 | 完成低价值任务 |
 | 模型评测分数 | 真实环境可靠性 | 对评测场景过拟合 |
+
+</div>
 
 智能体系统需要能够优化代理指标，但人类必须持续判断这些指标是否仍然服务于真实目标。
 
@@ -450,17 +518,23 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 </figure>
 {:/nomarkdown}
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 可观测性层级 | 观察对象 | 核心问题 |
 | --- | --- | --- |
 | 技术可观测性 | 软件及基础设施 | 系统发生了什么？ |
 | 智能体可观测性 | AI 的执行过程 | 智能体做了什么？ |
 | 认知可观测性 | 人类与智能体的关系 | 人类理解了什么，又失去了什么？ |
 
+</div>
+
 认知可观测性并不是试图监控人类的大脑，而是利用可观察的行为和工作成果，判断组织是否具备与其责任相匹配的理解能力。
 
 #### 2. 从任务完成报告转向认知交接报告
 
 目前，大多数智能体在完成任务之后，会提供一份类似这样的总结：已完成相关功能开发，修复了发现的问题，所有测试均通过。这类信息只能说明智能体声称完成了哪些工作，却不能充分支持人类建立理解。
+
+<div class="cognitive-table cognitive-table-two" markdown="1">
 
 | 交接内容 | 需要回答的问题 |
 | --- | --- |
@@ -475,6 +549,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | Recovery | 如果发生问题，如何回滚和恢复？ |
 | Ownership | 谁负责接受剩余风险？ |
 
+</div>
+
 这类报告的目标不是增加文档数量，而是将智能体内部隐含的工作决策转化为人类可以理解、审查和追溯的知识。早在1986年，软件工程学者 David Parnas 和 Paul Clements 就讨论过设计过程与设计文档之间的关系。他们指出，即使真实设计过程不完全遵循理想化的理性路径，系统化、持续更新的设计文档仍然具有重要工程价值。[[3]](#ref-3)
 
 在智能体时代，这一思想需要被重新重视。因为过去文档通常记录人类已经理解的设计，而现在文档还承担着帮助人类理解机器所做决策的任务。
@@ -484,6 +560,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 认知债务不像代码重复率、系统响应时间或缺陷数量那样容易直接测量。它包含知识、理解、技能、决策和组织协作等多个维度，因此不适合用单一指标进行概括。不过，我们可以构建一组工程管理中的代理指标（Proxy Metrics），帮助组织识别风险趋势。
 
 #### 1. 认知债务指标体系
+
+<div class="cognitive-table cognitive-table-three" markdown="1">
 
 | 指标 | 英文名称 | 衡量对象 |
 | --- | --- | --- |
@@ -495,6 +573,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | 未审查成果积压量 | Unreviewed Work Backlog | 生成但尚未完成审查的成果 |
 | 未解决风险暴露 | Unresolved Risk Exposure | 已识别但尚未解决的风险 |
 | 知识集中度 | Knowledge Concentration | 关键知识是否过度依赖单个人或模型 |
+
+</div>
 
 这些指标不能直接证明一个人的认知能力，但可以作为发现组织性理解缺口的信号。
 
@@ -513,6 +593,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 #### 3. 建立认知债务预算
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 系统类型 | 可接受的认知债务 | 管理重点 |
 | --- | --- | --- |
 | 一次性内部脚本 | 较高 | 基本正确性、可删除性 |
@@ -521,6 +603,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | 核心业务系统 | 较低 | 架构理解、数据一致性 |
 | 金融与医疗系统 | 很低 | 专业判断、独立验证 |
 | 安全关键系统 | 严格控制 | 系统安全、责任追溯、恢复能力 |
+
+</div>
 
 认知债务不是越低越好，而是必须与系统的重要程度、维护周期、复杂性、错误成本和风险承受能力保持匹配。
 
@@ -534,6 +618,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 > **公式：** Vnet = Vaccepted − (Cg + Cv + Cr + Cm + E[L])
 
+<div class="cognitive-table cognitive-table-two" markdown="1">
+
 | 变量 | 含义 |
 | --- | --- |
 | Vnet | AI 工作流产生的净价值 |
@@ -543,6 +629,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | Cr | 错误修复及返工成本 |
 | Cm | 后续维护与知识重建成本 |
 | E[L] | 潜在错误造成的预期损失 |
+
+</div>
 
 这个公式不是已经建立的经济学定律，而是一种帮助企业评估 AI 投资回报的成本框架。实际使用时需要统一计量单位和核算周期，并避免重复计算相关成本。它提醒我们：AI 降低了生成成本，并不意味着整个价值交付过程的总成本必然下降。如果验证、维护和风险成本大幅上升，智能体工作流的整体收益可能低于预期。
 
@@ -572,11 +660,15 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 #### 1. 从 Human-in-the-Loop 走向 Human-governed AI
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 模式 | 核心特征 | 适用情境 |
 | --- | --- | --- |
 | Human-in-the-Loop | 人类参与特定决策或审批 | 高风险决策、专业评审 |
 | Human-on-the-Loop | AI 自主执行，人类持续监督并可介入 | 受控自动化系统 |
 | Human-out-of-the-Loop | 任务在限定条件下无需人工逐次介入 | 低风险、标准化任务 |
+
+</div>
 
 在智能体时代，更值得关注的是 Human-governed AI，即人类主导治理的人工智能体系。它并不要求人类出现在每一个执行环节，而要求人类能够决定 AI 被授权执行什么任务、可以访问哪些数据和工具、哪些行为必须获得批准、哪些结果可以自动验收、哪些异常需要升级处理、如何暂停或撤销行为，以及谁对系统造成的后果负责。
 
@@ -585,6 +677,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 #### 2. 责任必须与权限相匹配
 
 一种危险的组织设计，是将 AI 系统的最终责任交给某个人，却不给予其相应的审查时间、访问权限、决策能力和技术资源。这种情况下，人类只是形式上的负责人。
+
+<div class="cognitive-table cognitive-table-two" markdown="1">
 
 | 角色 | 核心责任 |
 | --- | --- |
@@ -595,6 +689,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | Security & Risk Owner | 管理安全、隐私及风险控制 |
 | Release Authority | 决定是否接受剩余风险并上线 |
 | Operations Owner | 监控生产运行、处理异常与恢复 |
+
+</div>
 
 在小型团队中，一个人可以承担多个角色，但高风险场景应尽量保持必要的职责分离。责任不应只是能够追究某个人，而应该是确保负责者拥有实际履行责任的条件。
 
@@ -609,6 +705,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 </figure>
 {:/nomarkdown}
 
+<div class="cognitive-table cognitive-table-wide" markdown="1" tabindex="0" role="region" aria-label="表格：风险级别、典型任务、智能体权限、验证机制">
+
 | 风险级别 | 典型任务 | 智能体权限 | 验证机制 |
 | --- | --- | --- | --- |
 | R1 | 格式调整、摘要生成 | 高度自主 | 基础检查 |
@@ -616,6 +714,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | R3 | 业务系统开发、数据处理 | 限定权限 | 独立测试与代码审查 |
 | R4 | 核心系统变更、重大商业决策 | 严格约束 | 专业评审与人工审批 |
 | R5 | 安全关键操作、不可逆重大行为 | 最小必要权限 | 多层独立验证与正式授权 |
+
+</div>
 
 这里的风险等级是本文提出的工程管理建议，不是 NIST、ISO 或其他监管机构制定的正式风险分类。企业可以依据业务性质、数据敏感性、错误影响范围和可恢复程度进行调整。
 
@@ -625,12 +725,16 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 技术进步的历史，本身就是一些能力逐渐被替代的历史。人类已经不再需要普遍掌握手工复杂计算、机器指令编写和许多重复性劳动技能。因此，如果为了保持所谓的认知独立性，而要求所有人继续亲自执行所有基础任务，实际上可能阻碍技术进步。真正的问题是：**哪些能力是监督、治理和进一步使用人工智能所必需的？**
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 能力类型 | 典型能力 | 培养策略 |
 | --- | --- | --- |
 | 可替代执行能力 | 重复编码、格式转换、例行统计 | 优先自动化 |
 | 基础理解能力 | 编程原理、数学、数据结构、业务逻辑 | 持续掌握 |
 | 高价值判断能力 | 架构设计、风险判断、证据评价 | 重点强化 |
 | 治理与创造能力 | 问题定义、价值选择、系统创新 | 长期培养 |
+
+</div>
 
 这里的分类不是固定不变的。随着模型能力变化，一些过去必须由人类掌握的执行技能，可能逐渐转变为只需要理解其原理的技能。但在新的领域和高风险场景中，人类仍然需要发展新的专业知识和验证能力。
 
@@ -672,6 +776,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 过去，很多关于 AI 使用能力的讨论集中在提示词工程（Prompt Engineering）上。但随着智能体能够自主规划、调用工具并持续执行任务，单一的提示词技巧已经无法覆盖完整的人机协作过程。生产级 AI 系统至少涉及以下七个方面。
 
+<div class="cognitive-table cognitive-table-three" markdown="1">
+
 | 工程领域 | 英文名称 | 解决的问题 |
 | --- | --- | --- |
 | 意图工程 | Intent Engineering | 我们真正想实现什么？ |
@@ -681,6 +787,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | 评测工程 | Evaluation Engineering | 如何测量 AI 的真实表现？ |
 | 验证工程 | Verification Engineering | 如何证明成果满足要求？ |
 | AI 治理 | AI Governance | 如何控制权限、风险和责任？ |
+
+</div>
 
 这些术语的成熟度和行业定义并不完全一致，其中部分仍属于正在发展的实践范式。但它们共同揭示了一个重要变化：人机协作的质量，越来越依赖于整个系统的设计，而不仅仅是一次对话的质量。
 
@@ -703,6 +811,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 项目负责人向智能体提出需求：开发一个支持 PDF 上传、向量检索、问答和用户登录的智能知识库。智能体迅速完成了前端、后端、数据库、Embedding 模型、向量检索、API 接入和部署工作。演示过程中，系统能够回答大量问题。自动化测试全部通过。项目被宣布完成。然而，系统可能仍然存在以下问题：
 
+<div class="cognitive-table cognitive-table-two" markdown="1">
+
 | 风险领域 | 尚未解决的问题 |
 | --- | --- |
 | 数据权限 | 不同部门的员工是否能够检索彼此的敏感文档？ |
@@ -714,11 +824,15 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | 责任 | 员工依据错误回答执行操作后，谁负责处理？ |
 | 可维护性 | 团队是否理解当前系统的架构设计？ |
 
+</div>
+
 这个系统可能是一个成功的技术演示，却不一定是一个可靠的企业生产系统。
 
 #### 模式 B：以认知主权和验证工程为中心
 
 项目从业务目标定义开始，而不是从代码生成开始。项目团队首先明确：系统的目标不是生成看起来合理的答案，而是帮助员工获取准确、有效、符合访问权限的企业知识，并在证据不足时拒绝给出确定性结论。随后，将业务目标转化为可验证的要求。
+
+<div class="cognitive-table cognitive-table-two" markdown="1">
 
 | 验收维度 | 示例验证方式 |
 | --- | --- |
@@ -731,6 +845,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | Prompt Injection | 恶意输入与恶意文档测试 |
 | 性能 | 延迟、吞吐量、并发与成本测试 |
 | 恢复能力 | 故障注入、备份与回滚演练 |
+
+</div>
 
 {::nomarkdown}
 <figure class="cognitive-figure">
@@ -747,6 +863,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 在 AI 智能体时代，Forward Deployed Engineer（前线部署工程师，FDE）这一角色具有特别重要的意义。传统的软件工程师主要关注系统如何实现，传统项目经理主要关注项目如何组织和交付，而 FDE 需要同时理解客户业务、技术能力、数据环境、组织流程和实际使用场景。在高度智能体化的开发环境中，FDE 的核心价值可能进一步从编写解决方案转向定义、验证和治理解决方案。
 
+<div class="cognitive-table cognitive-table-two" markdown="1">
+
 | 能力领域 | FDE 的核心任务 |
 | --- | --- |
 | Business Discovery | 识别客户真实业务痛点 |
@@ -760,11 +878,15 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | Value Realization | 验证解决方案是否真正创造价值 |
 | Accountability | 明确责任边界和剩余风险 |
 
+</div>
+
 这意味着，一个优秀的 FDE 不应该只是擅长使用 AI 快速生成解决方案。他还需要能够解释为什么这个解决方案值得构建，为什么选择当前的技术路径，如何证明它解决了真实问题，以及如何帮助客户长期维持对系统的理解和控制。未来，AI 可能将系统实现的门槛不断降低，但业务理解、组织协作、系统验证和价值实现仍然需要大量专业工作。FDE 的竞争力就存在于这些环节的交叉位置。
 
 ### 二十四、项目管理也需要发生结构性变化
 
 传统项目管理强调范围、进度、成本、质量、资源、风险和利益相关者管理。这些原则不会因为 AI 出现而失效。但它们的具体管理对象正在发生改变。
+
+<div class="cognitive-table cognitive-table-three" markdown="1">
 
 | 管理领域 | 传统管理对象 | 智能体时代的扩展对象 |
 | --- | --- | --- |
@@ -777,6 +899,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | 知识管理 | 文档与经验教训 | 意图记录、决策追溯、理解重建 |
 | 沟通管理 | 人与人之间的信息传递 | 人与智能体之间的上下文交接 |
 | 价值管理 | 项目收益实现 | 经验证的自动化业务价值 |
+
+</div>
 
 在智能体工作流中，项目经理不再只是管理人类完成任务，也需要管理由人类与智能体共同组成的生产系统。如果项目管理只关注任务是否完成，而不关注成果是否经过验证、关键决策是否得到理解以及风险是否被有效接受，那么项目看似成功交付，实际可能积累了大量隐性负债。
 
@@ -896,6 +1020,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 
 <a id="ref-15"></a>
 
+<div class="cognitive-table cognitive-table-wide" markdown="1" tabindex="0" role="region" aria-label="表格：序号、作者或机构、研究资料、年份">
+
 | 序号 | 作者或机构 | 研究资料 | 年份 |
 | --- | --- | --- | --- |
 | 01 | Lisanne Bainbridge | [Ironies of Automation](https://doi.org/10.1016/0005-1098(83)90046-8) | 1983 |
@@ -914,9 +1040,13 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | 14 | Anthropic | [How AI Assistance Impacts the Formation of Coding Skills](https://www.anthropic.com/research/AI-assistance-coding-skills) | 2026 |
 | 15 | Steven Shaw, Gideon Nave | Thinking—Fast, Slow, and Artificial: How AI Is Reshaping Human Reasoning and the Rise of Cognitive Surrender | 2026 |
 
+</div>
+
 ## 关于本文的原创扩展与研究边界
 
 相较于最初的英文文章，本文不是简单翻译或内容改写，而是围绕其核心问题进行了系统性扩展。
+
+<div class="cognitive-table cognitive-table-two" markdown="1">
 
 | 原文重点 | 本文扩展方向 |
 | --- | --- |
@@ -930,6 +1060,8 @@ Goodhart 定律经常被概括为：当一个指标成为目标时，它就可�
 | 人类最终责任 | Human-governed AI 组织治理 |
 | 个人工作实践 | 企业级工程生命周期与风险分级 |
 | AI 对思维的影响 | 潜在的长期认知鸿沟 |
+
+</div>
 
 本文中的认知主权六维模型、认知可观测性框架、认知债务预算、审查容量模型及十八幅概念示意图，均属于基于既有研究和工程实践提出的分析性扩展，不应被误认为已经通过实证验证的成熟科学理论。
 
